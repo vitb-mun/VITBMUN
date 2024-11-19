@@ -5,24 +5,32 @@ const EventTimeline = () => {
 
   const timelineEvents = [
     {
-      date: "2021-01-01",
-      title: "Event 1",
-      description: "Description for event 1.",
+      date: "Date: 2023-01-01",
+      time: "Time: 9:00 - 12:00",
+      title: "MUN-MATE'24",
+      description:
+        "Welcome to our MUN Club, where we bring the world of Model United Nations to life! In our club,ganizations, engaging in spirited debates, negotiation.",
     },
     {
-      date: "2021-06-15",
-      title: "Event 2",
-      description: "Description for event 2.",
+      date: "Date: 2023-06-15",
+      time: "Time: 9:00 - 12:00",
+      title: "VITBMUN 3.0",
+      description:
+        "Welcome to our MUN Club, where we bring the world of Model United Nations to life! In our club,ganizations, engaging in spirited debates, negotiation.",
     },
     {
-      date: "2022-02-20",
-      title: "Event 3",
-      description: "Description for event 3.",
+      date: "Date: 2023-02-20",
+      time: "Time: 9:00 - 12:00",
+      title: "Rajneeti Rangmanch",
+      description:
+        "Welcome to our MUN Club, where we bring the world of Model United Nations to life! In our club,ganizations, engaging in spirited debates, negotiation.",
     },
     {
-      date: "2023-09-10",
-      title: "Event 4",
-      description: "Description for event 4.",
+      date: "Date: 2023-09-10",
+      time: "Time: 9:00 - 12:00",
+      title: "Chain Reaction Chase",
+      description:
+        "Welcome to our MUN Club, where we bring the world of Model United Nations to life! In our club,ganizations, engaging in spirited debates, negotiation.",
     },
   ];
 
@@ -49,11 +57,11 @@ const EventTimeline = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center px-4 py-8">
-      <h1 className="text-3xl font-bold mb-12 text-gray-800">Event Timeline</h1>
+    <div className="min-h-screen bg-white  flex flex-col items-center px-4 py-8">
+      <h1 className="text-4xl font-bold mb-10 text-gray-800">Event Timeline</h1>
       <div className="relative w-full max-w-4xl">
         {/* Vertical Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+        <div className="absolute  left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
 
         {timelineEvents.map((event, index) => (
           <div
@@ -75,12 +83,27 @@ const EventTimeline = () => {
             </div>
 
             {/* Event Card */}
-            <div className="bg-white shadow-lg rounded-lg p-5 mt-3 w-3/4 md:w-1/2">
+            <div className="bg-white shadow-lg  border-black-800 border-2 rounded-lg p-5 mt-3 w-3/4 md:w-1/2">
               <h2 className="text-xl font-semibold text-gray-800">
                 {event.title}
               </h2>
               <p className="text-sm text-gray-500">{event.date}</p>
+              <p className="text-sm text-gray-500">{event.time}</p>
               <p className="text-gray-700 mt-2">{event.description}</p>
+              <div className="container mx-auto px-2 py-4 flex justify-center space-x-4">
+                {["More"].map((btn) => (
+                  <button
+                    key={btn}
+                    className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg border-black-800 border-2 hover:bg-blue-600"
+                    style={{
+                      fontFamily:
+                        "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
+                    }}
+                  >
+                    {btn}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         ))}

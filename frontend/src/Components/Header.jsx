@@ -5,7 +5,7 @@ import UN_Assembly from "../assets/UN_Assembly.jpg";
 
 const Header = () => {
   return (
-    <div className="bg-white border-b shadow-sm">
+    <div className="bg-white  shadow-sm">
       {/* Top Header Section */}
       <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
         {/* Logos */}
@@ -21,21 +21,26 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav className="flex flex-wrap justify-center space-x-4 mt-4 md:mt-0">
-          {["About", "Events", "Team", "Sponsors", "FAQs", "Contact Us"].map(
-            (link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase().replace(" ", "")}`}
-                className="text-gray-700 text-lg font-bold hover:text-blue-600"
-                style={{
-                  fontFamily:
-                    "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
-                }}
-              >
-                {link}
-              </a>
-            )
-          )}
+          {[
+            "About",
+            "Events",
+            "Coordinators",
+            "Team",
+            "Sponsors",
+            "FAQs",
+            "Contact Us",
+          ].map((link) => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase().replace(" ", "")}`}
+              className="text-gray-700 text-lg font-bold hover:text-blue-600"
+              style={{
+                fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
+              }}
+            >
+              {link}
+            </a>
+          ))}
         </nav>
       </div>
 

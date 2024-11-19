@@ -1,8 +1,9 @@
 import React from "react";
+import vitbhopal_logo from "../assets/vitbhopal_logo.png";
 
 const Event = () => {
   return (
-    <div className="font-sans bg-gray-50 min-h-screen">
+    <div className="font-sans bg-white min-h-screen">
       <section className="container mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">
           Model Of United Nations
@@ -23,56 +24,80 @@ const Event = () => {
 
         {/* Events Section */}
         <h2 className="text-3xl font-bold text-gray-800 mb-6">Events</h2>
-        <div className="grid px-6 py-6 grid-cols-1 md:grid-cols-3 gap-6 border-solid border-2 rounded-3xl border-gray-300">
+        <div className="grid px-6 py-6 grid-cols-1 md:grid-cols-3  gap-6 border-solid border-2 rounded-3xl border-gray-300">
           {/* Event 1 */}
-          <div className="bg-gray-50 rounded-lg shadow overflow-hidden">
+          <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
             <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">No Image</span>
+              <img
+                src={vitbhopal_logo}
+                className="h-24 w-auto"
+                alt="VIT Bhopal Logo"
+              />
             </div>
             <h3 className="text-lg font-semibold  text-gray-700 p-4">
               MUN-MATE'24
             </h3>
           </div>
           {/* Event 2 */}
-          <div className="bg-gray-50 shadow rounded-lg overflow-hidden">
+          <div className="bg-white border-black-800 border-2 shadow rounded-lg overflow-hidden">
             <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">No Image</span>
+              <img
+                src={vitbhopal_logo}
+                className="h-24 w-auto"
+                alt="VIT Bhopal Logo"
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-700 p-4">
               VITBMUN 3.0
             </h3>
           </div>
           {/* Event 3 */}
-          <div className="bg-gray-50 shadow rounded-lg overflow-hidden">
+          <div className="bg-white border-black-800 border-2 shadow rounded-lg overflow-hidden">
             <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">No Image</span>
+              <img
+                src={vitbhopal_logo}
+                className="h-24 w-auto"
+                alt="VIT Bhopal Logo"
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-700 p-4">
               Rajneeti Rangmanch
             </h3>
           </div>
           {/* Event 4 */}
-          <div className="bg-gray-50 shadow rounded-lg overflow-hidden">
+          <div className="bg-white shadow border-black-800 border-2 rounded-lg overflow-hidden">
             <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">No Image</span>
+              <img
+                src={vitbhopal_logo}
+                className="h-24 w-auto"
+                alt="VIT Bhopal Logo"
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-700 p-4">
               Chain Reaction Chase
             </h3>
           </div>
           {/* Event 5 */}
-          <div className="bg-gray-50 shadow rounded-lg overflow-hidden">
+          <div className="bg-white shadow border-black-800 border-2 rounded-lg overflow-hidden">
             <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">No Image</span>
+              <img
+                src={vitbhopal_logo}
+                className="h-24 w-auto"
+                alt="VIT Bhopal Logo"
+              />
             </div>
             <h3 className="text-lg font-semibold text-gray-700 p-4">
               Rajneet '24
             </h3>
           </div>
           {/* Event 6 */}
-          <div className="bg-gray-50 shadow rounded-lg overflow-hidden">
+          <div className="bg-white shadow border-black-800 border-2 rounded-lg overflow-hidden">
             <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">Event Name</span>
+              <img
+                src={vitbhopal_logo}
+                className="h-24 w-auto"
+                alt="VIT Bhopal Logo"
+              />{" "}
             </div>
             <h3 className="text-lg font-semibold text-gray-700 p-4">
               Event Name
