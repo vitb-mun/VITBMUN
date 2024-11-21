@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         <div className="text mx-auto">&copy; 2024 MUN Club, VIT Bhopal</div>
-        <div className="baseline bg-white h-[0.3px] w-[90%] mt-4 mx-auto"></div>
+        <div className="baseline bg-white h-[0.3px] w-[100%] mt-4 mx-auto"></div>
         
       </div>
     </>
