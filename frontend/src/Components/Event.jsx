@@ -5,10 +5,10 @@ const Event = () => {
   return (
     <div className="font-sans bg-white min-h-screen">
       <section className="container mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+        <h2 className="text-5xl font-bold text-gray-800 mb-6">
           Model Of United Nations
         </h2>
-        <p className="text-gray-800 text-semibold leading-relaxed mb-12">
+        <p className="text-gray-800 text-lg text-semibold leading-relaxed mb-12">
           Welcome to our MUN Club, where we bring the world of Model United
           Nations to life! In our club, students take on the roles of delegates
           representing diverse countries and organizations, engaging in spirited
@@ -23,7 +23,7 @@ const Event = () => {
         </p>
 
         {/* Events Section */}
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Events</h2>
+        <h2 className="text-5xl font-bold text-gray-800 mb-6">Events</h2>
         <div className="grid px-6 py-6 grid-cols-1 md:grid-cols-3  gap-6 border-solid border-2 rounded-3xl border-gray-300">
           {/* Event 1 */}
           <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">

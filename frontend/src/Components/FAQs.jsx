@@ -1,57 +1,57 @@
 import React, { useState } from "react";
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const faqs = [
+    "What is MUN?",
+    "Can I engage MUN for just one of the services offered?",
+    "What is the cost of MUN's services?",
+    "How do I get started with MUN?",
+    "Can MUN help with funding or investor connections?",
+    "Do MUN offer any guarantees on results?",
+    "How flexible are MUN's service packages?",
+    "How does working with MUN compare to hiring in-house specialists?",
+    "How does MUN stay ahead in understanding market trends?",
+    "Do you provide resources or training for startup teams?",
+  ];
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const faqData = [
-    {
-      question: "Why should I join this club?",
-      answer:
-        "Welcome to our MUN Club, where we bring the world of Model United Nations to life! In our club, students take on the roles of delegates.",
-    },
-    {
-      question: "Do I have to pay a registration fee to join?",
-      answer: "No, joining the club is completely free!",
-    },
-    {
-      question: "What does this club offer?",
-      answer:
-        "The club offers a platform to engage in debates, develop public speaking skills, and network with peers.",
-    },
-    {
-      question: "How will this affect me?",
-      answer:
-        "You will gain invaluable skills in diplomacy, public speaking, and critical thinking.",
-    },
-  ];
-
   return (
-    <div className="flex flex-col items-center p-8 mt-4 space-y-10">
-      <h1 className="text-4xl font-bold text-gray-800">FAQ’s</h1>
-      <div className="w-full max-w-4xl  space-y-6">
-        {faqData.map((faq, index) => (
-          <div
-            key={index}
-            className="rounded-lg border-black-800 border-2 shadow-md  border-gray-200"
-          >
-            <button
-              className="w-full flex items-center justify-between p-4 text-left text-gray-800 font-medium hover:bg-blue-100"
-              onClick={() => toggleFAQ(index)}
-            >
-              <span>{faq.question}</span>
-              <span className="text-2xl">
-                {openIndex === index ? "▲" : "➕"}
-              </span>
-            </button>
-            {openIndex === index && (
-              <div className="p-4 bg-gray-100 text-gray-900">{faq.answer}</div>
-            )}
-          </div>
-        ))}
+    <div className="flex justify-center items-start min-h-screen mt-4 p-10 -mb-8">
+      <div className="border-4 shadow-md  rounded-3xl max-w-5xl flex flex-col md:flex-row items-start bg-white  overflow-hidden w-full">
+        {/* Left Section */}
+        <div className=" w-full md:w-1/3 p-8">
+          <h1 className="text-5xl font-semibold text-gray-800 ">
+            Any Questions?
+          </h1>
+        </div>
+
+        {/* Right Section */}
+        <div className="w-full border-l rounded-3xl shadow-md md:w-2/3 p-6">
+          {faqs.map((faq, index) => (
+            <div key={index} className="border-b border-gray-400 py-4">
+              <button
+                className="flex justify-between items-center w-full text-left text-gray-800 font-weight-700"
+                onClick={() => toggleFAQ(index)}
+              >
+                {faq}
+                <span className="text-3xl">
+                  {openIndex === index ? "-" : "+"}
+                </span>
+              </button>
+              {openIndex === index && (
+                <p className="mt-2 text-gray-600 text-md">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Curabitur pellentesque ultricies condimentum.
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -58,7 +58,9 @@ const EventTimeline = () => {
 
   return (
     <div className="min-h-screen bg-white  flex flex-col items-center px-4 py-8">
-      <h1 className="text-4xl font-bold mb-10 text-gray-800">Event Timeline</h1>
+      <h1 className="text-6xl font-semibold text-gray-800 mb-10 text-center container mx-auto">
+        Events Timeline
+      </h1>{" "}
       <div className="relative w-full max-w-4xl">
         {/* Vertical Line */}
         <div className="absolute  left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>

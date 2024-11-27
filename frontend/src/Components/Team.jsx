@@ -12,7 +12,7 @@ const OurTeam = () => {
 
   return (
     <div className="flex flex-col items-center space-y-12 mt-10">
-      <h1 className="text-4xl font-bold text-gray-800">Our Team</h1>
+      <h1 className="text-6xl font-bold text-gray-800">Our Team</h1>
       <div className="grid grid-cols-2 sm:grid-cols-6 gap-8 justify-items-center">
         {teamData.map((team, index) => (
           <div
