@@ -4,6 +4,7 @@ import vitbhopal_logo from "../assets/vitbhopal_logo.png";
 const Event = () => {
   return (
     <div className="font-sans bg-white min-h-screen">
+
       <section className="container mx-auto pl-6 py-12">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">
           Model Of United Nations
@@ -23,6 +24,7 @@ const Event = () => {
         </p>
 
         {/* Events Section */}
+
         <h2 className="text-3xl font-bold text-gray-800 mb-6">Events</h2>
         <div className="grid px-6 py-6 grid-cols-2 md:grid-cols-4 gap-6 border-solid border-[2.5px] rounded-l-3xl border-gray-300 border-r-0">
             {/* Event 1 */}
@@ -33,6 +35,7 @@ const Event = () => {
               <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 text-center">
                 MUN-MATE'24
               </h3>
+
             </div>
             {/* Event 2 */}
             <div className="flex flex-col justify-center items-center gap-3 hover:cursor-pointer">

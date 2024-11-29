@@ -33,7 +33,7 @@ const Header = () => {
             <a
               key={link}
               href={`#${link.toLowerCase().replace(" ", "")}`}
-              className="text-gray-700 text-lg font-bold hover:text-blue-600"
+              className="text-gray-700 text-xl font-bold hover:text-blue-600"
               style={{
                 fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
               }}
@@ -45,14 +45,14 @@ const Header = () => {
       </div>
 
       {/* Bottom Tagline Section */}
-      <div className="text-center">
+      <div className="text-center mt-4">
         <h1
-          className="text-blue-700 font-bold text-3xl"
+          className="text-blue-700 font-bold text-5xl"
           style={{ fontFamily: "'Host Grotesk', sans-serif" }}
         >
-          "Speak Up the world will know!"
+          Speak Up the world will know!
         </h1>
-        <p className="text-gray-600 font-medium">
+        <p className="text-gray-600 font-medium text-xl mt-1">
           VITBMUN Club | VIT Bhopal University
         </p>
       </div>
