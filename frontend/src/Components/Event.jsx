@@ -4,11 +4,11 @@ import vitbhopal_logo from "../assets/vitbhopal_logo.png";
 const Event = () => {
   return (
     <div className="font-sans bg-white min-h-screen">
-      <section className="container mx-auto px-6 py-12">
+      <section className="container mx-auto pl-6 py-12">
         <h2 className="text-3xl font-bold text-gray-800 mb-6">
           Model Of United Nations
         </h2>
-        <p className="text-gray-800 text-semibold leading-relaxed mb-12">
+        <p className="text-gray-800 text-semibold leading-relaxed mb-12 pr-3">
           Welcome to our MUN Club, where we bring the world of Model United
           Nations to life! In our club, students take on the roles of delegates
           representing diverse countries and organizations, engaging in spirited
@@ -24,86 +24,80 @@ const Event = () => {
 
         {/* Events Section */}
         <h2 className="text-3xl font-bold text-gray-800 mb-6">Events</h2>
-        <div className="grid px-6 py-6 grid-cols-1 md:grid-cols-3  gap-6 border-solid border-2 rounded-3xl border-gray-300">
-          {/* Event 1 */}
-          <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
+        <div className="grid px-6 py-6 grid-cols-2 md:grid-cols-4 gap-6 border-solid border-[2.5px] rounded-l-3xl border-gray-300 border-r-0">
+            {/* Event 1 */}
+            <div className="flex flex-col justify-center items-center gap-3 hover:cursor-pointer">
+              <div className="event_img w-[80%]">
+                <img src={vitbhopal_logo} alt="" className="rounded-3xl border-2 border-gray-300 shadow-xl" />
+              </div>
+              <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 text-center">
+                MUN-MATE'24
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold  text-gray-700 p-4">
-              MUN-MATE'24
-            </h3>
-          </div>
-          {/* Event 2 */}
-          <div className="bg-white border-black-800 border-2 shadow rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
+            {/* Event 2 */}
+            <div className="flex flex-col justify-center items-center gap-3 hover:cursor-pointer">
+              <div className="event_img w-[80%]">
+                <img src={vitbhopal_logo} alt="" className="rounded-3xl border-2 border-gray-300 shadow-xl" />
+              </div>
+              <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 text-center">
+                VITBMUN 3.0
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              VITBMUN 3.0
-            </h3>
-          </div>
-          {/* Event 3 */}
-          <div className="bg-white border-black-800 border-2 shadow rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
+            {/* Event 3 */}
+            <div className="flex flex-col justify-center items-center gap-3 hover:cursor-pointer">
+              <div className="event_img w-[80%]">
+                <img src={vitbhopal_logo} alt="" className="rounded-3xl border-2 border-gray-300 shadow-xl" />
+              </div>
+              <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 text-center">
+                Rajneeti Rangmanch
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              Rajneeti Rangmanch
-            </h3>
-          </div>
-          {/* Event 4 */}
-          <div className="bg-white shadow border-black-800 border-2 rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
+            {/* Event 4 */}
+            <div className="flex flex-col justify-center items-center gap-3 hover:cursor-pointer">
+              <div className="event_img w-[80%]">
+                <img src={vitbhopal_logo} alt="" className="rounded-3xl border-2 border-gray-300 shadow-xl" />
+              </div>
+              <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 text-center">
+                Chain Reaction Chase
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              Chain Reaction Chase
-            </h3>
-          </div>
-          {/* Event 5 */}
-          <div className="bg-white shadow border-black-800 border-2 rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
+            {/* Event 5 */}
+            <div className="flex flex-col justify-center items-center gap-3 hover:cursor-pointer">
+              <div className="event_img w-[80%]">
+                <img src={vitbhopal_logo} alt="" className="rounded-3xl border-2 border-gray-300 shadow-xl" />
+              </div>
+              <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 text-center">
+                Rajneet '24
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              Rajneet '24
-            </h3>
-          </div>
-          {/* Event 6 */}
-          <div className="bg-white shadow border-black-800 border-2 rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />{" "}
+            {/* Event 6 */}
+            <div className="flex flex-col justify-center items-center gap-3 hover:cursor-pointer">
+              <div className="event_img w-[80%]">
+                <img src={vitbhopal_logo} alt="" className="rounded-3xl border-2 border-gray-300 shadow-xl" />
+              </div>
+              <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 text-center">
+                Event Name
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              Event Name
-            </h3>
+            {/* Event 7 */}
+            <div className="flex flex-col justify-center items-center gap-3 hover:cursor-pointer">
+              <div className="event_img w-[80%]">
+                <img src={vitbhopal_logo} alt="" className="rounded-3xl border-2 border-gray-300 shadow-xl" />
+              </div>
+              <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 text-center">
+                Event Name
+              </h3>
+            </div>
+            {/* Event 8 */}
+            <div className="flex flex-col justify-center items-center gap-3 hover:cursor-pointer">
+              <div className="event_img w-[80%]">
+                <img src={vitbhopal_logo} alt="" className="rounded-3xl border-2 border-gray-300 shadow-xl" />
+              </div>
+              <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 text-center">
+                Event 8
+              </h3>
+            </div>
           </div>
-        </div>
       </section>
     </div>
   );
