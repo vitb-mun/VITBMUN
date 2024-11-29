@@ -50,7 +50,7 @@ const Event = () => {
           Nations to life! In our club, students take on the roles of delegates
           representing diverse countries and organizations, engaging in spirited
           debates, negotiations, and crafting solutions to global challenges.
-          At MUN Club, we're more than just a simulation – we're a vibrant
+          At MUN Club, we're more than just a simulation - we're a vibrant
           community dedicated to fostering a deeper understanding of
           international affairs and honing invaluable skills in diplomacy,
           public speaking, and critical thinking. Whether you're a seasoned
@@ -67,11 +67,11 @@ const Event = () => {
             infinite={true}
             autoPlay={true}
             keyBoardControl={true}
-            containerClass="carousel-container" // Add padding at the bottom to prevent overlap
+            containerClass="carousel-container"
             itemClass="carousel-item-padding-40-px"
             customTransition="transform 300ms ease-in-out"
-            arrows={true} // Ensure navigation buttons are enabled
-            renderButtonGroupOutside={true} // Moves buttons outside the carousel
+            arrows={true}
+            renderButtonGroupOutside={true}
             className="pt-12"
           >
             {events.map((event) => (
