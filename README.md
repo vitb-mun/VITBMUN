@@ -3,11 +3,7 @@
 
 Welcome to the VIT Bhopal Model United Nations (VITBMUN)official website repository! This project showcases our club's activities, events, team, and sponsorship packages, providing a comprehensive platform for engaging with the world of Model United Nations.
 
-## Demo
 
-- Event Listings: View and register for MUN events.
-- Sponsorship Opportunities: Learn about and contribute as a sponsor.
-- Dynamic FAQ Section: Provides insights into the club's operations.
 
 
 ## Documentation
@@ -53,29 +49,9 @@ Responsive Design: Optimized for various devices and screen sizes to ensure a sm
 Interactive Elements: Includes clickable event details, expandable FAQs, and a contact form for inquiries.
 
 ---
-Future Optimizations
-
-Integrating dynamic elements like real-time event updates or user registration.
-Enhancing accessibility for users with disabilities.
-Incorporating animations to improve user engagement.
-## API Reference
-
-Currently, the website does not include external API integrations. Future updates may integrate APIs for event registrations and live updates.
-
-
-## Authors
-
-Team Members: Secretariat, Design, Content, Photography, PR, Technical teams.
 
 
 
-## FAQ
-
-What is VITBMUN?
-
-VITBMUN is a student club that simulates the Model United Nations experience.
-
-For more, visit FAQ Section.
 
 ## Features
 
@@ -115,15 +91,7 @@ Your input makes a difference, and we’re committed to making VITBMUN even bett
 
 
 
-## Optimizations
 
-Current Optimizations-
-Minified CSS and JavaScript for faster load times.
-Image optimization for better performance.
-
-Future Plans-
-API integration for dynamic updates.
-Chatbot for live support.
 
 
 ## Support
@@ -141,9 +109,6 @@ React: For building interactive and dynamic user interfaces.
 Tailwind CSS: For efficient styling and responsive design.
 
 GSAP (GreenSock Animation Platform): For smooth and engaging animations to improve user interaction.
-## Running Tests
-
-Testing is currently manual. Future updates will include automated tests.
 
 ## Used By
 
@@ -153,13 +118,5 @@ Sponsors: Local and international businesses.
 Faculty and Alumni: As guides and supporters.
 
 
-## Lessons Learned
 
-This project taught us about:
-
--> Effective teamwork and collaboration
-
--> Web design and responsiveness
-
--> Managing event details dynamically
 
