@@ -1,42 +1,5 @@
 import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import vitbhopal_logo from "../assets/vitbhopal_logo.png";
-import './css/event.css'
-
-const events = [
-  { id: 1, title: "MUN-MATE'24", imageSrc: vitbhopal_logo },
-  { id: 2, title: "VITBMUN 3.0", imageSrc: vitbhopal_logo },
-  { id: 3, title: "Rajneeti Rangmanch", imageSrc: vitbhopal_logo },
-  { id: 4, title: "Chain Reaction Chase", imageSrc: vitbhopal_logo },
-  { id: 5, title: "Rajneet '24", imageSrc: vitbhopal_logo },
-  { id: 6, title: "Event Name", imageSrc: vitbhopal_logo },
-  { id: 7, title: "Event Name", imageSrc: vitbhopal_logo },
-  { id: 8, title: "Event 8", imageSrc: vitbhopal_logo },
-];
-
-const responsive = {
-  superLargeDesktop: {
-    // screens >= 1440px
-    breakpoint: { max: 3000, min: 1440 },
-    items: 3,
-  },
-  desktop: {
-    // screens >= 1024px
-    breakpoint: { max: 1440, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    // screens >= 768px
-    breakpoint: { max: 1024, min: 768 },
-    items: 2,
-  },
-  mobile: {
-    // screens < 768px
-    breakpoint: { max: 768, min: 0 },
-    items: 1,
-  },
-};
 
 const Event = () => {
   return (
@@ -45,18 +8,18 @@ const Event = () => {
         <h2 className="text-4xl font-bold text-gray-800 mb-6">
           Model Of United Nations
         </h2>
-        <p className="text-gray-800 text-semibold leading-relaxed mb-12 pr-3">
+        <p className="text-gray-800 text-lg text-semibold leading-relaxed mb-12">
           Welcome to our MUN Club, where we bring the world of Model United
           Nations to life! In our club, students take on the roles of delegates
           representing diverse countries and organizations, engaging in spirited
-          debates, negotiations, and crafting solutions to global challenges.
-          At MUN Club, we're more than just a simulation - we're a vibrant
+          debates, negotiations, and crafting solutions to global challenges. At
+          MUN Club, we're more than just a simulation – we're a vibrant
           community dedicated to fostering a deeper understanding of
           international affairs and honing invaluable skills in diplomacy,
           public speaking, and critical thinking. Whether you're a seasoned
           delegate or new to the MUN scene, our club offers a supportive
           environment where members can learn, grow, and make lasting
-          connections.
+          connections
         </p>
 
         {/* Events Section */}

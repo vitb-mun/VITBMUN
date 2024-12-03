@@ -1,4 +1,5 @@
 import React from "react";
+import vitbmun_logo from "../assets/vitbmun_logo.svg";
 
 const FacultyInfo = () => {
   const coordinators = [
@@ -31,36 +32,16 @@ const FacultyInfo = () => {
         {coordinators.map((coordinator, index) => (
           <div
             key={index}
-            className="bg-white shadow-xl border-4 border-gray-300 rounded-3xl w-72 p-4"
+            className="w-full sm:w-96 bg-white shadow-lg rounded-lg p-6 text-center"
           >
-            {/* Placeholder for image */}
-            <div className="bg-gray-200 h-36 rounded-xl mb-5"></div>
-
-            {/* Name and Role */}
-            <h2 className="text-2xl font-semibold text-gray-800">
-              {coordinator.name}
-            </h2>
-            <p className="text-md font-medium text-gray-500 mb-4">
-              {coordinator.role}
-            </p>
-
-            {/* Description */}
-            <p className="text-md text-gray-600 mb-4">
-              {coordinator.description}
-            </p>
-
-            {/* Learn More Button */}
-            <div className="flex justify-between items-center">
-              <button className="text-blue-600 font-medium hover:underline">
-                Learn More
-              </button>
-              {/* Placeholder for pagination dots */}
-              <div className="flex space-x-1">
-                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
-                <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
-              </div>
-            </div>
+            <img
+              src={vitbmun_logo}
+              alt={`Coordinator ${coordinator.name}`}
+              className="w-24 h-24 rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">{coordinator.name}</h3>
+            <p className="text-lg text-gray-600">{coordinator.role}</p>
+            <p className="text-gray-600 mt-4">{coordinator.description}</p>
           </div>
         ))}
       </div>
