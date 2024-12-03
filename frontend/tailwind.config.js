@@ -7,6 +7,7 @@ module.exports = withMT({
     extend: {
       animation: {
         marquee: "marquee 10s linear infinite",
+        pulse: "pulse 1.5s infinite",
       },
       keyframes: {
         marquee: {
