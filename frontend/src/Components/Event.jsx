@@ -42,7 +42,7 @@ const Event = () => {
   return (
     <div className="font-sans bg-white min-h-screen">
       <section className="container mx-auto pl-6 py-12">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+        <h2 className="text-4xl font-bold text-gray-800 mb-6">
           Model Of United Nations
         </h2>
         <p className="text-gray-800 text-semibold leading-relaxed mb-12 pr-3">
@@ -61,7 +61,7 @@ const Event = () => {
 
         {/* Events Section */}
         <div className="event-section">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Events</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">Events</h2>
           <Carousel
             responsive={responsive}
             infinite={true}
@@ -77,13 +77,13 @@ const Event = () => {
             {events.map((event) => (
               <div
                 key={event.id}
-                className="flex flex-col justify-center items-center gap-3  px-4"
+                className="flex flex-col justify-center items-center gap-3  px-4 mx-auto"
               >
-                <div className="event_img w-[85%]">
+                <div className="event_img w-[80%]">
                   <img
                     src={event.imageSrc}
                     alt={event.title}
-                    className="rounded-3xl border-2 border-gray-300 shadow-xl h-52"
+                    className="rounded-3xl border-2 border-gray-300 shadow-xl mx-auto"
                   />
                 </div>
                 <h3 className="text-gray-700 text-lg font-semibold p-2 hover:text-blue-600 hover:cursor-pointer text-center">
