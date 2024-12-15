@@ -17,7 +17,7 @@ const ContentTeam = () => {
         </header>
 
         {/* Content Section */}
-        <div className="flex gap-8">
+        <div className="flex gap-8 flex-col md:flex-row">
           {/* About Section */}
           <div className="flex-[0_0_40%] bg-white rounded-[40px] shadow-2xl p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">About</h2>
