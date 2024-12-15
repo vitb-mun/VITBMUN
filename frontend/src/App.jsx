@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import Layout from "../src/Layout/Layout";
+import Team from "./Components/Team"
 import TechTeamLayout from "./Layout/TeamLayout/TechTeamLayout";
 import ContentTeamLayout from "./Layout/TeamLayout/ContentTeamLayout";
 import SecretariatTeamLayout from "./Layout/TeamLayout/SecretariatTeamLayout";
@@ -19,6 +20,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Layout></Layout>}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/Team" element={<Team></Team>}></Route>
         </Routes>
         <Routes>
           <Route

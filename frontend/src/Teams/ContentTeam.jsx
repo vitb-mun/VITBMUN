@@ -12,15 +12,15 @@ const ContentTeam = () => {
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-4xl font-bold text-gray-800">Content Team</h1>
-          <p className="text-gray-500">VITB MUN Club / Teams / Team Name</p>
+          <p className="text-gray-500">VITB MUN Club / Teams / <span className="font-bold">Team Name</span></p>
           <hr className="mt-4 border-gray-300" />
         </header>
 
         {/* Content Section */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="flex gap-8">
           {/* About Section */}
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">About</h2>
+          <div className="flex-[0_0_40%] bg-white rounded-[40px] shadow-2xl p-6">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">About</h2>
             <div className="bg-gray-200 h-40 rounded-md flex items-center justify-center mb-4">
               <span className="text-gray-500">Group Picture?</span>
             </div>
@@ -52,23 +52,25 @@ const ContentTeam = () => {
           </div>
 
           {/* Team Section */}
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Team</h2>
-            <div className="grid grid-cols-3 gap-4">
+          <div className="flex-[0_0_60%] rounded-lg p-6">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Team</h2>
+            <div className="flex flex-wrap gap-4 justify-center">
               {[
                 { name: "Member 1", role: "Lead" },
-                { name: "Member 1", role: "Co-Lead" },
-                { name: "Member 1", role: "Member" },
-                { name: "Member 1", role: "Member" },
-                { name: "Member 1", role: "Member" },
-                { name: "Member 1", role: "Member" },
+                { name: "Member 2", role: "Co-Lead" },
+                { name: "Member 3", role: "Member" },
+                { name: "Member 4", role: "Member" },
+                { name: "Member 5", role: "Member" },
+                { name: "Member 6", role: "Member" },
               ].map((member, index) => (
                 <div
                   key={index}
-                  className="bg-gray-200 rounded-lg p-4 flex flex-col items-center"
+                  className="rounded-lg p-4 flex flex-col items-center"
                 >
-                  <div className="bg-gray-300 h-16 w-16 rounded-full mb-4"></div>
-                  <p className="text-gray-800 font-semibold">{member.name}</p>
+                  <div className="bg-gray-300 h-28 w-28 mb-4 rounded-xl">
+                    <img src="" alt="" />
+                  </div>
+                  <p className="text-gray-800 font-bold text-lg">{member.name}</p>
                   <p className="text-gray-500 text-sm">{member.role}</p>
                 </div>
               ))}

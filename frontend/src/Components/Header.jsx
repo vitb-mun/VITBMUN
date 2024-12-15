@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import vitbhopal_logo from "../assets/vitbhopal_logo.png";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
 import UN_Assembly from "../assets/UN_Assembly.jpg";
 
 const Header = () => {
   return (
-    <div className="bg-white  shadow-sm">
+    <div className="bg-white shadow-sm">
       {/* Top Header Section */}
       <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
         {/* Logos */}
@@ -30,16 +31,16 @@ const Header = () => {
             "FAQs",
             "Contact Us",
           ].map((link) => (
-            <a
+            <Link
               key={link}
-              href={`#${link.toLowerCase().replace(" ", "")}`}
+              to={`/${link.toLowerCase().replace(" ", "")}`}
               className="text-gray-700 text-xl font-bold hover:text-blue-600"
               style={{
                 fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
               }}
             >
               {link}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
