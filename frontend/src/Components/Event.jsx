@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import vitbhopal_logo from "../assets/vitbhopal_logo.png";
 
 const Event = () => {
@@ -19,14 +20,14 @@ const Event = () => {
           public speaking, and critical thinking. Whether you're a seasoned
           delegate or new to the MUN scene, our club offers a supportive
           environment where members can learn, grow, and make lasting
-          connections
+          connections.
         </p>
 
         {/* Events Section */}
         <h2 className="text-5xl font-bold text-gray-800 mb-6">Events</h2>
-        <div className="grid px-6 py-6 grid-cols-1 md:grid-cols-3  gap-6 border-solid border-2 rounded-3xl border-gray-300">
+        <div className="grid px-6 py-6 grid-cols-1 md:grid-cols-3 gap-6 border-solid border-2 rounded-3xl border-gray-300">
           {/* Event 1 */}
-          <a href="/MUN-MATE" className="block">
+          <Link to="/MUN-MATE" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
               <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
                 <img
@@ -39,8 +40,8 @@ const Event = () => {
                 MUN-MATE'24
               </h3>
             </div>
-          </a>
-          <a href="/VITBMUN" className="block">
+          </Link>
+          <Link to="/VITBMUN" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
               <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
                 <img
@@ -53,8 +54,8 @@ const Event = () => {
                 VITBMUN
               </h3>
             </div>
-          </a>
-          <a href="/RajneetiRangmanch" className="block">
+          </Link>
+          <Link to="/RajneetiRangmanch" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
               <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
                 <img
@@ -67,8 +68,8 @@ const Event = () => {
                 Rajneeti Rangmanch
               </h3>
             </div>
-          </a>
-          <a href="/ChainReactionChase" className="block">
+          </Link>
+          <Link to="/ChainReactionChase" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
               <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
                 <img
@@ -81,7 +82,7 @@ const Event = () => {
                 Chain Reaction Chase
               </h3>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
     </div>
