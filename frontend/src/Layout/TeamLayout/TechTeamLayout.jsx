@@ -1,11 +1,13 @@
-import Header from "../../Components/Header";
+import TeamHeader from "../../Components/TeamHeader";
 import Footer from "../../Components/Footer";
 import TechTeam from "../../Teams/TechTeam";
+import Test from "../../Components/test";
 const TechTeamLayout = () => {
   return (
     <div>
-      <Header></Header>
+      <TeamHeader></TeamHeader>
       <TechTeam></TechTeam>
+      <Test></Test>
       <Footer></Footer>
     </div>
   );

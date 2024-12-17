@@ -26,83 +26,62 @@ const Event = () => {
         <h2 className="text-5xl font-bold text-gray-800 mb-6">Events</h2>
         <div className="grid px-6 py-6 grid-cols-1 md:grid-cols-3  gap-6 border-solid border-2 rounded-3xl border-gray-300">
           {/* Event 1 */}
-          <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
+          <a href="/MUN-MATE" className="block">
+            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+              <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
+                <img
+                  src={vitbhopal_logo}
+                  className="h-24 w-auto"
+                  alt="VIT Bhopal Logo"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-700 p-4">
+                MUN-MATE'24
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold  text-gray-700 p-4">
-              MUN-MATE'24
-            </h3>
-          </div>
-          {/* Event 2 */}
-          <div className="bg-white border-black-800 border-2 shadow rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
+          </a>
+          <a href="/VITBMUN" className="block">
+            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+              <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
+                <img
+                  src={vitbhopal_logo}
+                  className="h-24 w-auto"
+                  alt="VIT Bhopal Logo"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-700 p-4">
+                VITBMUN
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              VITBMUN 3.0
-            </h3>
-          </div>
-          {/* Event 3 */}
-          <div className="bg-white border-black-800 border-2 shadow rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
+          </a>
+          <a href="/RajneetiRangmanch" className="block">
+            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+              <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
+                <img
+                  src={vitbhopal_logo}
+                  className="h-24 w-auto"
+                  alt="VIT Bhopal Logo"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-700 p-4">
+                Rajneeti Rangmanch
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              Rajneeti Rangmanch
-            </h3>
-          </div>
-          {/* Event 4 */}
-          <div className="bg-white shadow border-black-800 border-2 rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
+          </a>
+          <a href="/ChainReactionChase" className="block">
+            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+              <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
+                <img
+                  src={vitbhopal_logo}
+                  className="h-24 w-auto"
+                  alt="VIT Bhopal Logo"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-700 p-4">
+                Chain Reaction Chase
+              </h3>
             </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              Chain Reaction Chase
-            </h3>
-          </div>
-          {/* Event 5 */}
-          <div className="bg-white shadow border-black-800 border-2 rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              Rajneet '24
-            </h3>
-          </div>
-          {/* Event 6 */}
-          <div className="bg-white shadow border-black-800 border-2 rounded-lg overflow-hidden">
-            <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
-              <img
-                src={vitbhopal_logo}
-                className="h-24 w-auto"
-                alt="VIT Bhopal Logo"
-              />{" "}
-            </div>
-            <h3 className="text-lg font-semibold text-gray-700 p-4">
-              Event Name
-            </h3>
-          </div>
+          </a>
         </div>
       </section>
     </div>

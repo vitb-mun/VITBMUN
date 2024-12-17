@@ -4,7 +4,6 @@ import SecretariatTeam from "../../Teams/SecretariatTeam";
 const SecretariatTeamLayout = () => {
   return (
     <div>
-      <Header></Header>
       <SecretariatTeam></SecretariatTeam>
       <Footer></Footer>
     </div>

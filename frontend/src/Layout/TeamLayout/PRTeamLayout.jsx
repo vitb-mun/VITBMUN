@@ -4,7 +4,6 @@ import PRTeam from "../../Teams/PRTeam";
 const PRTeamLayout = () => {
   return (
     <div>
-      <Header></Header>
       <PRTeam></PRTeam>
       <Footer></Footer>
     </div>

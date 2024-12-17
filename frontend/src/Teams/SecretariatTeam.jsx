@@ -12,7 +12,7 @@ const SecretariatTeam = () => {
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-4xl font-bold text-gray-800">Secretariat Team</h1>
-          <p className="text-gray-500">VITB MUN Club / Teams / Team Name</p>
+          <p className="text-gray-500">VITB MUN Club / Teams</p>
           <hr className="mt-4 border-gray-300" />
         </header>
 

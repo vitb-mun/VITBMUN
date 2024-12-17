@@ -4,7 +4,6 @@ import PhotographyTeam from "../../Teams/PhotographyTeam";
 const PhotographyTeamLayout = () => {
   return (
     <div>
-      <Header></Header>
       <PhotographyTeam></PhotographyTeam>
       <Footer></Footer>
     </div>
