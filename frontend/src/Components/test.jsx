@@ -1,49 +1,46 @@
 import React from "react";
+import "./GSD.css"
+import image from "../assets/image.png"
+import teams from "../assets/teams.json"
 
-const Team = () => {
+const TeamDetails = ({member}) => {
   return (
-    <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
-      <div className="container mx-auto">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="mx-auto mb-[60px] max-w-[510px] text-center">
-              <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
-                Our Awesome Team
-              </h2>
-              <p className="text-base text-body-color dark:text-dark-6">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
-              </p>
-            </div>
-          </div>
-        </div>
+    <div className="team-item auto_show">
+                    <div className="team-inner">
+                        <img src={image} alt="Some Random Image" />
+                        <div className="team-info">
+                            <h3>{member.name}</h3>
+                            <p>{member.position}</p>
+                            <ul className="social_icons">
+                                <li><a href="https://www.instagram.com"><i className="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="hhhh"><i className="fab fa-github"></i></a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>)
 
-        <div className="-mx-4 flex flex-wrap justify-center">
-          <TeamCard
-            name="Coriss Ambady"
-            profession="Web Developer"
-            imageSrc="https://i.ibb.co/T1J9LD4/image-03-2.jpg"
-          />
-          <TeamCard
-            name="Coriss Ambady"
-            profession="Web Developer"
-            imageSrc="https://i.ibb.co/8P6cvVy/image-01-1.jpg"
-          />
-          <TeamCard
-            name="Coriss Ambady"
-            profession="Web Developer"
-            imageSrc="https://i.ibb.co/30tGtjP/image-04.jpg"
-          />
-          <TeamCard
-            name="Coriss Ambady"
-            profession="Web Developer"
-            imageSrc="https://i.ibb.co/yVVT0Dp/image-02-2.jpg"
-          />
+}
+
+const Team = ({team_id}) => {
+  const team = teams[team_id]
+  const member_html = team.members.map((member,index) => <TeamDetails key={index} member={member} />)
+  return (
+    <>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></link>
+      <section className="team">
+        <div className="container">
+            <div className="team-list">
+                {member_html}
+            </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
+
+
 
 export default Team;
 

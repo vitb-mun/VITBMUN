@@ -1,0 +1,178 @@
+{
+  "0": {
+    "name": "Technical Team",
+    "description": "The Technical Team is responsible for creating and managing the technical aspects of the VITBMUN website and social media platforms.",
+    "members": [
+      { "image":"test",
+        "name": "Person 1",
+        "position": "Position 1",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 2",
+        "position": "Position 2",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 3",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      }
+    ]
+  },
+  "1": {
+    "name": "Content Team",
+    "description": "The Content Team is responsible for creating and managing the content for the VITBMUN website and social media platforms.",
+    "members": [
+      {
+        "name": "Person 1",
+        "position": "Position 1",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 2",
+        "position": "Position 2",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 3",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 2",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 3",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      }
+    ]
+  },
+  "2": {
+    "name": "Design Team",
+    "description": "The Design Team is responsible for creating and managing the design for the VITBMUN website and social media platforms.",
+    "members": [
+      {
+        "name": "Person 3",
+        "position": "Position 1",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 2",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 3",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      }
+    ]
+  },
+  "3": {
+    "name": "Public Relations Team",
+    "description": "The Public Relations Team is responsible for creating and managing the public relations for the VITBMUN website and social media platforms.",
+    "members": [
+      {
+        "name": "Person 3",
+        "position": "Position 1",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 2",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 3",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      }
+    ]
+  },
+  "4": {
+    "name": "Secretariat Team",
+    "description": "The Secretariat Team is responsible for creating and managing the secretariat for the VITBMUN website and social media platforms.",
+    "members": [
+      {
+        "name": "Person 3",
+        "position": "Position 1",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 2",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 3",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      }
+    ]
+  },
+  "5": {
+    "name": "Photography Team",
+    "description": "The Photography Team is responsible for creating and managing the photography for the VITBMUN website and social media platforms.",
+    "members": [
+      {
+        "name": "Person 3",
+        "position": "Position 1",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 2",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      },
+      {
+        "name": "Person 3",
+        "position": "Position 3",
+        "linkedIn": "",
+        "instagram": "",
+        "twitter": ""
+      }
+    ]
+  }
+}

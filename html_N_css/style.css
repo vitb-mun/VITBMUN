@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.team{
+    padding: 100px 0;
+}
+.team-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px;
+}
+
+.team-item{
+    position: relative;
+    overflow: hidden;
+}
+.team-item::before,
+.team-item::after,
+.team-inner::before,
+.team-inner::after
+{
+    content: '';
+    position: absolute;
+    background-color:white;
+    z-index: 1;
+    transition: 0.3s;
+
+}
+.team-item::before,
+.team-item::after{
+    height: 3px;
+    width: 0;
+    transition-delay: 0.3s;
+}
+.team-item::before{
+    top: 20px;
+    left: 20px;
+}
+.team-item::after{
+    bottom: 20px;
+    right: 20px;
+}
+.team-item:hover::before,
+.team-item:hover::after
+{
+    width: calc(100% - 40px);
+    transition-delay: 0s;
+}
+
+.team-inner::before,
+.team-inner::after{
+    width: 3px;
+    height: 0;
+}
+.team-inner::before{
+    right:20px;
+    top: 20px;
+}
+.team-inner::after{
+    left: 20px;
+    bottom: 20px;
+}
+.team-item:hover .team-inner::before,
+.team-item:hover .team-inner::after{
+    height: calc(100% - 40px);
+    transition-delay: 0s;
+}
+
+.team-item img{
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+    filter: grayscale(1);
+}
+.team-item:hover img{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+.team-info{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(calc(-50% + 20px));
+    z-index: 2;
+    text-align: center;
+    text-transform: capitalize;
+    color:hsl(0,0%,100%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.team-item:hover .team-info{
+    opacity: 1;
+    transform: translateY(-50% + 0px);
+    transition-delay: 0.3s;
+}
+
+.team-info h3{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* For social icons */
+.social_icons li a{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    
+}
+.social_icons li a:hover{
+    transform: translateY(-10px);
+}
+.social_icons{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.team-item::after{
+
+}

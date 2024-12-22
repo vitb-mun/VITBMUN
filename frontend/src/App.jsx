@@ -4,18 +4,12 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-
 import Layout from "../src/Layout/Layout";
-import TechTeamLayout from "./Layout/TeamLayout/TechTeamLayout";
-import ContentTeamLayout from "./Layout/TeamLayout/ContentTeamLayout";
-import SecretariatTeamLayout from "./Layout/TeamLayout/SecretariatTeamLayout";
-import DesignTeamLayout from "./Layout/TeamLayout/DesignTeamLayout";
-import PRTeamLayout from "./Layout/TeamLayout/PRTeamLayout";
-import PhotographyTeamLayout from "./Layout/TeamLayout/PhotographyTeamLayout";
 import MUNMATELayout from "./Layout/EventLayout/MUNMATELayout";
 import VITBMUNLayout from "./Layout/EventLayout/VITBMUNLayout";
 import RajneetiRangmanchLayout from "./Layout/EventLayout/RajneetiRangmanchLayout";
 import ChainReactionChaseLayout from "./Layout/EventLayout/ChainReactionChaseLayout";
+import Team_detail_view from "./Components/team_detail_view";
 
 function App() {
   return (
@@ -45,24 +39,27 @@ function App() {
         <Routes>
           <Route
             path="/TechTeam"
-            element={<TechTeamLayout></TechTeamLayout>}
+            element={<Team_detail_view team_id={0}></Team_detail_view>}
           ></Route>
           <Route
             path="/ContentTeam"
-            element={<ContentTeamLayout></ContentTeamLayout>}
-          ></Route>
-          <Route
-            path="/SecretariatTeam"
-            element={<SecretariatTeamLayout></SecretariatTeamLayout>}
+            element={<Team_detail_view team_id={1}></Team_detail_view>}
           ></Route>
           <Route
             path="/DesignTeam"
-            element={<DesignTeamLayout></DesignTeamLayout>}
+            element={<Team_detail_view team_id={2}></Team_detail_view>}
           ></Route>
-          <Route path="/PRTeam" element={<PRTeamLayout></PRTeamLayout>}></Route>
+          <Route
+            path="/PRTeam"
+            element={<Team_detail_view team_id={3}></Team_detail_view>}
+          ></Route>
+          <Route
+            path="/SecretariatTeam"
+            element={<Team_detail_view team_id={4}></Team_detail_view>}
+          ></Route>
           <Route
             path="/PhotographyTeam"
-            element={<PhotographyTeamLayout></PhotographyTeamLayout>}
+            element={<Team_detail_view team_id={5}></Team_detail_view>}
           ></Route>
         </Routes>
       </Router>
