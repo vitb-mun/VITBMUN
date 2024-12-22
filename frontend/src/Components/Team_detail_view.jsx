@@ -41,7 +41,7 @@ const Member_detail = ({ member }) => {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="{}">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </li>
