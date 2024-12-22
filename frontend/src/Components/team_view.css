@@ -1,7 +1,7 @@
 .container{
     max-width: 1170px;
     margin: 0 auto;
-    padding: 0 15px;
+   
 }
 .team{
     padding: 100px 0;
@@ -10,12 +10,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 40px;
+
 }
 
 .team-item{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    max-width: 260px;
 }
 .team-item::before,
 .team-item::after,
@@ -168,3 +170,20 @@
         transform: translateY(110%);
     }
 }
+
+@keyframes slideUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .heading {
+    animation: slideUp 1s ease-out;
+  }
+  
+  
