@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import vitbhopal_logo from "../assets/vitbhopal_logo.png";
-import tech_team from "../assets/tech_team.jpg";
-import photo_team from "../assets/photo_team.jpg";
+import tech_team from "../assets/Tech_Team.jpg";
+import photo_team from "../assets/Photo_Team.jpg";
 import pr_Team from "../assets/PR_Team.jpg";
 import content_Team from "../assets/Content_Team.jpg";
 import design_Team from "../assets/Design_Team.jpg";

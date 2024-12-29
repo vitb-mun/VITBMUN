@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import vitbhopal_logo from "../assets/vitbhopal_logo.png";
 import diagloue_logo from "../assets/Diagloue.png";
 import rajneeti_logo from "../assets/Rajneeti.png";
 
