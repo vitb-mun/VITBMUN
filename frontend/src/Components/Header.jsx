@@ -50,7 +50,7 @@ const Header = () => {
           className="text-blue-700 font-bold text-5xl"
           style={{ fontFamily: "'Host Grotesk', sans-serif" }}
         >
-          Speak Up the world will know!
+          Speak up the World will know!
         </h1>
         <p className="text-gray-600 font-medium text-xl mt-1">
           VITBMUN Club | VIT Bhopal University
@@ -68,17 +68,22 @@ const Header = () => {
 
       {/* Buttons Section */}
       <div className="container mx-auto px-2 py-4 flex justify-center space-x-4">
-        {["Vichaar Vivad", "Newsletter"].map((btn) => (
-          <button
-            key={btn}
-            className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg border-black-800 border-2 hover:bg-blue-600"
-            style={{
-              fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
-            }}
-          >
-            {btn}
-          </button>
-        ))}
+        <button
+          className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg border-black-800 border-2 hover:bg-blue-600"
+          style={{
+            fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
+          }}
+        >
+          Vichaar Vivad
+        </button>
+        <button
+          className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg border-black-800 border-2 hover:bg-blue-600"
+          style={{
+            fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
+          }}
+        >
+          Newsletter
+        </button>
       </div>
       <br></br>
     </div>

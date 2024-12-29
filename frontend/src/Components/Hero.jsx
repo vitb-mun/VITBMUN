@@ -5,6 +5,7 @@ import FacultyInfo from "./FacultyInfo";
 import Team from "./Team";
 import FAQ from "./FAQs";
 import Sponsors from "./Sponsors";
+//import Test from "./test";
 
 const Hero = () => {
   return (

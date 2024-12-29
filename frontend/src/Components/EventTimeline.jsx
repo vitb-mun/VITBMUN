@@ -57,11 +57,14 @@ const EventTimeline = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white  flex flex-col items-center px-4 py-8">
-      <h1 className="text-6xl font-semibold text-gray-800 mb-10 text-center container mx-auto">
+    <div className="bg-white  flex flex-col items-center px-4 py-8">
+      <h1
+        className="text-6xl font-bold text-gray-800 mb-10 text-center container mx-auto"
+        style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+      >
         Events Timeline
       </h1>{" "}
-      <div className="relative w-full max-w-4xl">
+      <div className="relative">
         {/* Vertical Line */}
         <div className="absolute  left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
 
@@ -85,12 +88,11 @@ const EventTimeline = () => {
             </div>
 
             {/* Event Card */}
-            <div className="bg-white shadow-lg  border-black-800 border-2 rounded-lg p-5 mt-3 w-3/4 md:w-1/2">
+            <div className="bg-white shadow-lg  border-black-800 border-2 rounded-lg p-5 mt-3 w-3/4 md:w-8/12">
               <h2 className="text-xl font-semibold text-gray-800">
                 {event.title}
               </h2>
-              <p className="text-sm text-gray-500">{event.date}</p>
-              <p className="text-sm text-gray-500">{event.time}</p>
+
               <p className="text-gray-700 mt-2">{event.description}</p>
               <div className="container mx-auto px-2 py-4 flex justify-center space-x-4">
                 {["More"].map((btn) => (

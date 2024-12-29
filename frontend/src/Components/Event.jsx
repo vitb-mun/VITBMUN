@@ -1,15 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import vitbhopal_logo from "../assets/vitbhopal_logo.png";
+import diagloue_logo from "../assets/Diagloue.png";
+import rajneeti_logo from "../assets/Rajneeti.png";
 
 const Event = () => {
   return (
-    <div className="font-sans bg-white min-h-screen">
+    <div className="font-sans bg-white ">
       <section className="container mx-auto px-6 py-12">
-        <h2 className="text-5xl font-bold text-gray-800 mb-6">
+        <h2
+          className="text-5xl font-bold text-gray-800 mb-6"
+          style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+        >
           Model Of United Nations
         </h2>
-        <p className="text-gray-800 text-lg text-semibold leading-relaxed mb-12">
+        <p className="text-gray-800 text-xl text-bold leading-relaxed mb-12">
           Welcome to our MUN Club, where we bring the world of Model United
           Nations to life! In our club, students take on the roles of delegates
           representing diverse countries and organizations, engaging in spirited
@@ -24,61 +29,78 @@ const Event = () => {
         </p>
 
         {/* Events Section */}
-        <h2 className="text-5xl font-bold text-gray-800 mb-6">Events</h2>
-        <div className="grid px-6 py-6 grid-cols-1 md:grid-cols-3 gap-6 border-solid border-2 rounded-3xl border-gray-300">
+        <h2
+          className="text-5xl font-bold text-gray-800 mb-6"
+          style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+        >
+          Events
+        </h2>
+        <div className="grid px-1 py-1 grid-cols-1 md:grid-cols-4 gap-6  rounded-3xl border-gray-300">
           {/* Event 1 */}
           <Link to="/MUN-MATE" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
+              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
                 <img
-                  src={vitbhopal_logo}
-                  className="h-24 w-auto"
+                  src={diagloue_logo}
+                  className="h-full w-full object-cover"
                   alt="VIT Bhopal Logo"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-700 p-4">
-                MUN-MATE'24
+              <h3
+                className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
+                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+              >
+                MUNMATE'24
               </h3>
             </div>
           </Link>
           <Link to="/VITBMUN" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
+              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
                 <img
-                  src={vitbhopal_logo}
-                  className="h-24 w-auto"
+                  src={rajneeti_logo}
+                  className="h-full w-full object-cover"
                   alt="VIT Bhopal Logo"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-700 p-4">
-                VITBMUN
+              <h3
+                className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
+                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+              >
+                VITBMUN'24
               </h3>
             </div>
           </Link>
           <Link to="/RajneetiRangmanch" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
+              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
                 <img
-                  src={vitbhopal_logo}
-                  className="h-24 w-auto"
+                  src={diagloue_logo}
+                  className="h-full w-full object-cover"
                   alt="VIT Bhopal Logo"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-700 p-4">
+              <h3
+                className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
+                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+              >
                 Rajneeti Rangmanch
               </h3>
             </div>
           </Link>
           <Link to="/ChainReactionChase" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-32 bg-gray-200 flex items-center justify-center">
+              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
                 <img
-                  src={vitbhopal_logo}
-                  className="h-24 w-auto"
+                  src={rajneeti_logo}
+                  className="h-full w-full object-cover"
                   alt="VIT Bhopal Logo"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-gray-700 p-4">
+              <h3
+                className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
+                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+              >
                 Chain Reaction Chase
               </h3>
             </div>

@@ -25,8 +25,11 @@ const FAQ = () => {
       <div className="border-4 shadow-md rounded-3xl max-w-5xl flex flex-col md:flex-row items-start bg-white overflow-hidden w-full">
         {/* Left Section */}
         <div className="w-full md:w-1/3 p-8">
-          <h1 className="text-5xl font-semibold text-gray-800">
-            Any Questions?
+          <h1
+            className="text-5xl font-semibold text-gray-800"
+            style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+          >
+            Any Questions ?
           </h1>
         </div>
 
