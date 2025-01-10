@@ -6,22 +6,19 @@ const FacultyInfo = () => {
     {
       name: "TAUSEEF QAMAR",
       role: "Club Coordinator",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque ultricies condimentum. Class aptent taciti sociosqu ",
+
       image: null,
     },
     {
       name: "FEEROZ BABU",
       role: "Club Co-Coordinator",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque ultricies condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+
       image: null,
     },
     {
       name: "KK NAIR",
       role: "Faculty Advisor",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque ultricies condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+
       image: null,
     },
   ];
@@ -45,7 +42,7 @@ const FacultyInfo = () => {
             <img
               src={coordinator.image || vitbmun_logo}
               alt={`Coordinator ${coordinator.name}`}
-              className="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-gray-300"
+              className="w-48 h-48 rounded-full mx-auto mb-10 border-2 border-gray-300"
             />
             <h3
               id={`coordinator-${index}-name`}
@@ -53,11 +50,8 @@ const FacultyInfo = () => {
             >
               {coordinator.name}
             </h3>
-            <p className="text-lg text-gray-600 font-medium">
+            <p className="text-lg text-gray-800 font-medium">
               {coordinator.role}
-            </p>
-            <p className="text-gray-600 mt-4 line-clamp-3">
-              {coordinator.description}
             </p>
           </div>
         ))}
