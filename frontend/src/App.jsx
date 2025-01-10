@@ -8,7 +8,6 @@ import {
 import Layout from "../src/Layout/Layout";
 import TechTeamLayout from "./Layout/TeamLayout/TechTeamLayout";
 import ContentTeamLayout from "./Layout/TeamLayout/ContentTeamLayout";
-import SecretariatTeamLayout from "./Layout/TeamLayout/SecretariatTeamLayout";
 import DesignTeamLayout from "./Layout/TeamLayout/DesignTeamLayout";
 import PRTeamLayout from "./Layout/TeamLayout/PRTeamLayout";
 import PhotographyTeamLayout from "./Layout/TeamLayout/PhotographyTeamLayout";
@@ -51,10 +50,7 @@ function App() {
             path="/ContentTeam"
             element={<ContentTeamLayout></ContentTeamLayout>}
           ></Route>
-          <Route
-            path="/SecretariatTeam"
-            element={<SecretariatTeamLayout></SecretariatTeamLayout>}
-          ></Route>
+
           <Route
             path="/DesignTeam"
             element={<DesignTeamLayout></DesignTeamLayout>}
