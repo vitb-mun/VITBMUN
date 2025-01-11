@@ -6,11 +6,6 @@ import {
 } from "react-router-dom";
 
 import Layout from "../src/Layout/Layout";
-import TechTeamLayout from "./Layout/TeamLayout/TechTeamLayout";
-import ContentTeamLayout from "./Layout/TeamLayout/ContentTeamLayout";
-import DesignTeamLayout from "./Layout/TeamLayout/DesignTeamLayout";
-import PRTeamLayout from "./Layout/TeamLayout/PRTeamLayout";
-import PhotographyTeamLayout from "./Layout/TeamLayout/PhotographyTeamLayout";
 import MUNMATELayout from "./Layout/EventLayout/MUNMATELayout";
 import VITBMUNLayout from "./Layout/EventLayout/VITBMUNLayout";
 import RajneetiRangmanchLayout from "./Layout/EventLayout/RajneetiRangmanchLayout";
@@ -39,26 +34,6 @@ function App() {
           <Route
             path="/ChainReactionChase"
             element={<ChainReactionChaseLayout></ChainReactionChaseLayout>}
-          ></Route>
-        </Routes>
-        <Routes>
-          <Route
-            path="/TechTeam"
-            element={<TechTeamLayout></TechTeamLayout>}
-          ></Route>
-          <Route
-            path="/ContentTeam"
-            element={<ContentTeamLayout></ContentTeamLayout>}
-          ></Route>
-
-          <Route
-            path="/DesignTeam"
-            element={<DesignTeamLayout></DesignTeamLayout>}
-          ></Route>
-          <Route path="/PRTeam" element={<PRTeamLayout></PRTeamLayout>}></Route>
-          <Route
-            path="/PhotographyTeam"
-            element={<PhotographyTeamLayout></PhotographyTeamLayout>}
           ></Route>
         </Routes>
       </Router>

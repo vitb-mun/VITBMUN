@@ -1,5 +1,9 @@
 import React from "react";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
+import Tauseef from "../assets/Tauseef.jpg";
+import Feeroz from "../assets/Feeroz.jpg";
+import KKNair from "../assets/kknair.jpg";
+import backgroundimage from "../assets/dotted.png";
 
 const FacultyInfo = () => {
   const coordinators = [
@@ -7,24 +11,32 @@ const FacultyInfo = () => {
       name: "TAUSEEF QAMAR",
       role: "Club Coordinator",
 
-      image: null,
+      image: Tauseef,
     },
     {
       name: "FEEROZ BABU",
       role: "Club Co-Coordinator",
 
-      image: null,
+      image: Feeroz,
     },
     {
       name: "KK NAIR",
       role: "Faculty Advisor",
 
-      image: null,
+      image: KKNair,
     },
   ];
 
   return (
-    <div className="container mx-auto p-4">
+    <div
+      className="responsive-background mx-auto p-4"
+      style={{
+        backgroundImage: `url(${backgroundimage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <h1
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
@@ -42,7 +54,7 @@ const FacultyInfo = () => {
             <img
               src={coordinator.image || vitbmun_logo}
               alt={`Coordinator ${coordinator.name}`}
-              className="w-48 h-48 rounded-full mx-auto mb-10 border-2 border-gray-300"
+              className="w-48 h-48 object-cover rounded-full mx-auto mb-10 border-2 border-gray-300"
             />
             <h3
               id={`coordinator-${index}-name`}

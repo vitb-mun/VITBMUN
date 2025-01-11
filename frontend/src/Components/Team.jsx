@@ -17,91 +17,81 @@ const OurTeam = () => {
       </h1>
       <section className="container mx-auto px-6">
         <div className="flex flex-wrap justify-center gap-8 rounded-3xl border-gray-300">
-          <Link to="/ContentTeam" className="block">
-            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                <img
-                  src={content_Team}
-                  className="h-full w-full object-cover"
-                  alt="VIT Bhopal Logo"
-                />
-              </div>
-              <h3
-                className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
-                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-              >
-                Content Team
-              </h3>
+          <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+            <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
+              <img
+                src={content_Team}
+                className="h-full w-full object-cover"
+                alt="VIT Bhopal Logo"
+              />
             </div>
-          </Link>
-          <Link to="/DesignTeam" className="block">
-            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                <img
-                  src={design_Team}
-                  className="h-full w-full object-cover"
-                  alt="VIT Bhopal Logo"
-                />
-              </div>
-              <h3
-                className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
-                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-              >
-                Design Team
-              </h3>
+            <h3
+              className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
+              style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+            >
+              Content Team
+            </h3>
+          </div>
+          <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+            <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
+              <img
+                src={design_Team}
+                className="h-full w-full object-cover"
+                alt="VIT Bhopal Logo"
+              />
             </div>
-          </Link>
-          <Link to="/PhotographyTeam" className="block">
-            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                <img
-                  src={photo_team}
-                  className="h-full w-full object-cover"
-                  alt="VIT Bhopal Logo"
-                />
-              </div>
-              <h3
-                className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
-                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-              >
-                Photography Team
-              </h3>
+            <h3
+              className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
+              style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+            >
+              Design Team
+            </h3>
+          </div>
+          <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+            <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
+              <img
+                src={photo_team}
+                className="h-full w-full object-cover"
+                alt="VIT Bhopal Logo"
+              />
             </div>
-          </Link>
-          <Link to="/PRTeam" className="block">
-            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                <img
-                  src={pr_Team}
-                  className="h-full w-full object-cover"
-                  alt="VIT Bhopal Logo"
-                />
-              </div>
-              <h3
-                className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
-                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-              >
-                PR Team
-              </h3>
+            <h3
+              className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
+              style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+            >
+              Photography Team
+            </h3>
+          </div>
+          <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+            <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
+              <img
+                src={pr_Team}
+                className="h-full w-full object-cover"
+                alt="VIT Bhopal Logo"
+              />
             </div>
-          </Link>
-          <Link to="/TechTeam" className="block">
-            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                <img
-                  src={tech_team}
-                  className="h-full w-full object-cover"
-                  alt="VIT Bhopal Logo"
-                />
-              </div>
-              <h3
-                className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
-                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-              >
-                Technical Team
-              </h3>
+            <h3
+              className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
+              style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+            >
+              PR Team
+            </h3>
+          </div>
+          <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+            <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
+              <img
+                src={tech_team}
+                className="h-full w-full object-cover"
+                alt="VIT Bhopal Logo"
+              />
             </div>
-          </Link>
+            <h3
+              className="text-2xl flex items-center justify-center font-semibold text-gray-800 p-4"
+              style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+            >
+              Technical Team
+            </h3>
+          </div>
         </div>
       </section>
     </div>
