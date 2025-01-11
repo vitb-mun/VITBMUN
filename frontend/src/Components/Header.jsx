@@ -65,26 +65,6 @@ const Header = () => {
           className="w-full h-[400px] object-cover rounded-3xl shadow-lg"
         />
       </div>
-
-      {/* Buttons Section */}
-      <div className="container mx-auto px-2 py-4 flex justify-center space-x-4">
-        <button
-          className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg border-black-800 border-2 hover:bg-blue-600"
-          style={{
-            fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
-          }}
-        >
-          Vichaar Vivad
-        </button>
-        <button
-          className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg border-black-800 border-2 hover:bg-blue-600"
-          style={{
-            fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
-          }}
-        >
-          Newsletter
-        </button>
-      </div>
       <br></br>
     </div>
   );
