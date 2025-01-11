@@ -1,7 +1,7 @@
 import React from "react";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
-import Tauseef from "../assets/Tauseef.jpg";
-import Feeroz from "../assets/Feeroz.jpg";
+import Tauseef from "../assets/TAUSEEF.jpg";
+import Feeroz from "../assets/FEEROZ.jpg";
 import KKNair from "../assets/kknair.jpg";
 import backgroundimage from "../assets/dotted.png";
 
