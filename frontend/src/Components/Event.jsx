@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import diagloue_logo from "../assets/Diagloue.png";
 import rajneeti_logo from "../assets/Rajneeti.png";
+import upcome from "../assets/upcome.jpg";
 
 const Event = () => {
   return (
@@ -32,15 +33,32 @@ const Event = () => {
           className="text-5xl font-bold text-gray-800 mb-6"
           style={{ fontFamily: "'Host Grotesk', sans-serif" }}
         >
-          Events
+          Upcoming Events
         </h2>
         <div className="grid px-1 py-1 grid-cols-1 md:grid-cols-4 gap-6  rounded-3xl border-gray-300">
           {/* Event 1 */}
+          <Link to="/RajneetiRangmanch" className="block">
+            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
+              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
+                <img
+                  src={rajneeti_logo}
+                  className="h-full w-full object-cover"
+                  alt="VIT Bhopal Logo"
+                />
+              </div>
+              <h3
+                className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
+                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+              >
+                Rajneeti Rangmanch
+              </h3>
+            </div>
+          </Link>
           <Link to="/MUN-MATE" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
               <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
                 <img
-                  src={diagloue_logo}
+                  src={upcome}
                   className="h-full w-full object-cover"
                   alt="VIT Bhopal Logo"
                 />
@@ -57,7 +75,7 @@ const Event = () => {
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
               <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
                 <img
-                  src={rajneeti_logo}
+                  src={upcome}
                   className="h-full w-full object-cover"
                   alt="VIT Bhopal Logo"
                 />
@@ -70,28 +88,11 @@ const Event = () => {
               </h3>
             </div>
           </Link>
-          <Link to="/RajneetiRangmanch" className="block">
+          <Link to="/VITBMUN" className="block">
             <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
               <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
                 <img
-                  src={diagloue_logo}
-                  className="h-full w-full object-cover"
-                  alt="VIT Bhopal Logo"
-                />
-              </div>
-              <h3
-                className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
-                style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-              >
-                Rajneeti Rangmanch
-              </h3>
-            </div>
-          </Link>
-          <Link to="/ChainReactionChase" className="block">
-            <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                <img
-                  src={rajneeti_logo}
+                  src={upcome}
                   className="h-full w-full object-cover"
                   alt="VIT Bhopal Logo"
                 />

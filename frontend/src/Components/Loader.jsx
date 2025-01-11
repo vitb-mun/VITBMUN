@@ -24,22 +24,7 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className="p-10">
-          <h1 className="text-3xl font-bold text-center text-gray-800">
-            Welcome to the Website!
-          </h1>
-          <p className="text-gray-600 mt-4 text-center">
-            Your content is now ready to view.
-          </p>
-        </div>
-      )}
-    </>
-  );
+  return <>{loading ? <Loader /> : <div></div>}</>;
 };
 
 export default App;
