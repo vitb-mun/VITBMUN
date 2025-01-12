@@ -7,7 +7,6 @@ import FAQ from "./FAQs";
 import Sponsors from "./Sponsors";
 import SecretaryInfo from "./SecretaryInfo";
 import Gallery from "./Gallery";
-//import Test from "./test";
 
 const Hero = () => {
   return (

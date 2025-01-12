@@ -13,7 +13,7 @@ const OurTeam = () => {
         className="text-6xl font-bold text-gray-800"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
       >
-        Our Team
+        Our Teams
       </h1>
       <section className="container mx-auto px-6">
         <div className="flex flex-wrap justify-center gap-8 rounded-3xl border-gray-300">

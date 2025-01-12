@@ -55,78 +55,60 @@ const Event = () => {
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
           >
-            Upcoming Events
+            Upcoming Event
           </h2>
-          <div className="grid px-1 py-1 grid-cols-1 md:grid-cols-4 gap-6  rounded-3xl border-gray-300">
-            {/* Event 1 */}
-            <Link to="/RajneetiRangmanch" className="block">
-              <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-                <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                  <img
-                    src={rajneeti_logo}
-                    className="h-full w-full object-cover"
-                    alt="VIT Bhopal Logo"
-                  />
-                </div>
+          <div className="bg-gray-900 text-white border border-gray-700 rounded-3xl shadow-md p-6">
+            <div className="flex flex-col md:flex-row md:items-start items-center">
+              {/* Image Section */}
+              <div className="w-full md:w-1/3 h-48 sm:h-60 md:h-auto bg-gray-300 rounded-lg overflow-hidden flex-shrink-0">
+                <img
+                  src={rajneeti_logo}
+                  className="h-full w-full object-cover"
+                  alt="Rajneeti Rangmanch Logo"
+                />
+              </div>
+
+              {/* Content Section */}
+              <div className="w-full md:w-2/3 mt-6 md:mt-0 md:ml-6 flex flex-col justify-center">
                 <h3
-                  className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
+                  className="text-3xl sm:text-4xl font-bold"
                   style={{ fontFamily: "'Host Grotesk', sans-serif" }}
                 >
                   Rajneeti Rangmanch
                 </h3>
-              </div>
-            </Link>
-            <Link to="/MUN-MATE" className="block">
-              <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-                <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                  <img
-                    src={upcome}
-                    className="h-full w-full object-cover"
-                    alt="VIT Bhopal Logo"
-                  />
+                <p className="text-gray-400 mt-2 text-lg sm:text-xl leading-relaxed">
+                  Welcome to our MUN Club, where we bring the world of Model
+                  United Nations to life! In our club, students take on the
+                  roles of delegates representing diverse countries and
+                  organizations, engaging in spirited debates, negotiations, and
+                  crafting solutions to global challenges.
+                </p>
+                {/* Additional Event Details */}
+                <div className="mt-4">
+                  <p className="text-gray-300 text-lg sm:text-xl">
+                    <span className="font-semibold text-white">Date:</span>{" "}
+                    05/08/2024
+                  </p>
+                  <br></br>
+                  <p className="text-gray-300 text-lg sm:text-xl">
+                    <span className="font-semibold text-white">Day:</span>{" "}
+                    Monday
+                  </p>
+                  <br></br>
+                  <p className="text-gray-300 text-lg sm:text-xl">
+                    <span className="font-semibold text-white">Time:</span>{" "}
+                    10:00 AM - 06:00 PM
+                  </p>
+                  <br></br>
+                  <p className="text-gray-300 text-lg sm:text-xl">
+                    <span className="font-semibold text-white">
+                      Registration Fee:
+                    </span>{" "}
+                    ₹199
+                  </p>
                 </div>
-                <h3
-                  className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
-                  style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-                >
-                  MUNMATE'24
-                </h3>
               </div>
-            </Link>
-            <Link to="/VITBMUN" className="block">
-              <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-                <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                  <img
-                    src={upcome}
-                    className="h-full w-full object-cover"
-                    alt="VIT Bhopal Logo"
-                  />
-                </div>
-                <h3
-                  className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
-                  style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-                >
-                  VITBMUN'24
-                </h3>
-              </div>
-            </Link>
-            <Link to="/VITBMUN" className="block">
-              <div className="bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden">
-                <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
-                  <img
-                    src={upcome}
-                    className="h-full w-full object-cover"
-                    alt="VIT Bhopal Logo"
-                  />
-                </div>
-                <h3
-                  className="text-2xl flex items-center justify-center font-semibold text-gray-700 p-4"
-                  style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-                >
-                  Chain Reaction Chase
-                </h3>
-              </div>
-            </Link>
+            </div>
           </div>
         </section>
       </div>
