@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import tech_team from "../assets/Tech_Team.jpg";
-import photo_team from "../assets/Photo_Team.jpg";
-import pr_Team from "../assets/PR_Team.jpg";
-import content_Team from "../assets/Content_Team.jpg";
-import design_Team from "../assets/Design_Team.jpg";
+import tech_team from "../assets/Team Photos/Tech_Team.jpg";
+import photo_team from "../assets/Team Photos/Photo_Team.jpg";
+import pr_Team from "../assets/Team Photos/PR_Team.jpg";
+import content_Team from "../assets/Team Photos/Content_Team.jpg";
+import design_Team from "../assets/Team Photos/Design_Team.jpg";
 
 const OurTeam = () => {
   return (

@@ -6,6 +6,7 @@ import Team from "./Team";
 import FAQ from "./FAQs";
 import Sponsors from "./Sponsors";
 import SecretaryInfo from "./SecretaryInfo";
+import Gallery from "./Gallery";
 //import Test from "./test";
 
 const Hero = () => {
@@ -13,6 +14,7 @@ const Hero = () => {
     <div>
       <Event></Event>
       <EventTimeline></EventTimeline>
+      <Gallery></Gallery>
       <FacultyInfo></FacultyInfo>
       <SecretaryInfo></SecretaryInfo>
       <Team></Team>

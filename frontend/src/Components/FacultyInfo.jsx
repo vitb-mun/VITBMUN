@@ -1,8 +1,8 @@
 import React from "react";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
-import Tauseef from "../assets/TAUSEEF.jpg";
-import Feeroz from "../assets/FEEROZ.jpg";
-import KKNair from "../assets/kknair.jpg";
+import Tauseef from "../assets/Faculty/TAUSEEF.jpg";
+import Feeroz from "../assets/Faculty/FEEROZ.jpg";
+import KKNair from "../assets/Faculty/kknair.jpg";
 import backgroundimage from "../assets/dotted.png";
 
 const FacultyInfo = () => {

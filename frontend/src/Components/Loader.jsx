@@ -19,7 +19,7 @@ const App = () => {
     // Simulating a delay (e.g., fetching data, loading assets, etc.)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust time as needed
+    }, 1000); // Adjust time as needed
 
     return () => clearTimeout(timer);
   }, []);

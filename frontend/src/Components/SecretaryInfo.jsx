@@ -1,13 +1,13 @@
 import React from "react";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
-import Priyanshi from "../assets/Priyanshi.jpg";
-import Akhila from "../assets/AKHILA.jpg";
-import Dev from "../assets/Dev.jpg";
-import Jeremy from "../assets/Jeremy.jpg";
-import Pushkar from "../assets/Pushkar.jpg";
-import Asmita from "../assets/Asmita.jpg";
-import Savita from "../assets/SAVI.jpg";
-import Swayam from "../assets/swayam.jpg";
+import Priyanshi from "../assets/Secretary Photos/Priyanshi.jpg";
+import Akhila from "../assets/Secretary Photos/AKHILA.jpg";
+import Dev from "../assets/Secretary Photos/Dev.jpg";
+import Jeremy from "../assets/Secretary Photos/Jeremy.jpg";
+import Pushkar from "../assets/Secretary Photos/Pushkar.jpg";
+import Asmita from "../assets/Secretary Photos/Asmita.jpg";
+import Savita from "../assets/Secretary Photos/SAVI.jpg";
+import Swayam from "../assets/Secretary Photos/swayam.jpg";
 
 const SecreatryInfo = () => {
   const coordinators = [
