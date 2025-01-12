@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
 import Tauseef from "../assets/Faculty/TAUSEEF.jpg";
 import Feeroz from "../assets/Faculty/FEEROZ.jpg";
@@ -10,19 +11,16 @@ const FacultyInfo = () => {
     {
       name: "TAUSEEF QAMAR",
       role: "Club Coordinator",
-
       image: Tauseef,
     },
     {
       name: "FEEROZ BABU",
       role: "Club Co-Coordinator",
-
       image: Feeroz,
     },
     {
       name: "KK NAIR",
       role: "Faculty Advisor",
-
       image: KKNair,
     },
   ];
@@ -45,11 +43,23 @@ const FacultyInfo = () => {
       </h1>
       <div className="flex flex-wrap justify-center gap-8 p-4">
         {coordinators.map((coordinator, index) => (
-          <div
+          <motion.div
             key={index}
             className="w-full sm:w-96 bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300"
             role="region"
             aria-labelledby={`coordinator-${index}-name`}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{
+              borderColor: "#3498db",
+              boxShadow: "0 0 15px rgba(52, 152, 219, 0.7)",
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+              delay: index * 0.1,
+            }}
           >
             <img
               src={coordinator.image || vitbmun_logo}
@@ -65,7 +75,7 @@ const FacultyInfo = () => {
             <p className="text-lg text-gray-800 font-medium">
               {coordinator.role}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

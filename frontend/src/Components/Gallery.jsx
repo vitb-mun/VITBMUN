@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import image2 from "../assets/Highlights/image2.jpg";
 import image3 from "../assets/Highlights/image3.jpg";
@@ -21,19 +22,27 @@ const Gallery = () => {
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
       >
-        Highlights
+        Event Highlights
       </h1>
       <div className="flex flex-wrap justify-center gap-8 p-4">
         {galleryImages.map((image, index) => (
-          <div
+          <motion.div
             key={index}
             className="w-full sm:w-96 bg-white shadow-xl rounded-lg transform hover:scale-105 transition-transform duration-300"
             style={{
-              transform: "rotate(-5deg)", // Slight tilt effect for Polaroid style
+              transform: "rotate(-5deg)", // Initial tilt effect for Polaroid style
               paddingBottom: "15px",
             }}
             role="region"
             aria-labelledby={`gallery-image-${index}`}
+            initial={{ opacity: 0, rotate: -5 }} // Initial rotation and opacity
+            whileInView={{ opacity: 1, rotate: 5 }} // Rotate slightly to the right
+            transition={{
+              duration: 0.8,
+              delay: index * 0.2, // Staggered delay for cascading effect
+              type: "spring",
+            }}
+            viewport={{ once: true }}
           >
             <div
               className="polaroid-photo-wrapper relative overflow-hidden rounded-lg"
@@ -52,7 +61,7 @@ const Gallery = () => {
             <div className="polaroid-caption text-center text-sm text-gray-700 font-semibold">
               Image {index + 1}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -14,12 +14,39 @@ const Event = () => {
           className="text-blue-700 font-bold text-5xl"
           style={{ fontFamily: "'Host Grotesk', sans-serif" }}
         >
-          Speak up the World will know!
+          {`Speak up the World will know!`.split(" ").map((word, index) => (
+            <span
+              key={index}
+              className="inline-block mr-2"
+              style={{
+                animation: `fadeIn 0.5s ease ${index * 0.19}s forwards`,
+                opacity: 0,
+              }}
+            >
+              {word}
+            </span>
+          ))}
         </h1>
         <p className="text-gray-600 font-medium text-xl mt-1">
           VITBMUN Club | VIT Bhopal University
         </p>
       </div>
+
+      <style>
+        {`
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`}
+      </style>
+
       {/* Image Section */}
       <div className="relative container mx-auto px-2 py-4">
         <img

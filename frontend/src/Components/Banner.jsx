@@ -7,7 +7,7 @@ const Banner = () => {
     // Simulating a delay (e.g., fetching data, loading assets, etc.)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000000); // Adjust time as needed
+    }, 300000000); // Adjust time as needed
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,9 +35,6 @@ const Banner = () => {
             </p>
           </div>
         )}
-
-        {/* Main content */}
-        {!loading && <div></div>}
       </div>
     </div>
   );
