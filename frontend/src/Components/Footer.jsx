@@ -27,11 +27,11 @@ const Footer = () => {
             </ul>
           </div>
           <div className="icons flex gap-8 text-3xl justify-center items-center">
-            <FaWhatsapp className="hover:cursor-pointer" />
-            <FaDiscord className="hover:cursor-pointer" />
-            <BsLinkedin className="hover:cursor-pointer" />
-            <FaInstagram className="hover:cursor-pointer" />
-            <AiFillTwitterCircle className="hover:cursor-pointer" />
+            <a href="https://chat.whatsapp.com/B6IDPABiyyI6DIUkhWy6uk"><FaWhatsapp className="hover:cursor-pointer" /></a>
+            <a href="/"><FaDiscord className="hover:cursor-pointer" /></a>
+            <a href="/"><BsLinkedin className="hover:cursor-pointer" /></a>
+            <a href="https://www.instagram.com/vitb.mun/"><FaInstagram className="hover:cursor-pointer" /></a>
+            <a href="/"><AiFillTwitterCircle className="hover:cursor-pointer" /></a>
           </div>
         </div>
 
