@@ -9,7 +9,6 @@ import Pushkar from "../assets/Secretary Photos/Pushkar.jpg";
 import Asmita from "../assets/Secretary Photos/Asmita.jpg";
 import Savita from "../assets/Secretary Photos/SAVI.jpg";
 import Swayam from "../assets/Secretary Photos/swayam.jpg";
-import backgroundimage from "../assets/back3.jpg";
 
 const SecreatryInfo = () => {
   const coordinators = [
@@ -56,15 +55,7 @@ const SecreatryInfo = () => {
   ];
 
   return (
-    <div
-      className="mx-auto p-4"
-      style={{
-        backgroundImage: `url(${backgroundimage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div className="mx-auto p-4">
       <h1
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
@@ -78,15 +69,12 @@ const SecreatryInfo = () => {
             className="w-full sm:w-96 bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300"
             role="region"
             aria-labelledby={`coordinator-${index}-name`}
-            initial={{
-              opacity: 0,
-              x: index % 2 === 0 ? -100 : 100, // Alternating fade-in directions
-            }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }} // Only fade-in
+            whileInView={{ opacity: 1 }}
             transition={{
-              duration: 0.6,
+              duration: 0.8,
               ease: "easeOut",
-              delay: index * 0.1, // Staggered animations
+              delay: index * 0.2, // Staggered animations
             }}
             viewport={{ once: true }}
           >

@@ -6,16 +6,7 @@ import image2 from "../assets/Highlights/image3.jpg";
 import backgroundimage from "../assets/back4.jpg";
 
 const Gallery = () => {
-  const galleryImages = [
-    image1,
-    image1,
-    image1,
-    image1,
-    image2,
-    image2,
-    image2,
-    image2,
-  ];
+  const galleryImages = [image1, image1, image1, image1];
 
   return (
     <div
