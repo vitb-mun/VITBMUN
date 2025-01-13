@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import rajneeti_logo from "../assets/Rajneeti.png";
 import UN_Assembly from "../assets/finalun.jpg";
+import { motion } from "framer-motion";
 
 const Event = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -62,9 +63,14 @@ const Event = () => {
             </span>
           ))}
         </h1>
-        <p className="text-gray-700 font-medium text-xl mt-1">
+        <motion.p
+          className="text-gray-700 font-medium text-xl mt-1"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 3 }}
+        >
           VITBMUN Club | VIT Bhopal University
-        </p>
+        </motion.p>
       </div>
 
       <style>
@@ -103,13 +109,21 @@ const Event = () => {
       {/* Main Content Section */}
       <div className="font-sans bg-white">
         <section className="container mx-auto px-6 py-12">
-          <h2
+          <motion.h2
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 3 }}
           >
             Model United Nations
-          </h2>
-          <p className="text-gray-800 text-xl text-bold leading-relaxed mb-12">
+          </motion.h2>
+          <motion.p
+            className="text-gray-800 text-xl text-bold leading-relaxed mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 3 }}
+          >
             Welcome to our MUN Club, where we bring the world of Model United
             Nations to life! In our club, students take on the roles of
             delegates representing diverse countries and organizations, engaging
@@ -121,7 +135,7 @@ const Event = () => {
             delegate or new to the MUN scene, our club offers a supportive
             environment where members can learn, grow, and make lasting
             connections.
-          </p>
+          </motion.p>
 
           {/* Events Section */}
           <h2

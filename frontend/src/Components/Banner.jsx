@@ -10,7 +10,7 @@ const Banner = ({ onComplete }) => {
     const timer = setTimeout(() => {
       setSlideUp(true);
       setTimeout(() => setLoading(false), 1000); // Allow sliding animation to complete
-    }, 1500);
+    }, 1600);
 
     return () => clearTimeout(timer);
   }, []);

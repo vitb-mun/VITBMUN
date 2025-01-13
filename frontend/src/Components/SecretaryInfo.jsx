@@ -72,9 +72,9 @@ const SecreatryInfo = () => {
             initial={{ opacity: 0 }} // Only fade-in
             whileInView={{ opacity: 1 }}
             transition={{
-              duration: 0.8,
+              duration: 0.7,
               ease: "easeOut",
-              delay: index * 0.2, // Staggered animations
+              delay: index * 0.1, // Staggered animations
             }}
             viewport={{ once: true }}
           >

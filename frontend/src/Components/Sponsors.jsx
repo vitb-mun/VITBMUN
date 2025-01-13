@@ -1,10 +1,18 @@
 import React from "react";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
+import backgroundimage from "../assets/back4.jpg";
 
 const Sponsors = () => {
   const sponsorLogos = [vitbmun_logo, vitbmun_logo, vitbmun_logo];
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: `url(${backgroundimage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="py-10 px-6 -mb-10 ">
         {/* Sponsors Section */}
         <div className="">
