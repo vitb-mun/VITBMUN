@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import rajneeti_logo from "../assets/Rajneeti.png";
 import UN_Assembly from "../assets/finalun.jpg";
 
 const Event = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const eventCardRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,9 +18,32 @@ const Event = () => {
     };
   }, []);
 
+  // Intersection Observer to detect when the card is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true); // Trigger fade-in when the event card comes into view
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the element is in the viewport
+    );
+
+    if (eventCardRef.current) {
+      observer.observe(eventCardRef.current);
+    }
+
+    return () => {
+      if (eventCardRef.current) {
+        observer.unobserve(eventCardRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div>
-      {/* Bottom Tagline Section */}
       <div className="text-center mt-4">
         <h1
           className="text-blue-700 font-bold text-5xl"
@@ -105,7 +130,14 @@ const Event = () => {
           >
             Upcoming Event
           </h2>
-          <div className="bg-gray-900 text-white border border-gray-700 rounded-3xl shadow-md p-6 relative overflow-hidden">
+          <div
+            ref={eventCardRef}
+            className={`bg-gray-900 text-white border border-gray-700 rounded-3xl shadow-md p-6 relative overflow-hidden ${
+              isVisible
+                ? "opacity-100 transition-opacity duration-1000"
+                : "opacity-0"
+            }`}
+          >
             {/* Right Semi-Circle Cut */}
             <div className="absolute -right-7 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white rounded-full border-t border-r"></div>
 

@@ -26,7 +26,7 @@ const FacultyInfo = () => {
   ];
 
   return (
-    <div
+    <motion.div
       className="responsive-background mx-auto p-4"
       style={{
         backgroundImage: `url(${backgroundimage})`,
@@ -34,6 +34,9 @@ const FacultyInfo = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
+      initial={{ opacity: 0 }} // Fade in for the entire container
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
       <h1
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
@@ -49,10 +52,13 @@ const FacultyInfo = () => {
             role="region"
             aria-labelledby={`coordinator-${index}-name`}
             initial={{
-              opacity: 0,
-              x: index % 2 === 0 ? -100 : 100, // Alternating fade-in directions
+              opacity: 0, // Start with opacity 0
+              y: 50, // Start from 50px lower than the final position
             }}
-            whileInView={{ opacity: 1, x: 0 }}
+            whileInView={{
+              opacity: 1, // Fade in to full opacity
+              y: 0, // Animate to original position
+            }}
             transition={{
               duration: 0.6,
               ease: "easeOut",
@@ -77,7 +83,7 @@ const FacultyInfo = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

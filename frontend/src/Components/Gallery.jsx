@@ -55,8 +55,8 @@ const Gallery = () => {
               x: 0, // Reset x-axis (center position)
             }}
             transition={{
-              duration: 0.6,
-              delay: index * 0.2, // Staggered delay for cascading effect
+              duration: 0.4,
+              delay: index * 0.1, // Staggered delay for cascading effect
               type: "spring",
             }}
             viewport={{ once: true }}
