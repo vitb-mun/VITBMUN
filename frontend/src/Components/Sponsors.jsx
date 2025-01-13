@@ -2,36 +2,39 @@ import React from "react";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
 
 const Sponsors = () => {
-  const sponsorLogos = [vitbmun_logo, vitbmun_logo, vitbmun_logo];
+  const sponsorLogos = [
+    vitbmun_logo,
+    vitbmun_logo,
+    vitbmun_logo,
+    vitbmun_logo,
+    vitbmun_logo,
+    vitbmun_logo,
+    vitbmun_logo,
+    vitbmun_logo,
+    vitbmun_logo,
+    vitbmun_logo,
+  ];
   return (
     <div>
-      {/* TODO: To make the Sponsorship logo continuous in nature  */}
-      <div className="py-10 px-6 -mb-10 ">
-        {/* Sponsors Section */}
-        <div className="">
-          <div className="overflow-hidden relative">
-            <div className="flex items-center justify-evenly space-x-8 animate-marquee">
-              {sponsorLogos.map((logo, index) => (
-                <img
-                  key={index}
-                  src={logo}
-                  alt={`Sponsor ${index + 1}`}
-                  className="h-20 w-auto object-contain"
-                />
-              ))}
-              {sponsorLogos.map((logo, index) => (
-                <img
-                  key={`duplicate-${index}`}
-                  src={logo}
-                  alt={`Sponsor ${index + 1}`}
-                  className="h-20 w-auto object-contain"
-                />
-              ))}
+      {/* 
+      Here Change the width and height for all images in the sponsor-slider
+      */}
+      <div
+        className="sponsor-slider"
+        style={{
+          "--width": "100px",
+          "--height": "100px",
+          "--quantity": sponsorLogos.length,
+        }}
+      >
+        <div className="list">
+          {sponsorLogos.map((logo, index) => (
+            <div className="item" style={{ "--position": index }}>
+              <img src={logo} alt={`Sponsor ${index + 1}`} />
             </div>
-          </div>
+          ))}
         </div>
       </div>
-      {/* TO Change till here */}
       <div className="py-10 px-6 mb-5">
         {/* Centered Section */}
         <div className="flex flex-col items-center">

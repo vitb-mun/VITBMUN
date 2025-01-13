@@ -21,3 +21,65 @@ body,
 html {
   transition: scroll 0.5s ease-in-out; /* Adjust the timing as per your preference */
 }
+
+/* 
+  For the Sponsor Slider 
+  (By GSD)
+*/
+
+.sponsor-slider {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10% 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 10% 90%,
+    transparent
+  );
+}
+.sponsor-slider .list {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+
+.sponsor-slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position)));
+}
+.sponsor-slider .list .item img {
+  width: 100%;
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+.sponsor-slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+
+}
+.sponsor-slider .item:hover{
+    filter: grayscale(0);
+}
+
+/* 
+  End of Sponsor Slider
+*/
