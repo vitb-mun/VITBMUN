@@ -1,11 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import rajneeti_logo from "../assets/Rajneeti.png";
-import upcome from "../assets/upcome.jpg";
-
-import UN_Assembly from "../assets/UN_Assembly.jpg";
+import UN_Assembly from "../assets/finalun.jpg";
 
 const Event = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       {/* Bottom Tagline Section */}
@@ -19,7 +29,7 @@ const Event = () => {
               key={index}
               className="inline-block mr-2"
               style={{
-                animation: `fadeIn 0.5s ease ${2 + index * 0.19}s forwards`, // Add a 2-second delay
+                animation: `fadeIn 0.5s ease ${2 + index * 0.19}s forwards`,
                 opacity: 0,
               }}
             >
@@ -34,28 +44,39 @@ const Event = () => {
 
       <style>
         {`
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  `}
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}
       </style>
 
-      {/* Image Section */}
-      <div className="relative container mx-auto px-2 py-4">
+      {/* Image Section with Scroll Zoom */}
+      <div
+        className="relative container mx-auto px-2 py-4 overflow-hidden"
+        style={{
+          height: "400px",
+        }}
+      >
         <img
           src={UN_Assembly}
           alt="Conference Hall"
-          className="w-full h-[400px] object-cover rounded-3xl shadow-lg"
+          className="w-full h-full object-cover rounded-3xl shadow-lg"
+          style={{
+            transform: `scale(${1 + scrollPosition / 1000})`, // Zoom effect
+            transition: "transform 0.1s ease-out", // Smooth transition
+          }}
         />
       </div>
-      <div className="font-sans bg-white ">
+
+      {/* Main Content Section */}
+      <div className="font-sans bg-white">
         <section className="container mx-auto px-6 py-12">
           <h2
             className="text-5xl font-bold text-gray-800 mb-6"
