@@ -10,7 +10,6 @@ import content_Team_1 from "../assets/Team Photos/Content_Team.jpg";
 import content_Team_2 from "../assets/Team Photos/Content_Team.jpg";
 import design_Team_1 from "../assets/Team Photos/Design_Team.jpg";
 import design_Team_2 from "../assets/Team Photos/Design_Team.jpg";
-import backgroundimage from "../assets/back2.jpg";
 
 const OurTeam = () => {
   const [contentIndex, setContentIndex] = useState(0);
@@ -61,15 +60,7 @@ const OurTeam = () => {
   };
 
   return (
-    <div
-      className="flex flex-col items-center space-y-12 mb-12"
-      style={{
-        backgroundImage: `url(${backgroundimage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div className="flex flex-col items-center space-y-12 mb-12">
       <h1
         className="text-6xl font-bold text-gray-800"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
