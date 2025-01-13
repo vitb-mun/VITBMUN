@@ -5,6 +5,7 @@ const Sponsors = () => {
   const sponsorLogos = [vitbmun_logo, vitbmun_logo, vitbmun_logo];
   return (
     <div>
+      {/* TODO: To make the Sponsorship logo continuous in nature  */}
       <div className="py-10 px-6 -mb-10 ">
         {/* Sponsors Section */}
         <div className="">
@@ -30,6 +31,7 @@ const Sponsors = () => {
           </div>
         </div>
       </div>
+      {/* TO Change till here */}
       <div className="py-10 px-6 mb-5">
         {/* Centered Section */}
         <div className="flex flex-col items-center">
