@@ -9,6 +9,7 @@ import Pushkar from "../assets/Secretary Photos/Pushkar.jpg";
 import Asmita from "../assets/Secretary Photos/Asmita.jpg";
 import Savita from "../assets/Secretary Photos/SAVI.jpg";
 import Swayam from "../assets/Secretary Photos/swayam.jpg";
+import backgroundimage from "../assets/back3.jpg";
 
 const SecreatryInfo = () => {
   const coordinators = [
@@ -55,7 +56,15 @@ const SecreatryInfo = () => {
   ];
 
   return (
-    <div className="mx-auto p-4">
+    <div
+      className="mx-auto p-4"
+      style={{
+        backgroundImage: `url(${backgroundimage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <h1
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}

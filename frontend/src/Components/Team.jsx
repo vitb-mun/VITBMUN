@@ -10,16 +10,15 @@ import content_Team_1 from "../assets/Team Photos/Content_Team.jpg";
 import content_Team_2 from "../assets/Team Photos/Content_Team.jpg";
 import design_Team_1 from "../assets/Team Photos/Design_Team.jpg";
 import design_Team_2 from "../assets/Team Photos/Design_Team.jpg";
+import backgroundimage from "../assets/back2.jpg";
 
 const OurTeam = () => {
-  // State for each team's image index
   const [contentIndex, setContentIndex] = useState(0);
   const [designIndex, setDesignIndex] = useState(0);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [prIndex, setPrIndex] = useState(0);
   const [techIndex, setTechIndex] = useState(0);
 
-  // Array of team images
   const teams = [
     {
       images: [content_Team_1, design_Team_2],
@@ -53,18 +52,24 @@ const OurTeam = () => {
     },
   ];
 
-  // Function to go to the next image
   const nextImage = (setIndex, currentIndex, images) => {
     setIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // Function to go to the previous image
   const prevImage = (setIndex, currentIndex, images) => {
     setIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
   return (
-    <div className="flex flex-col items-center space-y-12 mt-10 mb-12">
+    <div
+      className="flex flex-col items-center space-y-12 mb-12"
+      style={{
+        backgroundImage: `url(${backgroundimage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <h1
         className="text-6xl font-bold text-gray-800"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
@@ -76,13 +81,13 @@ const OurTeam = () => {
           {teams.map((team, index) => (
             <div
               key={index}
-              className="relative bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden"
+              className="relative bg-white border-black-800 border-2 rounded-lg shadow overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-xl animate-fadeIn"
             >
               {/* Image container */}
-              <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
+              <div className="w-full h-96 bg-gray-200 flex items-center justify-center overflow-hidden">
                 <img
                   src={team.images[team.index]}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-500"
                   alt={team.title}
                 />
               </div>

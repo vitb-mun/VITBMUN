@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* index.css or App.css */
+html {
+  scroll-behavior: smooth;
+}
+
+/* index.css or App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: for specific scrollable elements, you can add a transition */
+body,
+html {
+  transition: scroll 0.5s ease-in-out; /* Adjust the timing as per your preference */
+}

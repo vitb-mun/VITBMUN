@@ -1,23 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import image2 from "../assets/Highlights/image2.jpg";
-import image3 from "../assets/Highlights/image3.jpg";
+import image1 from "../assets/Highlights/image2.jpg";
+import image2 from "../assets/Highlights/image3.jpg";
+import backgroundimage from "../assets/back4.jpg";
 
 const Gallery = () => {
   const galleryImages = [
+    image1,
+    image1,
+    image1,
+    image1,
     image2,
-    image3,
     image2,
-    image3,
-    image3,
     image2,
-    image3,
     image2,
   ];
 
   return (
-    <div className="mx-auto p-4">
+    <div
+      className="mx-auto p-4"
+      style={{
+        backgroundImage: `url(${backgroundimage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <h1
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
@@ -31,14 +40,22 @@ const Gallery = () => {
             className="w-full sm:w-96 bg-white shadow-xl rounded-lg transform hover:scale-105 transition-transform duration-300"
             style={{
               transform: "rotate(-5deg)", // Initial tilt effect for Polaroid style
-              paddingBottom: "15px",
+              paddingBottom: "10px",
             }}
             role="region"
             aria-labelledby={`gallery-image-${index}`}
-            initial={{ opacity: 0, rotate: -5 }} // Initial rotation and opacity
-            whileInView={{ opacity: 1, rotate: 5 }} // Rotate slightly to the right
+            initial={{
+              opacity: 0,
+              rotate: -5, // Initial rotation (tilt)
+              x: image === image1 ? -100 : 100, // Slide from left (image1) or right (image2)
+            }}
+            whileInView={{
+              opacity: 1,
+              rotate: 5, // Final rotation (tilt slightly to the right)
+              x: 0, // Reset x-axis (center position)
+            }}
             transition={{
-              duration: 0.8,
+              duration: 0.6,
               delay: index * 0.2, // Staggered delay for cascading effect
               type: "spring",
             }}

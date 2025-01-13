@@ -19,7 +19,7 @@ const Event = () => {
               key={index}
               className="inline-block mr-2"
               style={{
-                animation: `fadeIn 0.5s ease ${index * 0.19}s forwards`,
+                animation: `fadeIn 0.5s ease ${2 + index * 0.19}s forwards`, // Add a 2-second delay
                 opacity: 0,
               }}
             >
@@ -27,24 +27,24 @@ const Event = () => {
             </span>
           ))}
         </h1>
-        <p className="text-gray-600 font-medium text-xl mt-1">
+        <p className="text-gray-700 font-medium text-xl mt-1">
           VITBMUN Club | VIT Bhopal University
         </p>
       </div>
 
       <style>
         {`
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-`}
+  `}
       </style>
 
       {/* Image Section */}
@@ -61,7 +61,7 @@ const Event = () => {
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
           >
-            Model Of United Nations
+            Model United Nations
           </h2>
           <p className="text-gray-800 text-xl text-bold leading-relaxed mb-12">
             Welcome to our MUN Club, where we bring the world of Model United
@@ -84,7 +84,10 @@ const Event = () => {
           >
             Upcoming Event
           </h2>
-          <div className="bg-gray-900 text-white border border-gray-700 rounded-3xl shadow-md p-6">
+          <div className="bg-gray-900 text-white border border-gray-700 rounded-3xl shadow-md p-6 relative overflow-hidden">
+            {/* Right Semi-Circle Cut */}
+            <div className="absolute -right-7 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white rounded-full border-t border-r"></div>
+
             <div className="flex flex-col md:flex-row md:items-start items-center">
               {/* Image Section */}
               <div className="w-full md:w-1/3 h-48 sm:h-60 md:h-auto bg-gray-300 rounded-lg overflow-hidden flex-shrink-0">
@@ -110,23 +113,24 @@ const Event = () => {
                   organizations, engaging in spirited debates, negotiations, and
                   crafting solutions to global challenges.
                 </p>
+
                 {/* Additional Event Details */}
                 <div className="mt-4">
                   <p className="text-gray-300 text-lg sm:text-xl">
                     <span className="font-semibold text-white">Date:</span>{" "}
                     05/08/2024
                   </p>
-                  <br></br>
+                  <br />
                   <p className="text-gray-300 text-lg sm:text-xl">
                     <span className="font-semibold text-white">Day:</span>{" "}
                     Monday
                   </p>
-                  <br></br>
+                  <br />
                   <p className="text-gray-300 text-lg sm:text-xl">
                     <span className="font-semibold text-white">Time:</span>{" "}
                     10:00 AM - 06:00 PM
                   </p>
-                  <br></br>
+                  <br />
                   <p className="text-gray-300 text-lg sm:text-xl">
                     <span className="font-semibold text-white">
                       Registration Fee:

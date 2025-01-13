@@ -48,18 +48,17 @@ const FacultyInfo = () => {
             className="w-full sm:w-96 bg-white shadow-lg rounded-lg p-6 text-center transform hover:scale-105 transition-transform duration-300"
             role="region"
             aria-labelledby={`coordinator-${index}-name`}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{
-              borderColor: "#3498db",
-              boxShadow: "0 0 15px rgba(52, 152, 219, 0.7)",
+            initial={{
+              opacity: 0,
+              x: index % 2 === 0 ? -100 : 100, // Alternating fade-in directions
             }}
-            viewport={{ once: false, amount: 0.5 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{
               duration: 0.6,
               ease: "easeOut",
-              delay: index * 0.1,
+              delay: index * 0.1, // Staggered animations
             }}
+            viewport={{ once: true }}
           >
             <img
               src={coordinator.image || vitbmun_logo}
