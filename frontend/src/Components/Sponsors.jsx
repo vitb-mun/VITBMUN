@@ -40,6 +40,7 @@ const Sponsors = () => {
         <div className="flex flex-col items-center">
           {/* Header */}
           <h2
+            id="sponsors"
             className="text-6xl font-bold text-center text-gray-800 mb-8"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
           >

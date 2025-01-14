@@ -58,6 +58,7 @@ const Event = () => {
       <div className="font-sans bg-white ">
         <section className="container mx-auto px-6 py-12">
           <h2
+            id="about"
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
           >
@@ -79,6 +80,7 @@ const Event = () => {
 
           {/* Events Section */}
           <h2
+            id="events"
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
           >

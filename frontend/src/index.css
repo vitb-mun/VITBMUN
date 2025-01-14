@@ -5,6 +5,8 @@
 /* index.css or App.css */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+  /* Fixed the scrolling issue */
 }
 
 /* index.css or App.css */
@@ -90,7 +92,7 @@ html {
 
 nav {
   height: 100px;
- 
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -145,6 +147,9 @@ nav a img {
 }
 
 @media (max-width: 1024px) {
+  html {
+    scroll-padding-top: 80px;
+  }
   nav {
     height: 70px;
   }
@@ -158,7 +163,6 @@ nav a img {
 }
 
 @media (max-width: 720px) {
- 
   .home-link-mobile {
     display: flex;
     padding: 10px;
@@ -185,7 +189,7 @@ nav a img {
     height: auto;
     justify-content: flex-start;
   }
-  nav a:hover{
+  nav a:hover {
     scale: 1.1;
   }
 

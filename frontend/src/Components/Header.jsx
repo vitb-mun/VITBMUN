@@ -3,13 +3,25 @@ import vitbhopal_logo from "../assets/vitbhopal_logo.png";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
 
 const Header = () => {
+  React.useEffect(() => {
+    const sidebar = document.getElementById("sidebar-active");
+    const overlay = document.getElementById("overlay");
+    overlay.addEventListener("click", () => {
+      sidebar.checked = false;
+    });
+    document.querySelectorAll("nav a").forEach((element) => {
+      element.addEventListener("click", () => {
+        sidebar.checked = false;
+      });
+    });
+  }, []);
   return (
     // div for header
     <nav className="bg-white sticky top-0 z-50 shadow-md">
-      <a className="home-link-mobile" href="#1">  
-            <img src={vitbmun_logo} alt="VITBMUN Logo" />
-            <h1>|</h1>
-            <img src={vitbhopal_logo} alt="VIT Bhopal Logo" />
+      <a className="home-link-mobile" href="#">
+        <img src={vitbmun_logo} alt="VITBMUN Logo" />
+        <h1>|</h1>
+        <img src={vitbhopal_logo} alt="VIT Bhopal Logo" />
       </a>
       <input type="checkbox" name="t" id="sidebar-active" />
       <label htmlFor="sidebar-active" className="open-sidebar-button">
@@ -20,9 +32,7 @@ const Header = () => {
           width="24px"
           fill="#000000"
         >
-          <path
-            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-          />
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
         </svg>
       </label>
       <label id="overlay" htmlFor="sidebar-active"></label>
@@ -35,36 +45,34 @@ const Header = () => {
             width="24px"
             fill="#000000"
           >
-            <path
-              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-            />
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>
         </label>
-        <a className="home-link" href="#1">  
-            <img src={vitbmun_logo} alt="VITBMUN Logo" />
-            <h1>|</h1>
-            <img src={vitbhopal_logo} alt="VIT Bhopal Logo" />
-      </a>
-      {[
-             "About",
-             "Events",
-             "Coordinators",
-             "Team",
-            "Sponsors",
-             "FAQs",
+        <a className="home-link" href="#">
+          <img src={vitbmun_logo} alt="VITBMUN Logo" />
+          <h1>|</h1>
+          <img src={vitbhopal_logo} alt="VIT Bhopal Logo" />
+        </a>
+        {[
+          "About",
+          "Events",
+          "Coordinators",
+          "Team",
+          "FAQs",
+          "Sponsors",
           "Contact Us",
-         ].map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase().replace(" ", "")}`}
-              className="text-gray-700 font-bold hover:text-blue-600"
-              style={{
-                fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
-              }}
-            >
-              {link}
-            </a>
-          ))}
+        ].map((link) => (
+          <a
+            key={link}
+            href={`#${link.toLowerCase().replace(" ", "")}`}
+            className="text-gray-700 font-bold hover:text-blue-600"
+            style={{
+              fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
+            }}
+          >
+            {link}
+          </a>
+        ))}
       </div>
     </nav>
   );

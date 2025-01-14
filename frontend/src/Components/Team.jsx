@@ -60,7 +60,7 @@ const OurTeam = () => {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-12 mb-12">
+    <div className="flex flex-col items-center space-y-12 mb-12" id="team">
       <h1
         className="text-6xl font-bold text-gray-800"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}

@@ -62,7 +62,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="flex justify-center items-start p-6">
+    <div id="faqs" className="flex justify-center items-start p-6">
       <div className="border-4 shadow-md rounded-3xl max-w-7xl flex flex-col md:flex-row items-start bg-white overflow-hidden w-full">
         {/* Left Section */}
         <div className="w-full md:w-1/3 p-8">
