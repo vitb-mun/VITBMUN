@@ -8,7 +8,7 @@ import backgroundimage from "../assets/dotted.png";
 
 const Footer = () => {
   return (
-    <div
+    <div id="contactus"
       style={{
         backgroundImage: `url(${backgroundimage})`,
         backgroundSize: "cover",
