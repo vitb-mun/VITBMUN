@@ -8,14 +8,7 @@ import backgroundimage from "../assets/dotted.png";
 
 const Footer = () => {
   return (
-    <div id="contactus"
-      style={{
-        backgroundImage: `url(${backgroundimage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <>
       <div className="container mx-auto w-[95vw] bg-[rgba(6,3,27,1)] text-white p-12 flex flex-col gap-4 rounded-t-[50px]">
         <div className="top flex justify-between flex-col md:flex-row gap-3">
           <div className="tabs flex justify-center">
@@ -35,21 +28,11 @@ const Footer = () => {
             </ul>
           </div>
           <div className="icons flex gap-8 text-3xl justify-center items-center">
-            <a href="https://chat.whatsapp.com/B6IDPABiyyI6DIUkhWy6uk">
-              <FaWhatsapp className="hover:cursor-pointer" />
-            </a>
-            <a href="/">
-              <FaDiscord className="hover:cursor-pointer" />
-            </a>
-            <a href="/">
-              <BsLinkedin className="hover:cursor-pointer" />
-            </a>
-            <a href="https://www.instagram.com/vitb.mun/">
-              <FaInstagram className="hover:cursor-pointer" />
-            </a>
-            <a href="/">
-              <AiFillTwitterCircle className="hover:cursor-pointer" />
-            </a>
+            <a href="https://chat.whatsapp.com/B6IDPABiyyI6DIUkhWy6uk"><FaWhatsapp className="hover:cursor-pointer" /></a>
+            <a href="/"><FaDiscord className="hover:cursor-pointer" /></a>
+            <a href="/"><BsLinkedin className="hover:cursor-pointer" /></a>
+            <a href="https://www.instagram.com/vitb.mun/"><FaInstagram className="hover:cursor-pointer" /></a>
+            <a href="/"><AiFillTwitterCircle className="hover:cursor-pointer" /></a>
           </div>
         </div>
 

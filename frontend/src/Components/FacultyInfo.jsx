@@ -26,7 +26,6 @@ const FacultyInfo = () => {
 
   return (
     <div
-      id="coordinators"
       className="responsive-background mx-auto p-4"
       style={{
         backgroundImage: `url(${backgroundimage})`,
