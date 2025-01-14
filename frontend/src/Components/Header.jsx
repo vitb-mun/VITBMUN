@@ -3,66 +3,78 @@ import vitbhopal_logo from "../assets/vitbhopal_logo.png";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  React.useEffect(() => {
+    const sidebar = document.getElementById("sidebar-active");
+    const overlay = document.getElementById("overlay");
+    overlay.addEventListener("click", () => {
+      sidebar.checked = false;
+    });
+    document.querySelectorAll("nav a").forEach((element) => {
+      element.addEventListener("click", () => {
+        sidebar.checked = false;
+      });
+    });
+  }, []);
   return (
-    <div className="bg-white sticky top-0 z-50 shadow-md">
-      {/* Top Header Section */}
-      <div className="container mx-auto px-4 py-6 flex items-center justify-between">
-        {/* Logos - Aligned Left */}
-        <div className="flex items-center space-x-4">
-          <img src={vitbmun_logo} className="h-12 w-auto" alt="VITBMUN Logo" />
-          <div className="text-3xl">|</div>
-          <img
-            src={vitbhopal_logo}
-            className="h-14 w-auto"
-            alt="VIT Bhopal Logo"
-          />
-        </div>
-
-        {/* Hamburger Icon - Visible only on small screens */}
-        <button
-          className="md:hidden text-gray-700 text-3xl focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle Menu"
+    // div for header
+    <nav className="bg-white sticky top-0 z-50 shadow-md">
+      <a className="home-link-mobile" href="#">
+        <img src={vitbmun_logo} alt="VITBMUN Logo" />
+        <h1>|</h1>
+        <img src={vitbhopal_logo} alt="VIT Bhopal Logo" />
+      </a>
+      <input type="checkbox" name="t" id="sidebar-active" />
+      <label htmlFor="sidebar-active" className="open-sidebar-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#000000"
         >
-          ☰
-        </button>
-
-        {/* Navigation Links - Aligned Right */}
-        <nav
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } absolute top-16 left-0 w-full bg-white shadow-md md:static md:block md:flex md:space-x-8 md:shadow-none`}
-        >
-          <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 py-4 md:py-0">
-            {[
-              "About",
-              "Events",
-              "Coordinators",
-              "Team",
-              "Sponsors",
-              "FAQs",
-              "Contact Us",
-            ].map((link) => (
-              <li key={link}>
-                <a
-                  href={`#${link.toLowerCase().replace(" ", "")}`}
-                  className="text-gray-700 text-xl font-bold hover:text-blue-600"
-                  style={{
-                    fontFamily:
-                      "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
-                  }}
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg>
+      </label>
+      <label id="overlay" htmlFor="sidebar-active"></label>
+      <div className="links-container">
+        <label htmlFor="sidebar-active" className="close-sidebar-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#000000"
+          >
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg>
+        </label>
+        <a className="home-link" href="#">
+          <img src={vitbmun_logo} alt="VITBMUN Logo" />
+          <h1>|</h1>
+          <img src={vitbhopal_logo} alt="VIT Bhopal Logo" />
+        </a>
+        {[
+          "About",
+          "Events",
+          "Coordinators",
+          "Team",
+          "FAQs",
+          "Sponsors",
+          "Contact Us",
+        ].map((link) => (
+          <a
+            key={link}
+            href={`#${link.toLowerCase().replace(" ", "")}`}
+            className="text-gray-700 font-bold hover:text-blue-600"
+            style={{
+              fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
+            }}
+          >
+            {link}
+          </a>
+        ))}
       </div>
-    </div>
+    </nav>
   );
 };
-
 export default Header;

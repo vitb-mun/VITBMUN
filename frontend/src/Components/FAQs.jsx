@@ -63,7 +63,7 @@ const FAQ = () => {
   };
 
   return (
-    <div
+    <div id="faqs"
       className="flex justify-center items-start p-6"
       style={{
         backgroundImage: `url(${backgroundimage})`,
