@@ -37,12 +37,7 @@ html {
     #000 10% 90%,
     transparent
   );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 10% 90%,
-    transparent
-  );
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
 }
 .sponsor-slider .list {
   display: flex;
@@ -71,15 +66,152 @@ html {
     left: calc(var(--width) * -1);
   }
 }
-.sponsor-slider:hover .item{
-    animation-play-state: paused!important;
-    filter: grayscale(1);
-
+.sponsor-slider:hover .item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
 }
-.sponsor-slider .item:hover{
-    filter: grayscale(0);
+.sponsor-slider .item:hover {
+  filter: grayscale(0);
 }
 
 /* 
   End of Sponsor Slider
+*/
+
+/* 
+ For navbar 
+ (by GSD)
+*/
+:root {
+  --color-1: #ffffff;
+  --text-color: #00000;
+  --accent-color: #006aff;
+}
+
+nav {
+  height: 100px;
+ 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+}
+.links-container {
+  background: #ffffff;
+  height: 100%;
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-size: 13pt;
+  text-decoration: none;
+  transition: 0.3s scale;
+}
+nav a:hover {
+  scale: 1.2;
+}
+.home-link:hover,
+.home-link-mobile:hover {
+  scale: 1;
+}
+nav .home-link {
+  margin-right: auto;
+}
+
+#sidebar-active {
+  display: none;
+}
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+.home-link-mobile {
+  display: none;
+}
+.home-link img,
+.home-link-mobile img {
+  padding: 10px;
+}
+nav a img {
+  height: 100px;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    height: 70px;
+  }
+  nav a {
+    padding: 20px 10px;
+    font-size: 10pt;
+  }
+  nav .home-link img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 720px) {
+ 
+  .home-link-mobile {
+    display: flex;
+    padding: 10px;
+  }
+  .home-link {
+    display: none;
+  }
+  .links-container {
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: clamp(fit-content, 300px, 100%);
+    transition: 0.75s ease-out;
+  }
+  nav a {
+    font-size: 16pt;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 50px;
+    height: auto;
+    justify-content: flex-start;
+  }
+  nav a:hover{
+    scale: 1.1;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay {
+    background: rgba(255, 255, 255, 0.42);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    transition: all 0.75s ease-out;
+  }
+  nav a img {
+    height: 50px;
+  }
+}
+
+/* 
+  End of Navbar
 */
