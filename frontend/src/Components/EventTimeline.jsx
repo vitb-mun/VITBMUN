@@ -9,35 +9,19 @@ const EventTimeline = () => {
 
   const timelineEvents = [
     {
-      date: "Date: 2023-01-01",
-      time: "Time: 9:00 - 12:00",
       title: "MUN-MATE'24",
-      description:
-        "Welcome to our MUN Club, where we bring the world of Model United Nations to life! Engage in spirited debates and negotiations.",
       image: Rajneeti,
     },
     {
-      date: "Date: 2023-06-15",
-      time: "Time: 9:00 - 12:00",
       title: "VITBMUN 3.0",
-      description:
-        "Experience the thrill of diplomacy at VITBMUN 3.0, featuring real-world simulations and engaging debates.",
       image: Diagloue,
     },
     {
-      date: "Date: 2023-02-20",
-      time: "Time: 9:00 - 12:00",
       title: "Rajneeti Rangmanch",
-      description:
-        "Dive into the world of politics with Rajneeti Rangmanch, showcasing strategy and critical thinking.",
       image: Rajneeti,
     },
     {
-      date: "Date: 2023-09-10",
-      time: "Time: 9:00 - 12:00",
       title: "Chain Reaction Chase",
-      description:
-        "Join Chain Reaction Chase, a collaborative problem-solving event with dynamic challenges.",
       image: Diagloue,
     },
   ];
@@ -130,9 +114,7 @@ const EventTimeline = () => {
               <h2 className="text-xl font-semibold text-gray-800 mt-4">
                 {event.title}
               </h2>
-              <p className="text-gray-600 text-sm mt-2">{event.date}</p>
-              <p className="text-gray-600 text-sm mb-4">{event.time}</p>
-              <p className="text-gray-700">{event.description}</p>
+
               <div className="mt-4 flex justify-center">
                 <button
                   className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"

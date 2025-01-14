@@ -6,16 +6,7 @@ import image2 from "../assets/Highlights/image3.jpg";
 import backgroundimage from "../assets/back4.jpg";
 
 const Gallery = () => {
-  const galleryImages = [
-    image1,
-    image1,
-    image1,
-    image1,
-    image2,
-    image2,
-    image2,
-    image2,
-  ];
+  const galleryImages = [image1, image1, image1, image1];
 
   return (
     <div
@@ -55,8 +46,8 @@ const Gallery = () => {
               x: 0, // Reset x-axis (center position)
             }}
             transition={{
-              duration: 0.6,
-              delay: index * 0.2, // Staggered delay for cascading effect
+              duration: 0.4,
+              delay: index * 0.1, // Staggered delay for cascading effect
               type: "spring",
             }}
             viewport={{ once: true }}

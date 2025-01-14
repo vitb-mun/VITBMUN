@@ -4,14 +4,19 @@ import { FaDiscord } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import backgroundimage from "../assets/dotted.png";
 
 const Footer = () => {
   return (
-    <>
-      <div
-        id="contactus"
-        className="container mx-auto w-[95vw] bg-[rgba(6,3,27,1)] text-white p-12 flex flex-col gap-4 rounded-t-[50px]"
-      >
+    <div id="contactus"
+      style={{
+        backgroundImage: `url(${backgroundimage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="container mx-auto w-[95vw] bg-[rgba(6,3,27,1)] text-white p-12 flex flex-col gap-4 rounded-t-[50px]">
         <div className="top flex justify-between flex-col md:flex-row gap-3">
           <div className="tabs flex justify-center">
             <ul className="flex md:gap-12 gap-2 text-lg ">
@@ -60,7 +65,7 @@ const Footer = () => {
         <div className="text mx-auto">&copy; 2025 MUN Club, VIT Bhopal</div>
         <div className="baseline bg-white h-[0.3px] w-[100%] mt-4 mx-auto"></div>
       </div>
-    </>
+    </div>
   );
 };
 

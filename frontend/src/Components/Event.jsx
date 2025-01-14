@@ -1,14 +1,50 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
 import rajneeti_logo from "../assets/Rajneeti.png";
-import upcome from "../assets/upcome.jpg";
-
-import UN_Assembly from "../assets/UN_Assembly.jpg";
+import UN_Assembly from "../assets/finalun.jpg";
+import { motion } from "framer-motion";
 
 const Event = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const eventCardRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Intersection Observer to detect when the card is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true); // Trigger fade-in when the event card comes into view
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the element is in the viewport
+    );
+
+    if (eventCardRef.current) {
+      observer.observe(eventCardRef.current);
+    }
+
+    return () => {
+      if (eventCardRef.current) {
+        observer.unobserve(eventCardRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div>
-      {/* Bottom Tagline Section */}
       <div className="text-center mt-4">
         <h1
           className="text-blue-700 font-bold text-5xl"
@@ -19,7 +55,7 @@ const Event = () => {
               key={index}
               className="inline-block mr-2"
               style={{
-                animation: `fadeIn 0.5s ease ${2 + index * 0.19}s forwards`, // Add a 2-second delay
+                animation: `fadeIn 0.5s ease ${2 + index * 0.19}s forwards`,
                 opacity: 0,
               }}
             >
@@ -27,44 +63,67 @@ const Event = () => {
             </span>
           ))}
         </h1>
-        <p className="text-gray-700 font-medium text-xl mt-1">
+        <motion.p
+          className="text-gray-700 font-medium text-xl mt-1"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 3 }}
+        >
           VITBMUN Club | VIT Bhopal University
-        </p>
+        </motion.p>
       </div>
 
       <style>
         {`
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  `}
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}
       </style>
 
-      {/* Image Section */}
-      <div className="relative container mx-auto px-2 py-4">
+      {/* Image Section with Scroll Zoom */}
+      <div
+        className="relative container mx-auto px-2 py-4 overflow-hidden"
+        style={{
+          height: "400px",
+        }}
+      >
         <img
           src={UN_Assembly}
           alt="Conference Hall"
-          className="w-full h-[400px] object-cover rounded-3xl shadow-lg"
+          className="w-full h-full object-cover rounded-3xl shadow-lg"
+          style={{
+            transform: `scale(${1 + scrollPosition / 1000})`, // Zoom effect
+            transition: "transform 0.1s ease-out", // Smooth transition
+          }}
         />
       </div>
-      <div className="font-sans bg-white ">
+
+      {/* Main Content Section */}
+      <div className="font-sans bg-white">
         <section className="container mx-auto px-6 py-12">
-          <h2
-            id="about"
+          <motion.h2 id="about"
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 3 }}
           >
             Model United Nations
-          </h2>
-          <p className="text-gray-800 text-xl text-bold leading-relaxed mb-12">
+          </motion.h2>
+          <motion.p
+            className="text-gray-800 text-xl text-bold leading-relaxed mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 3 }}
+          >
             Welcome to our MUN Club, where we bring the world of Model United
             Nations to life! In our club, students take on the roles of
             delegates representing diverse countries and organizations, engaging
@@ -76,7 +135,7 @@ const Event = () => {
             delegate or new to the MUN scene, our club offers a supportive
             environment where members can learn, grow, and make lasting
             connections.
-          </p>
+          </motion.p>
 
           {/* Events Section */}
           <h2
@@ -86,7 +145,14 @@ const Event = () => {
           >
             Upcoming Event
           </h2>
-          <div className="bg-gray-900 text-white border border-gray-700 rounded-3xl shadow-md p-6 relative overflow-hidden">
+          <div
+            ref={eventCardRef}
+            className={`bg-gray-900 text-white border border-gray-700 rounded-3xl shadow-md p-6 relative overflow-hidden ${
+              isVisible
+                ? "opacity-100 transition-opacity duration-1000"
+                : "opacity-0"
+            }`}
+          >
             {/* Right Semi-Circle Cut */}
             <div className="absolute -right-7 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white rounded-full border-t border-r"></div>
 
