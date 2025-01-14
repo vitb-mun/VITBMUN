@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React , {useState} from "react";
 import vitbhopal_logo from "../assets/vitbhopal_logo.png";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
 
 const Header = () => {
-
   React.useEffect(() => {
     const sidebar = document.getElementById("sidebar-active");
     const overlay = document.getElementById("overlay");
@@ -54,30 +53,26 @@ const Header = () => {
           <h1>|</h1>
           <img src={vitbhopal_logo} alt="VIT Bhopal Logo" />
         </a>
-        <>
-          {[
-            "About",
-            "Events",
-            "Coordinators",
-            "Team",
-            "FAQs",
-            "Sponsors",
-            "Contact Us",
-          ].map((link) => (
-            <a
-              key={link}
-              href={`#${link.toLowerCase().replace(" ", "")}`}
-              className="text-gray-700 font-bold hover:text-blue-600"
-              style={{
-                fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
-              }}
-            >
-              {link}
-            </a>
-          ))}
-        </>
-
-      
+        {[
+          "About",
+          "Events",
+          "Coordinators",
+          "Team",
+          "FAQs",
+          "Sponsors",
+          "Contact Us",
+        ].map((link) => (
+          <a
+            key={link}
+            href={`#${link.toLowerCase().replace(" ", "")}`}
+            className="text-gray-700 font-bold hover:text-blue-600"
+            style={{
+              fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
+            }}
+          >
+            {link}
+          </a>
+        ))}
       </div>
     </nav>
   );
