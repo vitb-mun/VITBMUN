@@ -1,118 +1,118 @@
 import React from "react";
+import Winners from "../Components/winners";
+import Highlights from "../Components/Highlights";
+import Review from "../Components/Review";
+import calendar from "./../assets/calendar.png";
+import building from "./../assets/building.png";
+import clock from "./../assets/clock.png";
+import currency from "./../assets/currency.png";
+import groups from "./../assets/groups.png";
+import hash from "./../assets/hash.png";
 
 const MunMate = () => {
   return (
-    <div className="font-sans bg-gray-100 text-gray-800">
+    <div className="font-sans bg-gray-100 text-gray-800 p-4 px-20">
       {/* Header Section */}
-      <header className="text-center py-8 bg-white shadow-md">
-        <h1 className="text-4xl font-bold">MUN MATE</h1>
-        <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">
-          Register Now
+      <header className="flex justify-between items-center mb-6">
+        <h1 className="text-4xl font-bold text-blue-gray-800">MUN MATE</h1>
+        <button className="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-500">
+          More Events
         </button>
       </header>
 
       {/* Main Content */}
-      <div className="container mx-auto p-4 md:p-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Options Section */}
-          <div className="md:col-span-1 bg-white rounded shadow p-4">
-            <h2 className="text-lg font-bold mb-4">Options</h2>
-            <div className="space-y-2">
-              <div className="border rounded p-2 hover:bg-gray-50">
-                Committee
-              </div>
-              <div className="border rounded p-2 hover:bg-gray-50">Rules</div>
-              <div className="border rounded p-2 hover:bg-gray-50">
-                Resources
-              </div>
-              <div className="border rounded p-2 hover:bg-gray-50">FAQs</div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
+        {/* Left Section */}
+        <div className="left col-span-1 flex flex-col gap-6">
+          {/* Sponsors Section */}
+          <div className="sponsers bg-white border border-gray-300 p-4 rounded-xl shadow-md">
+            <h2 className="text-xl font-semibold text-blue-gray-800 mb-4">Sponsors</h2>
+            <div className="images flex justify-between">
+              {[1, 2, 3].map((_, index) => (
+                <div
+                  key={index}
+                  className="h-24 w-24 border-4 border-gray-300 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center"
+                >
+                  <img src="" alt={`Sponsor ${index + 1}`} />
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Main Content */}
-          <div className="md:col-span-3 bg-white rounded shadow p-6">
-            <h2 className="text-xl font-bold mb-4">This MUN Introduces</h2>
-            <p className="mb-4 text-sm">
-              This MUN introduces several well-thought-of three rounds, designed
-              to test teamwork, problem-solving, decision-making, and
-              adaptability.
-            </p>
-
-            <h3 className="text-lg font-semibold mb-2">Rounds</h3>
-            <ol className="list-decimal list-inside mb-4 space-y-2">
-              <li>
-                <strong>Round 1:</strong> Participants perform tasks involving
-                rules clarification, background checks, and analysis.
-              </li>
-              <li>
-                <strong>Round 2:</strong> Group tasks with critical thinking
-                problems to be solved in limited time.
-              </li>
-              <li>
-                <strong>Round 3:</strong> Crisis committee with real-time
-                decision-making and negotiation tasks.
-              </li>
-            </ol>
-
-            <h3 className="text-lg font-semibold mb-2">Outcomes</h3>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Leadership and public speaking skills</li>
-              <li>Enhanced negotiation and teamwork abilities</li>
-              <li>Problem-solving and adaptability experience</li>
-            </ul>
+          {/* Event Details */}
+          <div className="bg-white border border-gray-300 p-4 rounded-xl shadow-md space-y-4">
+            {[{ label: "Date", icon: calendar }, { label: "Time", icon: clock }, { label: "Venue", icon: building }].map(
+              (item, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <img src={item.icon} alt={item.label} className="h-8" />
+                  <span className="text-lg font-bold">{item.label}: </span> <span>Details here</span>
+                </div>
+              )
+            )}
           </div>
         </div>
 
-        {/* Winners Section */}
-        <section className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">Winners</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="h-24 border rounded bg-gray-50 flex items-center justify-center">
-              Delegate Name
-            </div>
-            <div className="h-24 border rounded bg-gray-50 flex items-center justify-center">
-              Delegate Name
-            </div>
-            <div className="h-24 border rounded bg-gray-50 flex items-center justify-center">
-              Delegate Name
-            </div>
-            <div className="h-24 border rounded bg-gray-50 flex items-center justify-center">
-              Delegate Name
-            </div>
+        {/* Right Section */}
+        <div className="right col-span-2 flex flex-col gap-6">
+          {/* Event Description */}
+          <div className="bg-white p-4 rounded-xl shadow-md">
+            <p className="text-lg leading-relaxed">
+              This <span className="font-bold">fun</span> and <span className="font-bold">interactive event</span> will
+              consist of three rounds, designed to test{" "}
+              <span className="font-bold">teamwork, problem-solving skills,</span> and{" "}
+              <span className="font-bold">diplomacy</span> in an engaging and competitive environment.
+            </p>
           </div>
-        </section>
 
-        {/* Event Highlights */}
-        <section className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">Event Highlights</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="h-24 border rounded bg-gray-50"></div>
-            <div className="h-24 border rounded bg-gray-50"></div>
-            <div className="h-24 border rounded bg-gray-50"></div>
-          </div>
-        </section>
+          {/* Rounds Section */}
+          <section>
+            <h2 className="text-2xl font-bold text-blue-gray-800 mb-4">Rounds</h2>
+            <div className="space-y-4">
+              {[
+                {
+                  title: "1. SpeedMUN",
+                  description:
+                    "Participants are divided into four tables (A, B, C, D) with 20 individuals each for a 50-minute round.",
+                },
+                {
+                  title: "2. PPT Karaoke",
+                  description: "Participants will be given random PPT slides on various topics to present.",
+                },
+                {
+                  title: "3. Crisis Committee",
+                  description:
+                    "Participants will be divided into committees and given a crisis scenario to resolve creatively.",
+                },
+              ].map((round, index) => (
+                <div key={index} className="p-4 bg-white rounded-xl shadow-md">
+                  <h3 className="text-lg font-semibold text-blue-gray-800">{round.title}</h3>
+                  <p className="mt-2">{round.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-        {/* Reviews */}
-        <section className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">Reviews</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="border rounded p-4 bg-white">
-              <h3 className="font-semibold">Delegate Name</h3>
-              <p className="text-sm text-gray-600">
-                "It was a wonderful experience that enhanced my skills and
-                understanding of teamwork."
-              </p>
-            </div>
-            <div className="border rounded p-4 bg-white">
-              <h3 className="font-semibold">Delegate Name</h3>
-              <p className="text-sm text-gray-600">
-                "An amazing opportunity to connect, learn, and collaborate with
-                others."
-              </p>
-            </div>
+          {/* Register Button */}
+          <div className="flex justify-end">
+            <button className="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-500">
+              Register Now
+            </button>
           </div>
-        </section>
+        </div>
       </div>
+
+      <hr className="mt-10 border-t-2 border-gray-400" />
+
+      {/* Additional Sections */}
+      <section className="mt-8">
+        <Winners />
+      </section>
+      <section className="mt-8">
+        <Highlights />
+      </section>
+      <section className="mt-8">
+        <Review />
+      </section>
     </div>
   );
 };

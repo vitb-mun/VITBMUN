@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import Rajneeti from "../assets/Rajneeti.png";
 import Diagloue from "../assets/Diagloue.png";
 
@@ -9,22 +10,28 @@ const EventTimeline = () => {
 
   const timelineEvents = [
     {
+      name: "MUN-MATE",
       title: "MUN-MATE'24",
       image: Rajneeti,
     },
     {
+      name: "VITBMUN",
       title: "VITBMUN 3.0",
       image: Diagloue,
     },
     {
+      name: "RajneetiRangmanch",
       title: "Rajneeti Rangmanch",
       image: Rajneeti,
     },
     {
+      name: "ChainReactionChase",
       title: "Chain Reaction Chase",
       image: Diagloue,
     },
   ];
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,8 +55,8 @@ const EventTimeline = () => {
     };
   }, []);
 
-  const handleLearnMoreClick = (eventTitle) => {
-    console.log(`Learn more about ${eventTitle}`);
+  const handleLearnMoreClick = (eventName) => {
+      navigate(`/${eventName}`);
   };
 
   const openModal = (image) => {
@@ -79,28 +86,25 @@ const EventTimeline = () => {
           <div
             key={index}
             data-index={index}
-            className={`timeline-item flex flex-col md:flex-row items-center relative mb-16 ${
-              visibleItems.includes(index.toString())
+            className={`timeline-item flex flex-col md:flex-row items-center relative mb-16 ${visibleItems.includes(index.toString())
                 ? "opacity-100"
                 : "opacity-0"
-            } transition-opacity duration-700`}
+              } transition-opacity duration-700`}
           >
             {/* Timeline Circle */}
             <div
-              className={`bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform duration-700 ${
-                visibleItems.includes(index.toString())
+              className={`bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform duration-700 ${visibleItems.includes(index.toString())
                   ? "scale-100"
                   : "scale-50"
-              } absolute top-0 left-1/2 transform -translate-x-1/2`}
+                } absolute top-0 left-1/2 transform -translate-x-1/2`}
             >
               {index + 1}
             </div>
 
             {/* Event Card */}
             <div
-              className={`bg-white shadow-lg border-black-800 border-2 rounded-lg p-5 mt-12 w-3/4 md:w-5/12 ${
-                index % 2 === 0 ? "md:ml-12 md:mr-auto" : "md:mr-12 md:ml-auto"
-              }`}
+              className={`bg-white shadow-lg border-black-800 border-2 rounded-lg p-5 mt-12 w-3/4 md:w-5/12 ${index % 2 === 0 ? "md:ml-12 md:mr-auto" : "md:mr-12 md:ml-auto"
+                }`}
             >
               <div className="w-full h-auto bg-gray-200 rounded-t-lg overflow-hidden">
                 <img
@@ -118,7 +122,7 @@ const EventTimeline = () => {
               <div className="mt-4 flex justify-center">
                 <button
                   className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"
-                  onClick={() => handleLearnMoreClick(event.title)}
+                  onClick={() => handleLearnMoreClick(event.name)}
                   style={{
                     fontFamily:
                       "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
