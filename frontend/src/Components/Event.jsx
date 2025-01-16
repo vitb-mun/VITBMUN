@@ -109,7 +109,8 @@ const Event = () => {
       {/* Main Content Section */}
       <div className="font-sans bg-white">
         <section className="container mx-auto px-6 py-12">
-          <motion.h2 id="about"
+          <motion.h2
+            id="about"
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
             initial={{ opacity: 0, y: 20 }}
@@ -138,7 +139,7 @@ const Event = () => {
           </motion.p>
 
           {/* Events Section */}
-          <h2 id="events"
+          <h2
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
           >

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Rajneeti from "../assets/Rajneeti.png";
 import Diagloue from "../assets/Diagloue.png";
+import { Link } from "react-router-dom";
 
 const EventTimeline = () => {
   const [visibleItems, setVisibleItems] = useState([]);
@@ -71,6 +72,7 @@ const EventTimeline = () => {
       <h1
         className="text-6xl font-bold text-gray-800 mb-10 text-center container mx-auto"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+        id="eventtimeline"
       >
         Events Timeline
       </h1>

@@ -55,7 +55,8 @@ const Header = () => {
         </a>
         {[
           "About",
-          "Events",
+          "Collaborations",
+          "Event Timeline",
           "Coordinators",
           "Team",
           "FAQs",
