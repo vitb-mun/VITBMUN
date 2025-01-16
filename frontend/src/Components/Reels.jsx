@@ -4,12 +4,11 @@ const Reels = () => {
   const reels = [
     "https://www.instagram.com/p/DEPqTO_PyNO/",
     "https://www.instagram.com/p/DCgdaWnvn3E/",
-    "https://www.instagram.com/reel/DCv4t2fP3v3/",
   ];
 
   return (
     <section>
-      <div className="container mx-auto px-4 mt-4 mb-6">
+      <div className="container mx-auto px-4 mt-12 mb-6">
         <h1
           className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
           style={{ fontFamily: "'Host Grotesk', sans-serif" }}
@@ -23,8 +22,8 @@ const Reels = () => {
               <iframe
                 src={`${reel}embed`}
                 width="100%"
-                height="400"
-                className="rounded-lg shadow-lg"
+                height="500"
+                className="rounded-lg shadow-lg "
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
                 allowFullScreen
                 title={`Instagram Reel ${index + 1}`}

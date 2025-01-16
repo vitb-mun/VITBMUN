@@ -14,14 +14,15 @@ const Hero = () => {
   return (
     <div>
       <Event></Event>
-      <Collaboration></Collaboration>
       <EventTimeline></EventTimeline>
       <Gallery></Gallery>
-      <Reels></Reels>
 
       <FacultyInfo></FacultyInfo>
       <SecretaryInfo></SecretaryInfo>
       <Team></Team>
+      <Collaboration></Collaboration>
+      <Reels></Reels>
+
       <FAQ></FAQ>
       <Sponsors></Sponsors>
     </div>

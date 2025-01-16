@@ -11,16 +11,7 @@ import image7 from "../assets/Highlights/people3.jpg";
 import image8 from "../assets/Highlights/intro.jpg";
 
 const Gallery = () => {
-  const galleryImages = [
-    image8,
-    image1,
-    image4,
-    image5,
-    image6,
-    image7,
-    image3,
-    image2,
-  ];
+  const galleryImages = [image1, image5, image6, image7];
 
   return (
     <div className="mx-auto p-4">
