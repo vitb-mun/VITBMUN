@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Rajneeti from "../assets/Rajneeti.png";
 import Diagloue from "../assets/Diagloue.png";
+import { Link } from "react-router-dom";
+
 
 const EventTimeline = () => {
   const [visibleItems, setVisibleItems] = useState([]);
@@ -120,17 +122,17 @@ const EventTimeline = () => {
               </h2>
 
               <div className="mt-4 flex justify-center">
-                <button
-                  className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"
-                  onClick={() => redirectToEventPage(event.url)} // Redirect to respective event page
-                  style={{
-                    fontFamily:
-                      "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
-                  }}
-                >
-                  Learn More
-                </button>
-              </div>
+  <Link
+    to={event.url} // Use the URL from your `timelineEvents`
+    className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"
+    style={{
+      fontFamily: "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
+    }}
+  >
+    Learn More
+  </Link>
+</div>
+
             </div>
           </div>
         ))}
