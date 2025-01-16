@@ -11,18 +11,22 @@ const EventTimeline = () => {
     {
       title: "MUN-MATE'24",
       image: Rajneeti,
+      url: "/MUN-MATE",
     },
     {
       title: "VITBMUN 3.0",
       image: Diagloue,
+      url: "/VITBMUN",
     },
     {
       title: "Rajneeti Rangmanch",
       image: Rajneeti,
+      url: "/RajneetiRangmanch",
     },
     {
       title: "Chain Reaction Chase",
       image: Diagloue,
+      url: "/ChainReactionChase",
     },
   ];
 
@@ -48,10 +52,6 @@ const EventTimeline = () => {
     };
   }, []);
 
-  const handleLearnMoreClick = (eventTitle) => {
-    console.log(`Learn more about ${eventTitle}`);
-  };
-
   const openModal = (image) => {
     setSelectedImage(image);
     setIsModalOpen(true);
@@ -60,6 +60,10 @@ const EventTimeline = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedImage("");
+  };
+
+  const redirectToEventPage = (url) => {
+    window.location.href = url; // Redirect to the respective event page
   };
 
   return (
@@ -118,7 +122,7 @@ const EventTimeline = () => {
               <div className="mt-4 flex justify-center">
                 <button
                   className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"
-                  onClick={() => handleLearnMoreClick(event.title)}
+                  onClick={() => redirectToEventPage(event.url)} // Redirect to respective event page
                   style={{
                     fontFamily:
                       "'Host Grotesk', 'Inter', 'Montserrat', sans-serif",
