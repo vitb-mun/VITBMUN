@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import SponsorsCard from "../Components/SponsorsCard";
 import EventDetailsCard_a from "../Components/EventDetailsCard_a";
 import EventDetailsCard_b from "../Components/EventDetailsCard_b";
-import ResourcesCard from "../Components/resourcesCard";
+import ResourcesCard from "../Components/ResourcesCard";
 import Committees from "../Components/Committees";
 
 const VITBMUN = () => {
