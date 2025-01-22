@@ -1,5 +1,5 @@
 import React from "react";
-import Winners from "../Components/winners";
+import Winners from "../Components/Winners";
 import Highlights from "../Components/Highlights";
 import Review from "../Components/Review";
 import calendar from "./../assets/calendar.png";
