@@ -109,7 +109,8 @@ const Event = () => {
       {/* Main Content Section */}
       <div className="font-sans bg-white">
         <section className="container mx-auto px-6 py-12">
-          <motion.h2 id="about"
+          <motion.h2
+            id="about"
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
             initial={{ opacity: 0, y: 20 }}
@@ -138,7 +139,7 @@ const Event = () => {
           </motion.p>
 
           {/* Events Section */}
-          <h2 id="events"
+          <h2
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
           >
@@ -146,18 +147,16 @@ const Event = () => {
           </h2>
           <div
             ref={eventCardRef}
-            className={`bg-gray-900 text-white border border-gray-700 rounded-3xl shadow-md p-6 relative overflow-hidden ${
+            className={` text-white relative overflow-hidden bg-repeat object-bottom 
+            bg-[url('./assets/TicketC.jpg')] lg:bg-[url('./assets/TicketC.png')] bg-contain sm:h-auto h-lvh ${
               isVisible
                 ? "opacity-100 transition-opacity duration-1000"
                 : "opacity-0"
             }`}
           >
-            {/* Right Semi-Circle Cut */}
-            <div className="absolute -right-7 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white rounded-full border-t border-r"></div>
-
-            <div className="flex flex-col md:flex-row md:items-start items-center">
+            <div className="flex flex-col md:flex-row md:items-start items-center p-10 ">
               {/* Image Section */}
-              <div className="w-full md:w-1/3 h-48 sm:h-60 md:h-auto bg-gray-300 rounded-lg overflow-hidden flex-shrink-0">
+              <div className="w-full md:w-1/4 h-48 sm:h-60 md:h-auto bg-gray-300 rounded-lg overflow-hidden flex-shrink-0">
                 <img
                   src={rajneeti_logo}
                   className="h-full w-full object-cover"
@@ -166,7 +165,7 @@ const Event = () => {
               </div>
 
               {/* Content Section */}
-              <div className="w-full md:w-2/3 mt-6 md:mt-0 md:ml-6 flex flex-col justify-center">
+              <div className="w-full md:w-2/4 mt-6 md:mt-0 md:ml-6 flex flex-col justify-center">
                 <h3
                   className="text-3xl sm:text-4xl font-bold"
                   style={{ fontFamily: "'Host Grotesk', sans-serif" }}

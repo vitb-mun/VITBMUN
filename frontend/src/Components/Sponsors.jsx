@@ -1,6 +1,5 @@
 import React from "react";
 import vitbmun_logo from "../assets/vitbmun_logo.svg";
-import backgroundimage from "../assets/back4.jpg";
 
 const Sponsors = () => {
   const sponsorLogos = [
@@ -12,14 +11,7 @@ const Sponsors = () => {
     vitbmun_logo,
   ];
   return (
-    <div
-      style={{
-        backgroundImage: `url(${backgroundimage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div>
       {/* 
       Here Change the width and height for all images in the sponsor-slider
       */}
