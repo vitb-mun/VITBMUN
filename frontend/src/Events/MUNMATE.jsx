@@ -5,7 +5,7 @@ import Review from "../Components/Review";
 import SponsorsCard from "../Components/SponsorsCard";
 import EventDetailsCard_a from "../Components/EventDetailsCard_a";
 import EventDetailsCard_b from "../Components/EventDetailsCard_b";
-import ResourcesCard from "../Components/resourcesCard";
+import ResourcesCard from "../Components/ResourcesCard";
 
 const MunMate = () => {
   const [speedMUNOpen, setSpeedMUNOpen] = useState(false);
