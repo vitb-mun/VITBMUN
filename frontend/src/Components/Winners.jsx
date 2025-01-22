@@ -28,6 +28,11 @@ const Winners = () => {
       participantName: "Michael Brown",
       position: "Fifth Place",
     },
+    {
+      img: userLogo,
+      participantName: "Michael Brown",
+      position: "Fifth Place",
+    },
   ];
 
   return (
@@ -38,17 +43,17 @@ const Winners = () => {
         {winnerDetails.map((winner, index) => (
           <div
             key={index}
-            className="flex-shrink-0 flex flex-col items-center border-2 border-gray-300 bg-white rounded-lg shadow-lg p-4 mr-10 w-60"
+            className="flex-shrink-0 flex flex-col items-center mr-10"
           >
             <img
               src={winner.img}
               alt={winner.participantName}
-              className="w-32 h-32 object-cover rounded-full mb-4"
+              className="w-40 h-40 object-cover mb-4 border-2 rounded-3xl border-gray-300"
             />
-            <h4 className="text-lg font-bold text-gray-800">
+            <h4 className="text-md font-bold text-gray-800">
               {winner.participantName}
             </h4>
-            <h6 className="text-base font-medium text-gray-600">
+            <h6 className="text-sm font-medium text-gray-600">
               {winner.position}
             </h6>
           </div>
