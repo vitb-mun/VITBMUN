@@ -174,7 +174,9 @@ const Event = () => {
                 </h3>
                 <p className="text-gray-400 mt-2 text-lg sm:text-xl leading-relaxed">
                   Welcome to our MUN Club, where we bring the world of Model
-                  United Nations to life! In our club, ates, negotiations, and
+                  United Nations to life! In our club, students take on the
+                  roles of delegates representing diverse countries and
+                  organizations, engaging in spirited debates, negotiations, and
                   crafting solutions to global challenges.
                 </p>
 
