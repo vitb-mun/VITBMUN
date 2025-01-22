@@ -1,23 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import image1 from "../assets/Highlights/image2.jpg";
-import image2 from "../assets/Highlights/image3.jpg";
-import backgroundimage from "../assets/back4.jpg";
+import image1 from "../assets/Highlights/discuss.jpg";
+import image2 from "../assets/Highlights/grppic.jpg";
+import image3 from "../assets/Highlights/winners.jpg";
+import image4 from "../assets/Highlights/hall.jpg";
+import image5 from "../assets/Highlights/people.jpg";
+import image6 from "../assets/Highlights/people2.jpg";
+import image7 from "../assets/Highlights/people3.jpg";
+import image8 from "../assets/Highlights/intro.jpg";
 
 const Gallery = () => {
-  const galleryImages = [image1, image1, image1, image1];
+  const galleryImages = [image1, image5, image6, image7];
 
   return (
-    <div
-      className="mx-auto p-4"
-      style={{
-        backgroundImage: `url(${backgroundimage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div className="mx-auto p-4">
       <h1
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}

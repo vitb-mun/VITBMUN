@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import Rajneeti from "../assets/Rajneeti.png";
 import Diagloue from "../assets/Diagloue.png";
+import { Link } from "react-router-dom";
 
 const EventTimeline = () => {
   const [visibleItems, setVisibleItems] = useState([]);
@@ -13,21 +14,25 @@ const EventTimeline = () => {
       name: "MUN-MATE",
       title: "MUN-MATE'24",
       image: Rajneeti,
+      url: "/MUN-MATE",
     },
     {
       name: "VITBMUN",
       title: "VITBMUN 3.0",
       image: Diagloue,
+      url: "/VITBMUN",
     },
     {
       name: "RajneetiRangmanch",
       title: "Rajneeti Rangmanch",
       image: Rajneeti,
+      url: "/RajneetiRangmanch",
     },
     {
       name: "ChainReactionChase",
       title: "Chain Reaction Chase",
       image: Diagloue,
+      url: "/ChainReactionChase",
     },
   ];
 
@@ -58,7 +63,6 @@ const EventTimeline = () => {
   const handleLearnMoreClick = (eventName) => {
       navigate(`/${eventName}`);
   };
-
   const openModal = (image) => {
     setSelectedImage(image);
     setIsModalOpen(true);
@@ -69,11 +73,16 @@ const EventTimeline = () => {
     setSelectedImage("");
   };
 
+  const redirectToEventPage = (url) => {
+    window.location.href = url; // Redirect to the respective event page
+  };
+
   return (
     <div className="flex flex-col items-center px-4 py-8">
       <h1
         className="text-6xl font-bold text-gray-800 mb-10 text-center container mx-auto"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+        id="eventtimeline"
       >
         Events Timeline
       </h1>
@@ -120,7 +129,8 @@ const EventTimeline = () => {
               </h2>
 
               <div className="mt-4 flex justify-center">
-                <button
+                <Link
+                  to={event.url} // Use the URL from your `timelineEvents`
                   className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"
                   onClick={() => handleLearnMoreClick(event.name)}
                   style={{
@@ -129,7 +139,7 @@ const EventTimeline = () => {
                   }}
                 >
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           </div>
