@@ -34,7 +34,8 @@ const FacultyInfo = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h1 id="coordinators"
+      <h1
+        id="coordinators"
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
       >
