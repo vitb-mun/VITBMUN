@@ -59,7 +59,6 @@ const Header = () => {
           "Coordinators",
           "Team",
           "Collaborations",
-
           "FAQs",
           "Sponsors",
           "Contact Us",
