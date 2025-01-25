@@ -167,12 +167,12 @@ const Event = () => {
               {/* Content Section */}
               <div className="w-full md:w-2/4 mt-6 md:mt-0 md:ml-6 flex flex-col justify-center">
                 <h3
-                  className="text-3xl sm:text-4xl font-bold"
+                  className="text-2xl sm:text-4xl font-bold"
                   style={{ fontFamily: "'Host Grotesk', sans-serif" }}
                 >
                   Rajneeti Rangmanch
                 </h3>
-                <p className="text-gray-400 mt-2 text-lg sm:text-xl leading-relaxed">
+                <p className="text-gray-400 mt-2 text-sm sm:text-xl leading-relaxed">
                   Welcome to our MUN Club, where we bring the world of Model
                   United Nations to life! In our club, students take on the
                   roles of delegates representing diverse countries and
