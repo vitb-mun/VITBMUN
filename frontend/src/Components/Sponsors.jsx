@@ -1,36 +1,11 @@
 import React from "react";
-import vitbmun_logo from "../assets/vitbmun_logo.svg";
 
 const Sponsors = () => {
-  const sponsorLogos = [
-    vitbmun_logo,
-    vitbmun_logo,
-    vitbmun_logo,
-    vitbmun_logo,
-    vitbmun_logo,
-    vitbmun_logo,
-  ];
   return (
     <div>
       {/* 
       Here Change the width and height for all images in the sponsor-slider
       */}
-      <div
-        className="sponsor-slider"
-        style={{
-          "--width": "100px",
-          "--height": "100px",
-          "--quantity": sponsorLogos.length,
-        }}
-      >
-        <div className="list">
-          {sponsorLogos.map((logo, index) => (
-            <div className="item" style={{ "--position": index }}>
-              <img src={logo} alt={`Sponsor ${index + 1}`} />
-            </div>
-          ))}
-        </div>
-      </div>
       <div className="py-10 px-6 mb-5">
         {/* Centered Section */}
         <div className="flex flex-col items-center">
