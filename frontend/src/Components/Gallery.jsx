@@ -1,14 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 import image1 from "../assets/Highlights/discuss.jpg";
-import image2 from "../assets/Highlights/grppic.jpg";
-import image3 from "../assets/Highlights/winners.jpg";
-import image4 from "../assets/Highlights/hall.jpg";
 import image5 from "../assets/Highlights/people.jpg";
 import image6 from "../assets/Highlights/people2.jpg";
 import image7 from "../assets/Highlights/people3.jpg";
-import image8 from "../assets/Highlights/intro.jpg";
 
 const Gallery = () => {
   const galleryImages = [image1, image5, image6, image7];
@@ -23,31 +18,15 @@ const Gallery = () => {
       </h1>
       <div className="flex flex-wrap justify-center gap-8 p-4">
         {galleryImages.map((image, index) => (
-          <motion.div
+          <div
             key={index}
-            className="w-full sm:w-96 bg-white shadow-xl rounded-lg transform hover:scale-105 transition-transform duration-300"
+            className="w-full sm:w-96 bg-white shadow-xl rounded-lg"
             style={{
               transform: "rotate(-5deg)", // Initial tilt effect for Polaroid style
               paddingBottom: "10px",
             }}
             role="region"
             aria-labelledby={`gallery-image-${index}`}
-            initial={{
-              opacity: 0,
-              rotate: -5, // Initial rotation (tilt)
-              x: image === image1 ? -100 : 100, // Slide from left (image1) or right (image2)
-            }}
-            whileInView={{
-              opacity: 1,
-              rotate: 5, // Final rotation (tilt slightly to the right)
-              x: 0, // Reset x-axis (center position)
-            }}
-            transition={{
-              duration: 0.4,
-              delay: index * 0.1, // Staggered delay for cascading effect
-              type: "spring",
-            }}
-            viewport={{ once: true }}
           >
             <div
               className="polaroid-photo-wrapper relative overflow-hidden rounded-lg"
@@ -66,7 +45,7 @@ const Gallery = () => {
             <div className="polaroid-caption text-center text-sm text-gray-700 font-semibold">
               Image {index + 1}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

@@ -50,7 +50,7 @@ const Header = () => {
           className="text-blue-700 font-bold text-5xl"
           style={{ fontFamily: "'Host Grotesk', sans-serif" }}
         >
-          Speak Up the world will know!
+          Speak up, the world will know.
         </h1>
         <p className="text-gray-600 font-medium text-xl mt-1">
           VITBMUN Club | VIT Bhopal University
