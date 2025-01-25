@@ -56,7 +56,9 @@ const Header = () => {
         {[
           "About",
           "Event Timeline",
+          "Highlights",
           "Coordinators",
+          "Secretariat",
           "Team",
           "Collaborations",
           "FAQs",

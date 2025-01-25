@@ -8,7 +8,8 @@ import backgroundimage from "../assets/dotted.png";
 
 const Footer = () => {
   return (
-    <div id="contactus"
+    <div
+      id="contactus"
       style={{
         backgroundImage: `url(${backgroundimage})`,
         backgroundSize: "cover",
@@ -63,6 +64,7 @@ const Footer = () => {
         </div>
 
         <div className="text mx-auto">&copy; 2025 MUN Club, VIT Bhopal</div>
+        <div className="text mx-auto"> Made with ❤️ by Tech Team</div>
         <div className="baseline bg-white h-[0.3px] w-[100%] mt-4 mx-auto"></div>
       </div>
     </div>

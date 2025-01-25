@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import backgroundimage from "../assets/dotted.png";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -8,53 +7,52 @@ const FAQ = () => {
     {
       question: "What is Model United Nation?",
       answer:
-        "MUN is a Model United Nations conference where students simulate the workings of the United Nations and discuss global issues.",
+        "Model United Nations (MUN) is an educational simulation for those who aim to excel in arenas such as debates and board meetings. It offers participants with the opportunity to step into the role of delegates representing different countries, engaging in structured debates, negotiations, and decision-making to address and tackle global challenges.",
     },
     {
-      question: "Can I engage MUN for just one of the services offered?",
+      question: "What skills does MUN help develop?",
       answer:
-        "Yes, MUN offers a variety of services and you can choose to engage for specific ones as needed.",
+        "MUN is the platform to prepare the youth of today to be the leaders of tomorrow. It equips you with the skills of today, that is, the 21st century skills. To name a few: Public speaking, Leadership, Negotiation, Problem-solving, Critical thinking, Collaboration, Research and analysis.",
     },
     {
-      question: "What is the cost of MUN's services?",
+      question: "What can one gain through MUN?",
       answer:
-        "The cost varies based on the services and packages selected. Contact MUN for a customized quote.",
+        "Participating in MUNs give you a hands-on experience of being delegates, mentors, leaders and orators who strive to bring about a change. MUNs give you an opportunity to dive deeper into global issues and gain a better understanding about your rights and responsibilities. It is also a very good chance for participants to connect with like-minded peers and boost their public speaking as well as critical thinking abilities.",
     },
     {
-      question: "How do I get started with MUN?",
+      question: "Who can participate in MUN?",
       answer:
-        "You can get started by visiting our website, selecting your preferred services, and signing up.",
+        "Participation in MUNs is open to students from all age groups. The conferences are generally conducted for students at various levels, ranging from elementary schools to universities. These conferences are a great stop for all those who have a zeal for diplomacy, intense debates and for tackling global challenges.",
     },
     {
-      question: "Can MUN help with funding or investor connections?",
+      question: "How does a typical MUN conference work?",
       answer:
-        "Yes, MUN has connections with investors and can provide advice on funding opportunities.",
+        "MUN conferences mirror the working of the actual United Nations conferences. The breakdown of a typical MUN conference is infused with energy and enthusiasm:•	Opening Ceremonies: The stage is set with an introduction to the conference and keynote speeches. Delegates take the podium and introduce themselves giving short speeches outlining their country’s stance.•	Debate sessions: Delegates discuss issues, propose solutions, and collaborate to draft resolutions.•	Caucus sessions: These are the informal meetings which are conducted for negotiations and drafting resolutions.•	Resolution Voting: Once the debate concludes, delegates cast their votes on the resolutions. Only a majority vote can bring the resolutions into effect.•	Closing Ceremonies: The delegates are often recognized for their phenomenal performances at the end of the conference. Awards are handed out, and the conference is officially concluded.",
     },
     {
-      question: "Do MUN offer any guarantees on results?",
+      question: "How can I prepare for my first MUN conference?",
       answer:
-        "MUN provides expert guidance, but we do not guarantee specific results, as they depend on various factors.",
+        "To prepare for a thrilling first MUN conference, you should:•	Research: Understand your assigned country's position and policies, dig into the topics set for discussion at the conference•	Write a Position Paper: Draft an impactful paper describing your country’s stance.•	Learn Rules of Procedure: Familiarize yourself with the specific rules of the conference to be one step ahead.•	Practice Public Speaking: Rehearse opening speeches, master your responses to questions and be ready for any negotiations that may come your way!•	Dress Professionally: MUN conferences usually require formal attire. Dressing appropriately helps in standing out and creating a serious atmosphere. It is an essential part of the experience. So, put on your best attire!",
     },
     {
-      question: "How flexible are MUN's service packages?",
+      question: "How is MUN different from debate club? ",
       answer:
-        "MUN's service packages are designed to be flexible and can be customized based on your needs.",
+        "MUNs focus on international diplomacy and requires delegates to represent a country’s policies. Whereas, debate club focuses on logical reasoning, public speaking, and argument construction.  MUNs are all about proposing diplomatic solutions, building consensus and passing effective resolutions. It emphasizes collaborative problem-solving. On the other hand, debates have a clear goal of declaring a winner based on effective persuasion and argumentation skills showcased by the participants.",
     },
     {
-      question:
-        "How does working with MUN compare to hiring in-house specialists?",
+      question: "What do MUN participants do?",
       answer:
-        "MUN offers specialized expertise and a wide range of services, while in-house specialists may focus on specific areas.",
+        "MUN participants take on the roles of delegates representing different countries, organizations, or entities, diving into the world of international diplomacy. They research their assigned country’s policies, engage in thrilling discussions, and draft resolutions proposing innovative solutions to the most serious global issues. ",
     },
     {
-      question: "How does MUN stay ahead in understanding market trends?",
+      question: "What are the rules of procedure in MUN?",
       answer:
-        "MUN invests in research and has a dedicated team focused on staying updated with market trends.",
+        "Rules of procedure outline the conduct of debate, guiding how delegates speak, introduce motions, pose questions, and cast vote on resolutions. The rules of procedure cover everything from voting and motions to points. These rules ensure that business unfolds in a structured manner.",
     },
     {
-      question: "Do you provide resources or training for startup teams?",
+      question: "What are some of the awards presented at MUN conferences?",
       answer:
-        "Yes, MUN offers training and resources to help startup teams grow and succeed.",
+        "The awards at MUN conferences are a recognition of exceptional talent and hard work displayed by participants. Awards vary from conference to conference but generally include:•	Best Delegate: Given to the top performing delegate who dominates the committee through their oratorical skills.•	Outstanding Delegate: Given to delegates who significantly contributed to debate and left a lasting impact during discussions.•	Best Delegation: Presented to the team whose delegates collectively excel across all committees.•	Best Position Paper: Given to delegates who craft the most well-researched and articulated position papers.",
     },
   ];
 
@@ -63,15 +61,7 @@ const FAQ = () => {
   };
 
   return (
-    <div id="faqs"
-      className="flex justify-center items-start p-6"
-      style={{
-        backgroundImage: `url(${backgroundimage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div id="faqs" className="flex justify-center items-start p-6">
       <div className="border-4 shadow-md rounded-3xl max-w-7xl flex flex-col md:flex-row items-start bg-white overflow-hidden w-full">
         {/* Left Section */}
         <div className="w-full md:w-1/3 p-8">

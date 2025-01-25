@@ -50,7 +50,7 @@ const Event = () => {
           className="text-blue-700 font-bold text-5xl"
           style={{ fontFamily: "'Host Grotesk', sans-serif" }}
         >
-          {`Speak up the World will know!`.split(" ").map((word, index) => (
+          {`Speak up, the world will know.`.split(" ").map((word, index) => (
             <span
               key={index}
               className="inline-block mr-2"
@@ -125,17 +125,16 @@ const Event = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 3 }}
           >
-            Welcome to our MUN Club, where we bring the world of Model United
-            Nations to life! In our club, students take on the roles of
-            delegates representing diverse countries and organizations, engaging
-            in spirited debates, negotiations, and crafting solutions to global
-            challenges. At MUN Club, we're more than just a simulation – we're a
-            vibrant community dedicated to fostering a deeper understanding of
-            international affairs and honing invaluable skills in diplomacy,
-            public speaking, and critical thinking. Whether you're a seasoned
-            delegate or new to the MUN scene, our club offers a supportive
-            environment where members can learn, grow, and make lasting
-            connections.
+            We at the VITB-MUN club take pride in standing as a beacon for
+            students who want to make a difference in the world, and aim to
+            showcase the power of critical thinking, research and teamwork.{" "}
+            <br></br>
+            <br></br>The club embodies the idea of "Vox populi, vox Dei" which
+            translates to “the voice of the people is the voice of God” and
+            firmly believes that our generation has the power and guile to
+            change the world and aims to make students realise the importance of
+            voicing their opinions. VITBMUN is one of the most prestigious
+            conferences in Central India and is renowned for its unique events.
           </motion.p>
 
           {/* Events Section */}
@@ -173,11 +172,9 @@ const Event = () => {
                   Rajneeti Rangmanch
                 </h3>
                 <p className="text-gray-400 mt-2 text-sm sm:text-xl leading-relaxed">
-                  Welcome to our MUN Club, where we bring the world of Model
-                  United Nations to life! In our club, students take on the
-                  roles of delegates representing diverse countries and
-                  organizations, engaging in spirited debates, negotiations, and
-                  crafting solutions to global challenges.
+                  Rajneeti Rangmanch will bring together a blend of fun research
+                  and power packed debate. Come join us and enjoy an amazing
+                  game of discussion, deliberation and discovery.
                 </p>
 
                 {/* Additional Event Details */}
@@ -197,12 +194,6 @@ const Event = () => {
                     10:00 AM - 06:00 PM
                   </p>
                   <br />
-                  <p className="text-gray-300 text-lg sm:text-xl">
-                    <span className="font-semibold text-white">
-                      Registration Fee:
-                    </span>{" "}
-                    ₹199
-                  </p>
                 </div>
               </div>
             </div>

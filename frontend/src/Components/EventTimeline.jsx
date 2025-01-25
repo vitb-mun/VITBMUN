@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
-import Rajneeti from "../assets/Rajneeti.png";
-import Diagloue from "../assets/Diagloue.png";
+import { useNavigate } from "react-router-dom";
+import Rajneeti from "../assets/RajneetiRangmanch.png";
+import chainchase from "../assets/chainchase.png";
+import Munmate from "../assets/munmate.png";
+import Vitbmun from "../assets/VITBMUN.png";
 import { Link } from "react-router-dom";
 
 const EventTimeline = () => {
@@ -13,13 +15,13 @@ const EventTimeline = () => {
     {
       name: "MUN-MATE",
       title: "MUN-MATE'24",
-      image: Rajneeti,
+      image: Munmate,
       url: "/MUN-MATE",
     },
     {
       name: "VITBMUN",
       title: "VITBMUN 3.0",
-      image: Diagloue,
+      image: Vitbmun,
       url: "/VITBMUN",
     },
     {
@@ -31,7 +33,7 @@ const EventTimeline = () => {
     {
       name: "ChainReactionChase",
       title: "Chain Reaction Chase",
-      image: Diagloue,
+      image: chainchase,
       url: "/ChainReactionChase",
     },
   ];
@@ -61,7 +63,7 @@ const EventTimeline = () => {
   }, []);
 
   const handleLearnMoreClick = (eventName) => {
-      navigate(`/${eventName}`);
+    navigate(`/${eventName}`);
   };
   const openModal = (image) => {
     setSelectedImage(image);
@@ -95,25 +97,28 @@ const EventTimeline = () => {
           <div
             key={index}
             data-index={index}
-            className={`timeline-item flex flex-col md:flex-row items-center relative mb-16 ${visibleItems.includes(index.toString())
+            className={`timeline-item flex flex-col md:flex-row items-center relative mb-16 ${
+              visibleItems.includes(index.toString())
                 ? "opacity-100"
                 : "opacity-0"
-              } transition-opacity duration-700`}
+            } transition-opacity duration-700`}
           >
             {/* Timeline Circle */}
             <div
-              className={`bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform duration-700 ${visibleItems.includes(index.toString())
+              className={`bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform duration-700 ${
+                visibleItems.includes(index.toString())
                   ? "scale-100"
                   : "scale-50"
-                } absolute top-0 left-1/2 transform -translate-x-1/2`}
+              } absolute top-0 left-1/2 transform -translate-x-1/2`}
             >
               {index + 1}
             </div>
 
             {/* Event Card */}
             <div
-              className={`bg-white shadow-lg border-black-800 border-2 rounded-lg p-5 mt-12 w-3/4 md:w-5/12 ${index % 2 === 0 ? "md:ml-12 md:mr-auto" : "md:mr-12 md:ml-auto"
-                }`}
+              className={`bg-white shadow-lg border-black-800 border-2 rounded-lg p-5 mt-12 w-3/4 md:w-5/12 ${
+                index % 2 === 0 ? "md:ml-12 md:mr-auto" : "md:mr-12 md:ml-auto"
+              }`}
             >
               <div className="w-full h-auto bg-gray-200 rounded-t-lg overflow-hidden">
                 <img
@@ -124,7 +129,7 @@ const EventTimeline = () => {
                   onClick={() => openModal(event.image)} // Open modal on click
                 />
               </div>
-              <h2 className="text-xl font-semibold text-gray-800 mt-4">
+              <h2 className="text-2xl flex justify-center font-semibold  text-gray-800 mt-4">
                 {event.title}
               </h2>
 

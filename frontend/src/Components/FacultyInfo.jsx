@@ -3,7 +3,6 @@ import vitbmun_logo from "../assets/vitbmun_logo.svg";
 import Tauseef from "../assets/Faculty/TAUSEEF.jpg";
 import Feeroz from "../assets/Faculty/FEEROZ.jpg";
 import KKNair from "../assets/Faculty/kknair.jpg";
-import backgroundimage from "../assets/dotted.png";
 
 const FacultyInfo = () => {
   const coordinators = [
@@ -25,15 +24,7 @@ const FacultyInfo = () => {
   ];
 
   return (
-    <div
-      className="responsive-background mx-auto p-4"
-      style={{
-        backgroundImage: `url(${backgroundimage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div className="responsive-background mx-auto p-4">
       <h1
         id="coordinators"
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"

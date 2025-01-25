@@ -49,10 +49,7 @@ const Sponsors = () => {
             <div className="bg-white border-2 border-gray-300 rounded-xl shadow-md p-6 flex flex-col items-center">
               <h2 className="text-2xl font-bold text-blue-600">Silver</h2>
               <p className="text-5xl font-bold text-gray-900 mt-4">₹5000/-</p>
-              <p className="text-gray-600 text-center mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Curabitur pellentesque ultricies condimentum.{" "}
-              </p>
+
               <hr className="w-full my-4 border-gray-300" />
               <ul className="text-gray-800 space-y-2">
                 <li>
@@ -80,19 +77,13 @@ const Sponsors = () => {
                   in a single newsletter or email distributed to participants.
                 </li>
               </ul>
-              <button className="mt-6 font-semibold w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                Silver Package
-              </button>
             </div>
 
             {/* Gold Plan */}
             <div className="bg-blue-600 text-white border-2 border-blue-600 rounded-xl shadow-lg p-6 flex flex-col items-center">
               <h2 className="text-2xl font-bold">Gold</h2>
               <p className="text-5xl font-bold mt-4">₹12000/-</p>
-              <p className="text-center mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Curabitur pellentesque ultricies condimentum.{" "}
-              </p>
+
               <hr className="w-full my-4 border-blue-300" />
               <ul className="space-y-2">
                 <li>
@@ -122,19 +113,13 @@ const Sponsors = () => {
                   post.
                 </li>
               </ul>
-              <button className="mt-6 w-full font-semibold bg-white text-blue-600 py-2 px-4 rounded-lg hover:bg-gray-100">
-                Gold Package
-              </button>
             </div>
 
             {/* Platinum Plan */}
             <div className="bg-white border-2 border-gray-300 rounded-xl shadow-md p-6 flex flex-col items-center">
               <h2 className="text-2xl font-bold text-blue-600">Platinum</h2>
               <p className="text-5xl font-bold text-gray-900 mt-4">₹20000/-</p>
-              <p className="text-gray-600 text-center mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Curabitur pellentesque ultricies condimentum.{" "}
-              </p>
+
               <hr className="w-full my-4 border-gray-300" />
               <ul className="text-gray-800 space-y-2">
                 <li>
@@ -164,9 +149,6 @@ const Sponsors = () => {
                   during the event.
                 </li>
               </ul>
-              <button className="mt-6 w-full font-semibold bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
-                Platinum Package
-              </button>
             </div>
           </div>
         </div>

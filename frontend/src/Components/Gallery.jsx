@@ -13,6 +13,7 @@ const Gallery = () => {
       <h1
         className="text-5xl sm:text-6xl font-semibold text-gray-800 mb-10 text-center"
         style={{ fontFamily: "'Host Grotesk', sans-serif" }}
+        id="highlights"
       >
         Event Highlights
       </h1>
