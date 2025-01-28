@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Rajneeti from "../assets/RajneetiRangmanch.png";
+import rajneeti_logo from "../assets/Rajneeti.png";
 import chainchase from "../assets/chainchase.png";
 import Munmate from "../assets/munmate.png";
 import Vitbmun from "../assets/VITBMUN.png";
@@ -27,7 +27,7 @@ const EventTimeline = () => {
     {
       name: "RajneetiRangmanch",
       title: "Rajneeti Rangmanch",
-      image: Rajneeti,
+      image: rajneeti_logo,
       url: "/RajneetiRangmanch",
     },
     {

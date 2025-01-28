@@ -62,7 +62,6 @@ const Header = () => {
           "Team",
           "Collaborations",
           "FAQs",
-          "Sponsors",
           "Contact Us",
         ].map((link) => (
           <a
