@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
-import rajneeti_logo from "../assets/Rajneeti.png";
+import rajneeti_logo from "../assets/RajneetiRangmanch.png";
+import Diagloue from "../assets/Diagloue.png";
 import UN_Assembly from "../assets/finalun.jpg";
 import { motion } from "framer-motion";
+import Event_Ticket from "./Event_Ticket";
 
 const Event = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
   const eventCardRef = useRef(null);
 
   useEffect(() => {
@@ -18,6 +20,28 @@ const Event = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Changing The Events In Ticket
+  const [Logo, setLogo] = useState(rajneeti_logo);
+  const [Head, setHeadText] = useState("Rajneeti Rangmanch");
+  const [Desc, setDescText] = useState("Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery.");
+  const [Date, setDateText] = useState("22/02/2025");
+  const [Day, setDayText] = useState("Saturday");
+  const [Time, setTimeText] = useState("09:00 AM - 11:00 AM");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLogo((prevText) => (prevText === rajneeti_logo ? Diagloue : rajneeti_logo));
+      setHeadText((prevText) => (prevText === "Rajneeti Rangmanch" ? "Democracy Dialogue" : "Rajneeti Rangmanch"));
+      setDescText((prevText) => (prevText === "Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery." ? "Dive into Democracy Dialogue, a dynamic debate designed to deepen dialogue and develop discussions. Discover great mentoring from debate maestros, develop your discourse skills, and discuss ideas with like-minded individuals. Join us at Democracy Dialogue." : "Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery."));
+      setDateText((prevText) => (prevText === "22/02/2025" ? "22/02/2025" : "22/02/2025"));
+      setDayText((prevText) => (prevText === "Saturday" ? "Saturday" : "Saturday"));
+      setTimeText((prevText) => (prevText === "09:00 AM - 11:00 AM" ? "11:00 AM - 01:00 PM" : "09:00 AM - 11:00 AM"));
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
 
   // Intersection Observer to detect when the card is in view
   useEffect(() => {
@@ -142,62 +166,17 @@ const Event = () => {
             className="text-5xl font-bold text-gray-800 mb-6"
             style={{ fontFamily: "'Host Grotesk', sans-serif" }}
           >
-            Upcoming Event
+            Upcoming Events
           </h2>
-          <div
-            ref={eventCardRef}
-            className={` text-white relative overflow-hidden bg-repeat object-bottom 
-            bg-[url('./assets/TicketC.jpg')] lg:bg-[url('./assets/TicketC.png')] bg-contain sm:h-auto h-lvh ${
-              isVisible
-                ? "opacity-100 transition-opacity duration-1000"
-                : "opacity-0"
-            }`}
-          >
-            <div className="flex flex-col md:flex-row md:items-start items-center p-10 ">
-              {/* Image Section */}
-              <div className="w-full md:w-1/4 h-48 sm:h-60 md:h-auto bg-gray-300 rounded-lg overflow-hidden flex-shrink-0">
-                <img
-                  src={rajneeti_logo}
-                  className="h-full w-full object-cover"
-                  alt="Rajneeti Rangmanch Logo"
-                />
-              </div>
-
-              {/* Content Section */}
-              <div className="w-full md:w-2/4 mt-6 md:mt-0 md:ml-6 flex flex-col justify-center">
-                <h3
-                  className="text-2xl sm:text-4xl font-bold"
-                  style={{ fontFamily: "'Host Grotesk', sans-serif" }}
-                >
-                  Rajneeti Rangmanch
-                </h3>
-                <p className="text-gray-400 mt-2 text-sm sm:text-xl leading-relaxed">
-                  Rajneeti Rangmanch will bring together a blend of fun research
-                  and power packed debate. Come join us and enjoy an amazing
-                  game of discussion, deliberation and discovery.
-                </p>
-
-                {/* Additional Event Details */}
-                <div className="mt-4">
-                  <p className="text-gray-300 text-lg sm:text-xl">
-                    <span className="font-semibold text-white">Date:</span>{" "}
-                    05/08/2024
-                  </p>
-                  <br />
-                  <p className="text-gray-300 text-lg sm:text-xl">
-                    <span className="font-semibold text-white">Day:</span>{" "}
-                    Monday
-                  </p>
-                  <br />
-                  <p className="text-gray-300 text-lg sm:text-xl">
-                    <span className="font-semibold text-white">Time:</span>{" "}
-                    10:00 AM - 06:00 PM
-                  </p>
-                  <br />
-                </div>
-              </div>
-            </div>
-          </div>
+          <Event_Ticket
+          ref={eventCardRef}
+            Logo={Logo}
+            Heading={Head}
+            Description={Desc}
+            Date={Date}
+            Day={Day}
+            Time={Time}
+          />
         </section>
       </div>
     </div>
