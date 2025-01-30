@@ -6,7 +6,8 @@ import Team from "./Team";
 import FAQ from "./FAQs";
 import SecretaryInfo from "./SecretaryInfo";
 import Gallery from "./Gallery";
-import Collaboration from "./Collaboration";
+// import Collaboration from "./Collaboration";
+import StackingCard from "./StackingCard";
 
 const Hero = () => {
   return (
@@ -18,8 +19,8 @@ const Hero = () => {
       <FacultyInfo></FacultyInfo>
       <SecretaryInfo></SecretaryInfo>
       <Team></Team>
-      <Collaboration></Collaboration>
-
+      {/* <Collaboration></Collaboration> */}
+      <StackingCard></StackingCard>
       <FAQ></FAQ>
     </div>
   );

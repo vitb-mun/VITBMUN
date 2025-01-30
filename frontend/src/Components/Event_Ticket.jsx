@@ -10,7 +10,7 @@ export default function Event_Ticket(props) {
             overflow-hidden bg-repeat object-bottom 
 `}
         >
-            <div className="flex flex-col md:flex-row md:items-start items-center p-10">
+            <div className="flex flex-col md:flex-row md:items-start items-center p-12">
                 {/* Image Section */}
                 <div className="w-full md:w-1/4 h-48 sm:h-60 md:h-auto bg-gray-300 rounded-lg overflow-hidden flex-shrink-0">
                     <img
