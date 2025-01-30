@@ -7,7 +7,7 @@ export default function Event_Ticket(props) {
             bg-[url('./assets/TicketC.jpg')] lg:bg-[url('./assets/TicketC.png')] bg-contain
             text-white relative
             sm:h-auto h-lvh
-            overflow-hidden bg-repeat object-bottom 
+            overflow-hidden bg-repeat object-bottom mt-10
 `}
         >
             <div className="flex flex-col md:flex-row md:items-start items-center p-12">
@@ -49,6 +49,10 @@ export default function Event_Ticket(props) {
                             {props.Time}
                         </p>
                         <br />
+                        <p className="text-gray-300 text-lg sm:text-xl">
+                            <span className="font-semibold text-white">Venue:</span>{" "}
+                            {props.Venue}
+                        </p>
                     </div>
                 </div>
             </div>

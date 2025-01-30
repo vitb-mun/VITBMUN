@@ -1,13 +1,8 @@
-import merch from "../assets/Collabrations/merch.jpg";
-import irmun from "../assets/Collabrations/irmun.jpg";
-import iitkgp from "../assets/Collabrations/iitkgp.jpg";
-
 export default function banner() {
   const cards = [
-    { id: "card1", title: "Card 1", bg: 'bg-[url("./assets/Collabrations/merch.jpg")]' },
-    { id: "card2", title: "Card 2", bg: 'bg-[url("./assets/Collabrations/irmun.jpg")]' },
-    { id: "card3", title: "Card 3", bg: 'bg-[url("./assets/Collabrations/iitkgp.jpg")]' },
-    { id: "card4", title: "Card 4", bg: 'bg-[url("./assets/Collabrations/iitj.jpg")]' },
+    { id: "card1", bg: 'bg-[url("./assets/Collabrations/irmun.jpg")]' },
+    { id: "card2", bg: 'bg-[url("./assets/Collabrations/iitkgp.jpg")]' },
+    { id: "card3", bg: 'bg-[url("./assets/Collabrations/iitj.jpg")]' },
   ];
 
   return (
@@ -33,7 +28,6 @@ export default function banner() {
               <div
                 className={`rounded-[30px] sm:rounded-[50px] shadow-lg h-[90vw] sm:h-[70vh] transition-all duration-500 ${card.bg} bg-cover bg-no-repeat`}
               >
-                {/* <h2 className="text-4xl font-bold text-white">{card.title}</h2> */}
               </div>
             </li>
           ))}

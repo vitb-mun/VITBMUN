@@ -22,25 +22,25 @@ const Event = () => {
   }, []);
 
   // Changing The Events In Ticket
-  const [Logo, setLogo] = useState(rajneeti_logo);
-  const [Head, setHeadText] = useState("Rajneeti Rangmanch");
-  const [Desc, setDescText] = useState("Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery.");
-  const [Date, setDateText] = useState("22/02/2025");
-  const [Day, setDayText] = useState("Saturday");
-  const [Time, setTimeText] = useState("09:00 AM - 11:00 AM");
+  // const [Logo, setLogo] = useState(rajneeti_logo);
+  // const [Head, setHeadText] = useState("Rajneeti Rangmanch");
+  // const [Desc, setDescText] = useState("Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery.");
+  // const [Date, setDateText] = useState("22/02/2025");
+  // const [Day, setDayText] = useState("Saturday");
+  // const [Time, setTimeText] = useState("09:00 AM - 11:00 AM");
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLogo((prevText) => (prevText === rajneeti_logo ? Diagloue : rajneeti_logo));
-      setHeadText((prevText) => (prevText === "Rajneeti Rangmanch" ? "Democracy Dialogue" : "Rajneeti Rangmanch"));
-      setDescText((prevText) => (prevText === "Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery." ? "Dive into Democracy Dialogue, a dynamic debate designed to deepen dialogue and develop discussions. Discover great mentoring from debate maestros, develop your discourse skills, and discuss ideas with like-minded individuals. Join us at Democracy Dialogue." : "Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery."));
-      setDateText((prevText) => (prevText === "22/02/2025" ? "22/02/2025" : "22/02/2025"));
-      setDayText((prevText) => (prevText === "Saturday" ? "Saturday" : "Saturday"));
-      setTimeText((prevText) => (prevText === "09:00 AM - 11:00 AM" ? "11:00 AM - 01:00 PM" : "09:00 AM - 11:00 AM"));
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setLogo((prevText) => (prevText === rajneeti_logo ? Diagloue : rajneeti_logo));
+  //     setHeadText((prevText) => (prevText === "Rajneeti Rangmanch" ? "Democracy Dialogue" : "Rajneeti Rangmanch"));
+  //     setDescText((prevText) => (prevText === "Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery." ? "Dive into Democracy Dialogue, a dynamic debate designed to deepen dialogue and develop discussions. Discover great mentoring from debate maestros, develop your discourse skills, and discuss ideas with like-minded individuals. Join us at Democracy Dialogue." : "Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery."));
+  //     setDateText((prevText) => (prevText === "22/02/2025" ? "22/02/2025" : "22/02/2025"));
+  //     setDayText((prevText) => (prevText === "Saturday" ? "Saturday" : "Saturday"));
+  //     setTimeText((prevText) => (prevText === "09:00 AM - 11:00 AM" ? "11:00 AM - 01:00 PM" : "09:00 AM - 11:00 AM"));
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
 
   // Intersection Observer to detect when the card is in view
@@ -169,13 +169,23 @@ const Event = () => {
             Upcoming Events
           </h2>
           <Event_Ticket
-          ref={eventCardRef}
-            Logo={Logo}
-            Heading={Head}
-            Description={Desc}
-            Date={Date}
-            Day={Day}
-            Time={Time}
+            ref={eventCardRef}
+            Logo={rajneeti_logo}
+            Heading={"Rajneeti Rangmanch"}
+            Description={"Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery."}
+            Date={"22/02/2025"}
+            Day={"Saturday"}
+            Time={"09:00 AM - 11:00 AM"}
+            Venue={"AR 102"}
+          />
+          <Event_Ticket
+            Logo={Diagloue}
+            Heading={"Democracy Dialogue"}
+            Description={"Join Democracy Dialogue, a dynamic debate to deepen discussions and deliberate democracy’s dilemmas. Engage with diverse voices, gain mentoring, refine skills, and showcase prowess."}
+            Date={"22/02/2025"}
+            Day={"Saturday"}
+            Time={"11:00 AM - 01:00 PM"}
+            Venue={"AB 220"}
           />
         </section>
       </div>
