@@ -6,13 +6,13 @@ export default function Event_Ticket(props) {
             className={`
             bg-[url('./assets/TicketC.jpg')] lg:bg-[url('./assets/TicketC.png')] bg-contain
             text-white relative
-            sm:h-auto h-lvh
+            sm:h-auto h-auto
             overflow-hidden bg-repeat object-bottom mt-10
 `}
         >
             <div className="flex flex-col md:flex-row md:items-start items-center p-12">
                 {/* Image Section */}
-                <div className="w-full md:w-1/4 h-48 sm:h-60 md:h-auto bg-gray-300 rounded-lg overflow-hidden flex-shrink-0">
+                <div className="w-full md:w-1/4 h-78 sm:h-60 md:h-auto bg-gray-300 rounded-lg overflow-hidden flex-shrink-0">
                     <img
                         src={props.Logo}
                         className="h-full w-full object-cover"
@@ -33,7 +33,7 @@ export default function Event_Ticket(props) {
                     </p>
 
                     {/* Additional Event Details */}
-                    <div className="mt-4">
+                    <div className="mt-4 text-sm">
                         <p className="text-gray-300 text-lg sm:text-xl">
                             <span className="font-semibold text-white">Date:</span>{" "}
                             {props.Date}
