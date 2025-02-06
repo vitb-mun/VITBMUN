@@ -154,17 +154,17 @@ const EventTimeline = () => {
       {/* Modal for Image */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="relative">
+          <div className="relative" onClick={closeModal}>
             <img
               src={selectedImage}
               alt="Full-size"
               className="max-w-full max-h-screen object-contain"
             />
             <button
-              className="absolute top-0 right-0 p-4 text-white text-xl"
+              className="absolute top-3 right-2 hover:bg-gray-200 p-4 text-black text-lg bg-gray-100 rounded-lg py-1"
               onClick={closeModal}
             >
-              &times;
+              close
             </button>
           </div>
         </div>

@@ -13,16 +13,16 @@ const Footer = () => {
           <div className="tabs flex justify-center">
             <ul className="flex md:gap-12 gap-2 text-lg ">
               <li className="hover:underline">
-                <a href="">Home</a>
+                <a href="/">Home</a>
               </li>
               <li className="hover:underline">
-                <a href="">Events</a>
+                <a href="#eventtimeline">Events</a>
               </li>
               <li className="hover:underline">
-                <a href="">Teams</a>
+                <a href="#team">Teams</a>
               </li>
               <li className="hover:underline">
-                <a href="">FAQ's</a>
+                <a href="#faqs">FAQ's</a>
               </li>
             </ul>
           </div>
