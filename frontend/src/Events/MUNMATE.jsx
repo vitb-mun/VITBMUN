@@ -22,13 +22,11 @@ const MunMate = () => {
       </header>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <div className="flex flex-col gap-16">
         {/* Left Section */}
-        <div className="left col-span-1 flex flex-col gap-6">
-
+        <div className="left flex gap-6">
           {/* Sponsors Section */}
           <SponsorsCard />
-
           {/* Event Details */}
           <EventDetailsCard_a />
           <EventDetailsCard_b />
@@ -36,9 +34,9 @@ const MunMate = () => {
         </div>
 
         {/* Right Section */}
-        <div className="right col-span-2 flex flex-col gap-6  pt-2">
+        <div className="right flex flex-col gap-6 pt-2">
           {/* Event Description */}
-          <div className=" rounded-xl ">
+          <div className="rounded-xl">
             <p className="text-sm leading-relaxed">
               This <span className="font-bold">fun</span> and <span className="font-bold">interactive event</span> will
               consist of three rounds, designed to test{" "}
@@ -59,10 +57,7 @@ const MunMate = () => {
                 </li>
               </ul>
             </div>
-
           </div>
-
-
 
           {/* Rounds Section */}
           <section>
@@ -70,7 +65,6 @@ const MunMate = () => {
               <h2 className="text-2xl font-bold mb-4 hover:border-b-4 hover:border-blue-600 w-max">
                 Rounds
               </h2>
-
               {/* SpeedMUN Card */}
               <div
                 className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg hover:scale-105 cursor-pointer transition-all duration-200"
@@ -105,7 +99,6 @@ const MunMate = () => {
                 className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg hover:scale-105 cursor-pointer transition-all duration-200"
                 onClick={() => setPptKaraokeOpen(!pptKaraokeOpen)}
               >
-
                 <h3 className="text-lg font-semibold mb-2 hover:text-blue-600 hover:text-xl transition-all duration-200">
                   2. PPT Karaoke
                 </h3>
@@ -128,7 +121,6 @@ const MunMate = () => {
                 className="p-4 border border-gray-300 rounded-lg hover:shadow-lg hover:scale-105 cursor-pointer transition-all duration-200"
                 onClick={() => setCrisisCommitteeOpen(!crisisCommitteeOpen)}
               >
-
                 <h3 className="text-lg font-semibold mb-2 hover:text-blue-600 hover:text-xl transition-all duration-200">
                   3. Crisis Committee
                 </h3>
