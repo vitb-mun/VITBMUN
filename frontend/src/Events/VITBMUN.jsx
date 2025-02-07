@@ -12,7 +12,7 @@ const VITBMUN = () => {
   return (
     <div className="font-sans bg-gray-100 text-gray-800 p-4 px-20">
       {/* Header Section */}
-      <header className="flex justify-between items-center mb-6">
+      <header className="flex justify-between items-center mb-6" id="event-header">
         <h1 className="text-4xl font-bold text-blue-gray-800">VITB MUN 3.0</h1>
         <button className="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-500">
           More Events

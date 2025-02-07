@@ -12,35 +12,35 @@ const Footer = () => {
         <div className="top flex justify-between flex-col md:flex-row gap-3">
           <div className="tabs flex justify-center">
             <ul className="flex md:gap-12 gap-2 text-lg ">
-              <li className="hover:underline">
-                <a href="">Home</a>
+              <li className="hover:underline hover:scale-105 transition-transform duration-300 hover:animate-bounce-slow">
+                <a href="#">Home</a>
               </li>
-              <li className="hover:underline">
-                <a href="">Events</a>
+              <li className="hover:underline hover:scale-105 transition-transform duration-300 hover:animate-bounce-slow">
+                <a href={"#eventtimeline"}>Events</a>
               </li>
-              <li className="hover:underline">
-                <a href="">Teams</a>
+              <li className="hover:underline hover:scale-105 transition-transform duration-300 hover:animate-bounce-slow">
+                <a href="#team">Teams</a>
               </li>
-              <li className="hover:underline">
-                <a href="">FAQ's</a>
+              <li className="hover:underline hover:scale-105 transition-transform duration-300 hover:animate-bounce-slow">
+                <a href="#faqs">FAQ's</a>
               </li>
             </ul>
           </div>
           <div className="icons flex gap-8 text-3xl justify-center items-center">
             <a href="https://chat.whatsapp.com/B6IDPABiyyI6DIUkhWy6uk">
-              <FaWhatsapp className="hover:cursor-pointer" />
+              <FaWhatsapp className="hover:cursor-pointer hover:scale-110 transition-transform duration-300 hover:animate-bounce-slow" />
             </a>
             <a href="/">
-              <FaDiscord className="hover:cursor-pointer" />
+              <FaDiscord className="hover:cursor-pointer hover:scale-110 transition-transform duration-300 hover:animate-bounce-slow" />
             </a>
             <a href="/">
-              <BsLinkedin className="hover:cursor-pointer" />
+              <BsLinkedin className="hover:cursor-pointer hover:scale-110 transition-transform duration-300 hover:animate-bounce-slow" />
             </a>
             <a href="https://www.instagram.com/vitb.mun/">
-              <FaInstagram className="hover:cursor-pointer" />
+              <FaInstagram className="hover:cursor-pointer hover:scale-110 transition-transform duration-300 hover:animate-bounce-slow" />
             </a>
             <a href="/">
-              <AiFillTwitterCircle className="hover:cursor-pointer" />
+              <AiFillTwitterCircle className="hover:cursor-pointer hover:scale-110 transition-transform duration-300 hover:animate-bounce-slow" />
             </a>
           </div>
         </div>
