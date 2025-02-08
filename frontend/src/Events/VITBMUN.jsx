@@ -4,6 +4,7 @@ import EventDetailsCard_a from "../Components/EventDetailsCard_a";
 import EventDetailsCard_b from "../Components/EventDetailsCard_b";
 import ResourcesCard from "../Components/ResourcesCard";
 import Committees from "../Components/Committees";
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const VITBMUN = () => {
   const [speedMUNOpen, setSpeedMUNOpen] = useState(false);
@@ -70,46 +71,41 @@ const VITBMUN = () => {
               </h2>
 
               {/* SpeedMUN Card */}
-              <div
-                className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg hover:scale-105 cursor-pointer transition-all duration-200"
-                onClick={() => setSpeedMUNOpen(!speedMUNOpen)}
-              >
-                <h3 className="text-lg font-semibold mb-2 hover:text-blue-600 hover:text-xl transition-all duration-200">
-                  1. SpeedMUN
-                </h3>
-                <p className="text-sm text-gray-600">{!speedMUNOpen ? "Participants are divided into four tables (A, B, C, D) with 20 individuals each for a 50-minute round." : ""}</p>
-                {speedMUNOpen && (
-                  <div className="ml-4">
+              <div className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
+                <div className="flex justify-between items-center cursor-pointer" onClick={() => setSpeedMUNOpen(!speedMUNOpen)}>
+                  <h3 className="text-lg font-semibold hover:text-blue-600 hover:text-xl transition-all duration-200">
+                    1. SpeedMUN
+                  </h3>
+                  <button className="text-gray-600 text-lg focus:outline-none hover:text-black">
+                    {speedMUNOpen ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+                </div>
+                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${speedMUNOpen ? "max-h-[500px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"}`}>
+                  <div className="ml-4 mt-2">
                     <p className="mb-2"><strong>Setup:</strong> Participants are divided into four tables (A, B, C, D) with 20 individuals each for a 50-minute round.</p>
                     <p className="font-semibold mb-2">Process:</p>
                     <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        <strong>Round 1:</strong> Each participant shares insights about their assigned country and engages in discussions to understand allies and foreign policies.
-                      </li>
-                      <li>
-                        <strong>Rotations:</strong> After 10 minutes, half the participants rotate tables for further discussions, repeating this process for a comprehensive exchange of ideas.
-                      </li>
-                      <li>
-                        <strong>Open Lobbying:</strong> A 20-minute session where everyone mingles freely to form pairs, sharing knowledge about their countries.
-                      </li>
+                      <li><strong>Round 1:</strong> Each participant shares insights about their assigned country and engages in discussions to understand allies and foreign policies.</li>
+                      <li><strong>Rotations:</strong> After 10 minutes, half the participants rotate tables for further discussions, repeating this process for a comprehensive exchange of ideas.</li>
+                      <li><strong>Open Lobbying:</strong> A 20-minute session where everyone mingles freely to form pairs, sharing knowledge about their countries.</li>
                     </ul>
                     <p className="mt-2"><strong>Outcome:</strong> Each participant must form a pair with someone from a different country to progress to the next round, fostering collaboration and understanding.</p>
                   </div>
-                )}
+                </div>
               </div>
 
               {/* PPT Karaoke Card */}
-              <div
-                className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg hover:scale-105 cursor-pointer transition-all duration-200"
-                onClick={() => setPptKaraokeOpen(!pptKaraokeOpen)}
-              >
-
-                <h3 className="text-lg font-semibold mb-2 hover:text-blue-600 hover:text-xl transition-all duration-200">
-                  2. PPT Karaoke
-                </h3>
-                <p className="text-sm text-gray-600">{!pptKaraokeOpen ? "Pairs formed from the previous round (40 pairs total) take the stage for an exciting presentation challenge lasting approximately 2 hours." : ""}</p>
-                {pptKaraokeOpen && (
-                  <div className="ml-4">
+              <div className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
+                <div className="flex justify-between items-center cursor-pointer" onClick={() => setPptKaraokeOpen(!pptKaraokeOpen)}>
+                  <h3 className="text-lg font-semibold hover:text-blue-600 hover:text-xl transition-all duration-200">
+                    2. PPT Karaoke
+                  </h3>
+                  <button className="text-gray-600 text-lg focus:outline-none hover:text-black">
+                    {pptKaraokeOpen ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+                </div>
+                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${pptKaraokeOpen ? "max-h-[500px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"}`}>
+                  <div className="ml-4 mt-2">
                     <p className="mb-2"><strong>Setup:</strong> Pairs formed from the previous round (40 pairs total) take the stage for an exciting presentation challenge lasting approximately 2 hours.</p>
                     <p className="font-semibold mb-2">Process:</p>
                     <ul className="list-disc list-inside space-y-2">
@@ -118,21 +114,21 @@ const VITBMUN = () => {
                     </ul>
                     <p className="mt-2"><strong>Scoring:</strong> After the presentations, 20 pairs are eliminated based on performance, leaving 20 pairs to advance.</p>
                   </div>
-                )}
+                </div>
               </div>
 
               {/* Crisis Committee Card */}
-              <div
-                className="p-4 border border-gray-300 rounded-lg hover:shadow-lg hover:scale-105 cursor-pointer transition-all duration-200"
-                onClick={() => setCrisisCommitteeOpen(!crisisCommitteeOpen)}
-              >
-
-                <h3 className="text-lg font-semibold mb-2 hover:text-blue-600 hover:text-xl transition-all duration-200">
-                  3. Crisis Committee
-                </h3>
-                <p className="text-sm text-gray-600">{!crisisCommitteeOpen ? "The remaining 40 participants engage in a structured 2-hour committee session without formal roll calls." : ""}</p>
-                {crisisCommitteeOpen && (
-                  <div className="ml-4">
+              <div className="p-4 border border-gray-300 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
+                <div className="flex justify-between items-center cursor-pointer" onClick={() => setCrisisCommitteeOpen(!crisisCommitteeOpen)}>
+                  <h3 className="text-lg font-semibold hover:text-blue-600 hover:text-xl transition-all duration-200">
+                    3. Crisis Committee
+                  </h3>
+                  <button className="text-gray-600 text-lg focus:outline-none hover:text-black">
+                    {crisisCommitteeOpen ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+                </div>
+                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${crisisCommitteeOpen ? "max-h-[500px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"}`}>
+                  <div className="ml-4 mt-2">
                     <p className="mb-2"><strong>Setup:</strong> The remaining 40 participants engage in a structured 2-hour committee session without formal roll calls.</p>
                     <p className="font-semibold mb-2">Process:</p>
                     <ul className="list-disc list-inside space-y-2">
@@ -141,7 +137,7 @@ const VITBMUN = () => {
                       <li>Voting: After presenting directives, participants vote on the proposals, culminating in a session adjournment.</li>
                     </ul>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           </section>
@@ -172,13 +168,13 @@ const VITBMUN = () => {
         </div>
       </div>
 
-      <hr className="mt-10 border-t-2 border-gray-400" />
-      <hr className="mt-10 border-t-2 border-gray-400" />
+      <hr className="mt-20 border-t-2 border-gray-400 pb-20" />
+      {/* <hr className="mt-10 border-t-2 border-gray-400" /> */}
 
       {/* Additional Sections */}
 
-      <Committees/>
-     
+      {/* <Committees /> */}
+
     </div>
   );
 };

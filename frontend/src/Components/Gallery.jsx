@@ -43,9 +43,6 @@ const Gallery = () => {
                 alt={`Gallery Image ${index + 1}`}
               />
             </div>
-            <div className="polaroid-caption text-center text-sm text-gray-700 font-semibold">
-              Image {index + 1}
-            </div>
           </div>
         ))}
       </div>

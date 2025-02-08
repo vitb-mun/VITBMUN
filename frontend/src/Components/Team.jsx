@@ -1,15 +1,35 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import tech_team_1 from "../assets/Team Photos/Tech_Team.jpg";
-import tech_team_2 from "../assets/Team Photos/Tech_Team.jpg";
+import tech_lead from "../assets/Team Photos/tech_lead.jpg";
+import tech_mem_1 from "../assets/Team Photos/tech_mem_1.png";
+import tech_mem_2 from "../assets/Team Photos/tech_mem_2.png";
 import photo_team_1 from "../assets/Team Photos/Photo_Team.jpg";
-import photo_team_2 from "../assets/Team Photos/Photo_Team.jpg";
 import pr_Team_1 from "../assets/Team Photos/PR_Team.jpg";
-import pr_Team_2 from "../assets/Team Photos/PR_Team.jpg";
+import pr_lead from "../assets/Team Photos/pr_lead.jpg";
+import pr_colead_1 from "../assets/Team Photos/pr_colead_1.jpg";
+import pr_colead_2 from "../assets/Team Photos/pr_colead_2.jpg";
+import pr_mem_1 from "../assets/Team Photos/pr_mem_1.jpg";
+import pr_mem_2 from "../assets/Team Photos/pr_mem_2.jpg";
+import pr_mem_3 from "../assets/Team Photos/pr_mem_3.jpg";
+import pr_mem_4 from "../assets/Team Photos/pr_mem_4.jpg";
+import pr_mem_5 from "../assets/Team Photos/pr_mem_5.jpg";
 import content_Team_1 from "../assets/Team Photos/Content_Team.jpg";
-import content_Team_2 from "../assets/Team Photos/Content_Team.jpg";
+import content_lead from "../assets/Team Photos/Content_Lead.jpg";
+import content_colead_1 from "../assets/Team Photos/content_colead_1.jpg";
+import content_colead_2 from "../assets/Team Photos/content_colead_2.jpg";
+import content_colead_3 from "../assets/Team Photos/content_colead_3.jpg";
+import content_mem_1 from "../assets/Team Photos/content_mem_1.jpg";
+import content_mem_2 from "../assets/Team Photos/content_mem_2.jpg";
+import content_mem_3 from "../assets/Team Photos/content_mem_3.jpg";
+import content_mem_4 from "../assets/Team Photos/content_mem_4.jpg";
+import content_mem_5 from "../assets/Team Photos/content_mem_5.jpg";
 import design_Team_1 from "../assets/Team Photos/Design_Team.jpg";
-import design_Team_2 from "../assets/Team Photos/Design_Team.jpg";
+import design_lead from "../assets/Team Photos/design_lead.jpg";
+import design_colead from "../assets/Team Photos/design_colead.jpg";
+import design_mem_1 from "../assets/Team Photos/design_mem_1.jpg";
+import design_mem_2 from "../assets/Team Photos/design_mem_2.jpg";
+import design_mem_3 from "../assets/Team Photos/design_mem_3.jpg";
+import design_mem_4 from "../assets/Team Photos/design_mem_4.jpg";
 
 const OurTeam = () => {
   const [contentIndex, setContentIndex] = useState(0);
@@ -20,31 +40,60 @@ const OurTeam = () => {
 
   const teams = [
     {
-      images: [content_Team_1, design_Team_2],
+      images: [
+        content_Team_1,
+        content_lead,
+        content_colead_1,
+        content_colead_2,
+        content_colead_3,
+        content_mem_1,
+        content_mem_2,
+        content_mem_3,
+        content_mem_4,
+        content_mem_5,
+      ],
       title: "Content Team",
       setIndex: setContentIndex,
       index: contentIndex,
     },
     {
-      images: [design_Team_1, photo_team_1],
+      images: [
+        design_Team_1,
+        design_lead,
+        design_colead,
+        design_mem_1,
+        design_mem_2,
+        design_mem_3,
+        design_mem_4,
+      ],
       title: "Design Team",
       setIndex: setDesignIndex,
       index: designIndex,
     },
     {
-      images: [photo_team_1, design_Team_2],
+      images: [photo_team_1],
       title: "Photography Team",
       setIndex: setPhotoIndex,
       index: photoIndex,
     },
     {
-      images: [pr_Team_1, photo_team_1],
+      images: [
+        pr_Team_1,
+        pr_lead,
+        pr_colead_1,
+        pr_colead_2,
+        pr_mem_1,
+        pr_mem_2,
+        pr_mem_3,
+        pr_mem_4,
+        pr_mem_5,
+      ],
       title: "PR Team",
       setIndex: setPrIndex,
       index: prIndex,
     },
     {
-      images: [tech_team_1, design_Team_2],
+      images: [tech_team_1, tech_lead, tech_mem_1, tech_mem_2],
       title: "Technical Team",
       setIndex: setTechIndex,
       index: techIndex,
