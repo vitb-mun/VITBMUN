@@ -4,7 +4,7 @@ const ChainReactionChase = () => {
   return (
     <div className="font-sans bg-gray-100 text-gray-800">
       {/* Header Section */}
-      <header className="text-center py-8 bg-white shadow-md">
+      <header className="text-center py-8 bg-white shadow-md" id="event-header">
         <h1 className="text-4xl font-bold">ChainReactionChase</h1>
         <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-500">
           Register Now

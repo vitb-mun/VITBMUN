@@ -13,7 +13,7 @@ const SponsorsCard = () => {
         }
     ]
     return (
-        <div className="sponsers bg-white border-[3px] border-gray-300 p-4 rounded-xl shadow-sm">
+        <div className="sponsers bg-white border-[3px] h-max border-gray-300 p-4 rounded-xl shadow-sm">
             <h2 className="text-xl text-center font-semibold mb-4">Sponsors</h2>
             <div className="images flex justify-center gap-9">
                 {spImg.map((sponsor,index) => (

@@ -5,6 +5,7 @@ import chainchase from "../assets/chainchase.png";
 import Munmate from "../assets/munmate.png";
 import Vitbmun from "../assets/VITBMUN.png";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 const EventTimeline = () => {
   const [visibleItems, setVisibleItems] = useState([]);
@@ -134,8 +135,8 @@ const EventTimeline = () => {
               </h2>
 
               <div className="mt-4 flex justify-center">
-                <Link
-                  to={event.url} // Use the URL from your `timelineEvents`
+                <HashLink
+                  to={event.url+"#event-header"} // Use the URL from your `timelineEvents`
                   className="px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-lg hover:bg-blue-600"
                   onClick={() => handleLearnMoreClick(event.name)}
                   style={{
@@ -144,7 +145,7 @@ const EventTimeline = () => {
                   }}
                 >
                   Learn More
-                </Link>
+                </HashLink>
               </div>
             </div>
           </div>
