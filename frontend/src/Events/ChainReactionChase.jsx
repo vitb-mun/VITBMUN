@@ -23,21 +23,42 @@ const ChainReactionChase = () => {
       </header>
 
       {/* Main Content */}
-      <div className="container mx-auto p-4 md:p-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto p-4 lg:p-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Options Section */}
           <div className="md:col-span-1 bg-white rounded shadow p-4">
             <div className="space-y-2">
-              <SponsorsCard />
+              <SponsorsCard 
+              sponsor1="https://picsum.photos/200/300"
+              sponsor2="https://picsum.photos/200/300"
+              sponsor3="https://picsum.photos/200/300"
+              />
               <h3 className="text-xl font-bold mb-4">Event Details</h3>
-              <EventDetailsCard_a />
-              <EventDetailsCard_b />
-              <ResourcesCard />
+              <EventDetailsCard_a 
+              date="22nd Feb,2025"
+              days="3"
+              time="10:00AM - 5:00PM"
+              venue="VIT Bhopal University"
+              fees="₹500"
+              prize="₹10,000"
+              />
+              <EventDetailsCard_b 
+              participant = "100"
+              teamSize = "2"
+              rounds = "3"
+              />
+              <ResourcesCard 
+              pressReleases = "Press Releases"
+              pressReleasesLink = "https://www.google.com"
+              ruleBook = "Rule Book"
+              ruleBookLink = "https://www.google.com"
+              
+              />
             </div>
           </div>
 
           {/* Main Content */}
-          <div className="md:col-span-3 bg-white rounded shadow p-6">
+          <div className="lg:col-span-3 bg-white rounded shadow p-6">
             <h2 className="text-xl font-bold mb-4">This MUN Introduces</h2>
             <p className="mb-4 text-sm">
               This MUN introduces several well-thought-of three rounds, designed

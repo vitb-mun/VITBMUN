@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import hash from "./../assets/hash.png";
 
-const ResourcesCard = () => {
+const ResourcesCard = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const details = [
-    { icon: hash, label: "Press Releases", value: "" },
-    { icon: hash, label: "Rule Book", value: "" },
+    { icon: hash, label: "Press Releases", value: props.pressReleases ? props.pressReleases : "N/A" , link : props.pressReleasesLink ? props.pressReleasesLink : "N/A" },
+    { icon: hash, label: "Rule Book", value: props.ruleBook ? props.ruleBook : "N/A" , link : props.ruleBookLink ? props.ruleBookLink : "N/A" },
   ];
 
   return (
@@ -28,11 +28,12 @@ const ResourcesCard = () => {
         }`}
       >
         <div className="space-y-4 mt-3">
-          {details.map((item, index) => (
+          {details.filter(item => item.value !== 'N/A').map((item, index) => (
             <div
               key={index}
               className="flex items-center gap-4 border-[1.5px] py-0 rounded-lg w-auto px-3 hover:bg-gray-100 transition-colors duration-300"
             >
+              <a href={item.link} target="_blank" rel="noreferrer"  className="flex items-center gap-4">
               <img
                 src={item.icon}
                 alt={item.label}
@@ -40,6 +41,7 @@ const ResourcesCard = () => {
               />
               <span className="text-md font-bold">{item.label}:</span>
               <span className="text-sm">Details here</span>
+              </a>
             </div>
           ))}
         </div>

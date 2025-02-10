@@ -3,13 +3,13 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import groups from "./../assets/groups.png";
 import hash from "./../assets/hash.png";
 
-const EventDetailsCard_b = () => {
+const EventDetailsCard_b = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const details = [
-    { icon: groups, label: "Participant", value: "" },
-    { icon: groups, label: "Team Size", value: "" },
-    { icon: hash, label: "Rounds", value: "" },
+    { icon: groups, label: "Participant", value: props.participant ? props.participant : "N/A" },
+    { icon: groups, label: "Team Size", value: props.teamSize ? props.teamSize : "N/A" },
+    { icon: hash, label: "Rounds", value: props.rounds ? props.rounds : "N/A" },
   ];
 
   return (
@@ -29,7 +29,7 @@ const EventDetailsCard_b = () => {
         }`}
       >
         <div className="space-y-4 mt-3">
-          {details.map((item, index) => (
+        {details.filter(item => item.value !== 'N/A').map((item, index) => (
             <div
               key={index}
               className="flex items-center gap-4 border-[1.5px] py-0 rounded-lg w-auto px-3 hover:bg-gray-100 transition-colors duration-300"
@@ -40,7 +40,7 @@ const EventDetailsCard_b = () => {
                 className="h-7 filter brightness-[0.3] py-1"
               />
               <span className="text-md font-bold">{item.label}:</span>
-              <span className="text-sm">Details here</span>
+              <span className="text-sm">{item.value}</span>
             </div>
           ))}
         </div>
