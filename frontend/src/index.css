@@ -93,7 +93,7 @@ nav {
 
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
 }
-.event-header{
+.event-header {
   padding-right: 10px;
 }
 .links-container {
@@ -144,8 +144,8 @@ nav a img {
   height: 80px;
 }
 
-.event-nav, .event-nav-mobile{
-  
+.event-nav,
+.event-nav-mobile {
   font-size: 16pt;
   display: flex;
   justify-content: center;
@@ -153,8 +153,9 @@ nav a img {
   max-width: 100px;
   max-height: 50px;
 }
-.event-nav:hover, .event-nav-mobile:hover{
-  background-color: rgb(30 136 229 / var(--tw-bg-opacity, 1));;
+.event-nav:hover,
+.event-nav-mobile:hover {
+  background-color: rgb(30 136 229 / var(--tw-bg-opacity, 1));
   color: #fff;
 }
 .event-nav-mobile {
@@ -179,7 +180,6 @@ nav a img {
     height: 50px;
     width: 100px;
   }
- 
 }
 
 @media (max-width: 768px) {
@@ -239,8 +239,6 @@ nav a img {
     height: 50px;
   }
 }
-
-
 
 /* 
   End of Navbar
