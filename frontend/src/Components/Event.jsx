@@ -42,7 +42,6 @@ const Event = () => {
   //   return () => clearInterval(interval);
   // }, []);
 
-
   // Intersection Observer to detect when the card is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -168,24 +167,32 @@ const Event = () => {
           >
             Upcoming Events
           </h2>
+
           <Event_Ticket
             ref={eventCardRef}
             Logo={rajneeti_logo}
             Heading={"Rajneeti Rangmanch"}
-            Description={"Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery."}
+            Description={
+              "Rajneeti Rangmanch will bring together a blend of fun research and power packed debate. Come join us and enjoy an amazing game of discussion, deliberation and discovery."
+            }
             Date={"22/02/2025"}
             Day={"Saturday"}
             Time={"09:00 AM - 11:00 AM"}
             Venue={"AR 102"}
+            link={"https://lu.ma/oxlpewzu"}
           />
+
           <Event_Ticket
             Logo={Diagloue}
             Heading={"Democracy Dialogue"}
-            Description={"Join Democracy Dialogue, a dynamic debate to deepen discussions and deliberate democracy’s dilemmas. Engage with diverse voices, gain mentoring, refine skills, and showcase prowess."}
+            Description={
+              "Join Democracy Dialogue, a dynamic debate to deepen discussions and deliberate democracy’s dilemmas. Engage with diverse voices, gain mentoring, refine skills, and showcase prowess."
+            }
             Date={"22/02/2025"}
             Day={"Saturday"}
             Time={"11:00 AM - 01:00 PM"}
             Venue={"AB 220"}
+            link={"https://lu.ma/u6mt3yby"}
           />
         </section>
       </div>

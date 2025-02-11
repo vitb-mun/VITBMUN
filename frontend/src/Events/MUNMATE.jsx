@@ -6,15 +6,18 @@ import SponsorsCard from "../Components/SponsorsCard";
 import EventDetailsCard_a from "../Components/EventDetailsCard_a";
 import EventDetailsCard_b from "../Components/EventDetailsCard_b";
 import ResourcesCard from "../Components/ResourcesCard";
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const MunMate = () => {
+  
   const [speedMUNOpen, setSpeedMUNOpen] = useState(false);
   const [pptKaraokeOpen, setPptKaraokeOpen] = useState(false);
   const [crisisCommitteeOpen, setCrisisCommitteeOpen] = useState(false);
+  
   return (
     <div className="font-sans bg-gray-100 text-gray-800 p-4 px-20">
       {/* Header Section */}
-      <header className="flex justify-between items-center mb-6">
+      <header className="flex justify-between items-center mb-6" id="event-header">
         <h1 className="text-4xl font-bold text-blue-gray-800">MUN MATE</h1>
         <button className="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-500">
           More Events
@@ -22,13 +25,11 @@ const MunMate = () => {
       </header>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <div className="flex flex-col gap-16">
         {/* Left Section */}
-        <div className="left col-span-1 flex flex-col gap-6">
-
+        <div className="left flex gap-6">
           {/* Sponsors Section */}
           <SponsorsCard />
-
           {/* Event Details */}
           <EventDetailsCard_a />
           <EventDetailsCard_b />
@@ -36,9 +37,9 @@ const MunMate = () => {
         </div>
 
         {/* Right Section */}
-        <div className="right col-span-2 flex flex-col gap-6  pt-2">
+        <div className="right flex flex-col gap-6 pt-2">
           {/* Event Description */}
-          <div className=" rounded-xl ">
+          <div className="rounded-xl">
             <p className="text-sm leading-relaxed">
               This <span className="font-bold">fun</span> and <span className="font-bold">interactive event</span> will
               consist of three rounds, designed to test{" "}
@@ -59,59 +60,51 @@ const MunMate = () => {
                 </li>
               </ul>
             </div>
-
           </div>
-
-
 
           {/* Rounds Section */}
           <section>
-            <div className="rounds-section p-4 bg-white rounded-lg shadow-md">
+            <div className="rounds-section p-4 bg-white rounded-lg shadow-md overflow:hidden">
               <h2 className="text-2xl font-bold mb-4 hover:border-b-4 hover:border-blue-600 w-max">
                 Rounds
               </h2>
 
               {/* SpeedMUN Card */}
-              <div
-                className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg hover:scale-105 cursor-pointer transition-all duration-200"
-                onClick={() => setSpeedMUNOpen(!speedMUNOpen)}
-              >
-                <h3 className="text-lg font-semibold mb-2 hover:text-blue-600 hover:text-xl transition-all duration-200">
-                  1. SpeedMUN
-                </h3>
-                <p className="text-sm text-gray-600">{!speedMUNOpen ? "Participants are divided into four tables (A, B, C, D) with 20 individuals each for a 50-minute round." : ""}</p>
-                {speedMUNOpen && (
-                  <div className="ml-4">
+              <div className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer bg-white ">
+                <div className="flex justify-between items-center cursor-pointer" onClick={() => setSpeedMUNOpen(!speedMUNOpen)}>
+                  <h3 className="text-lg font-semibold hover:text-blue-600 hover:text-xl transition-all duration-200">
+                    1. SpeedMUN
+                  </h3>
+                  <button className="text-gray-600 text-lg focus:outline-none hover:text-black">
+                    {speedMUNOpen ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+                </div>
+                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${speedMUNOpen ? "max-h-[500px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"}`}>
+                  <div className="ml-4 mt-2">
                     <p className="mb-2"><strong>Setup:</strong> Participants are divided into four tables (A, B, C, D) with 20 individuals each for a 50-minute round.</p>
                     <p className="font-semibold mb-2">Process:</p>
                     <ul className="list-disc list-inside space-y-2">
-                      <li>
-                        <strong>Round 1:</strong> Each participant shares insights about their assigned country and engages in discussions to understand allies and foreign policies.
-                      </li>
-                      <li>
-                        <strong>Rotations:</strong> After 10 minutes, half the participants rotate tables for further discussions, repeating this process for a comprehensive exchange of ideas.
-                      </li>
-                      <li>
-                        <strong>Open Lobbying:</strong> A 20-minute session where everyone mingles freely to form pairs, sharing knowledge about their countries.
-                      </li>
+                      <li><strong>Round 1:</strong> Each participant shares insights about their assigned country and engages in discussions to understand allies and foreign policies.</li>
+                      <li><strong>Rotations:</strong> After 10 minutes, half the participants rotate tables for further discussions, repeating this process for a comprehensive exchange of ideas.</li>
+                      <li><strong>Open Lobbying:</strong> A 20-minute session where everyone mingles freely to form pairs, sharing knowledge about their countries.</li>
                     </ul>
                     <p className="mt-2"><strong>Outcome:</strong> Each participant must form a pair with someone from a different country to progress to the next round, fostering collaboration and understanding.</p>
                   </div>
-                )}
+                </div>
               </div>
 
               {/* PPT Karaoke Card */}
-              <div
-                className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg hover:scale-105 cursor-pointer transition-all duration-200"
-                onClick={() => setPptKaraokeOpen(!pptKaraokeOpen)}
-              >
-
-                <h3 className="text-lg font-semibold mb-2 hover:text-blue-600 hover:text-xl transition-all duration-200">
-                  2. PPT Karaoke
-                </h3>
-                <p className="text-sm text-gray-600">{!pptKaraokeOpen ? "Pairs formed from the previous round (40 pairs total) take the stage for an exciting presentation challenge lasting approximately 2 hours." : ""}</p>
-                {pptKaraokeOpen && (
-                  <div className="ml-4">
+              <div className="mb-6 p-4 border border-gray-300 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer bg-white">
+                <div className="flex justify-between items-center cursor-pointer" onClick={() => setPptKaraokeOpen(!pptKaraokeOpen)}>
+                  <h3 className="text-lg font-semibold hover:text-blue-600 hover:text-xl transition-all duration-200">
+                    2. PPT Karaoke
+                  </h3>
+                  <button className="text-gray-600 text-lg focus:outline-none hover:text-black">
+                    {pptKaraokeOpen ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+                </div>
+                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${pptKaraokeOpen ? "max-h-[500px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"}`}>
+                  <div className="ml-4 mt-2">
                     <p className="mb-2"><strong>Setup:</strong> Pairs formed from the previous round (40 pairs total) take the stage for an exciting presentation challenge lasting approximately 2 hours.</p>
                     <p className="font-semibold mb-2">Process:</p>
                     <ul className="list-disc list-inside space-y-2">
@@ -120,21 +113,21 @@ const MunMate = () => {
                     </ul>
                     <p className="mt-2"><strong>Scoring:</strong> After the presentations, 20 pairs are eliminated based on performance, leaving 20 pairs to advance.</p>
                   </div>
-                )}
+                </div>
               </div>
 
               {/* Crisis Committee Card */}
-              <div
-                className="p-4 border border-gray-300 rounded-lg hover:shadow-lg hover:scale-105 cursor-pointer transition-all duration-200"
-                onClick={() => setCrisisCommitteeOpen(!crisisCommitteeOpen)}
-              >
-
-                <h3 className="text-lg font-semibold mb-2 hover:text-blue-600 hover:text-xl transition-all duration-200">
-                  3. Crisis Committee
-                </h3>
-                <p className="text-sm text-gray-600">{!crisisCommitteeOpen ? "The remaining 40 participants engage in a structured 2-hour committee session without formal roll calls." : ""}</p>
-                {crisisCommitteeOpen && (
-                  <div className="ml-4">
+              <div className="p-4 border border-gray-300 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer bg-white">
+                <div className="flex justify-between items-center cursor-pointer" onClick={() => setCrisisCommitteeOpen(!crisisCommitteeOpen)}>
+                  <h3 className="text-lg font-semibold hover:text-blue-600 hover:text-xl transition-all duration-200">
+                    3. Crisis Committee
+                  </h3>
+                  <button className="text-gray-600 text-lg focus:outline-none hover:text-black">
+                    {crisisCommitteeOpen ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+                </div>
+                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${crisisCommitteeOpen ? "max-h-[500px] opacity-100 py-2" : "max-h-0 opacity-0 py-0"}`}>
+                  <div className="ml-4 mt-2">
                     <p className="mb-2"><strong>Setup:</strong> The remaining 40 participants engage in a structured 2-hour committee session without formal roll calls.</p>
                     <p className="font-semibold mb-2">Process:</p>
                     <ul className="list-disc list-inside space-y-2">
@@ -143,7 +136,7 @@ const MunMate = () => {
                       <li>Voting: After presenting directives, participants vote on the proposals, culminating in a session adjournment.</li>
                     </ul>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           </section>
@@ -177,9 +170,9 @@ const MunMate = () => {
       <hr className="mt-10 border-t-2 border-gray-400" />
 
       {/* Additional Sections */}
-      <section className="mt-8">
+      {/* <section className="mt-8">
         <Winners />
-      </section>
+      </section> */}
       <section className="mt-8">
         <Highlights />
       </section>

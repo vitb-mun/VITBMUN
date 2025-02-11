@@ -89,7 +89,7 @@ const FAQ = () => {
                   <svg
                     className={`w-3 h-3 ${
                       openIndex === index ? "rotate-180" : ""
-                    } shrink-0`}
+                    } shrink-0 transition-transform duration-300`}
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -107,7 +107,9 @@ const FAQ = () => {
               </h2>
               <div
                 id={`accordion-body-${index}`}
-                className={openIndex === index ? "" : "hidden"}
+                className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
+                  openIndex === index ? "max-h-screen" : "max-h-0"
+                }`}
                 aria-labelledby={`accordion-heading-${index}`}
               >
                 <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
