@@ -186,7 +186,7 @@ const Event = () => {
             Logo={Diagloue}
             Heading={"Democracy Dialogue"}
             Description={
-              "Join Democracy Dialogue, a dynamic debate to deepen discussions and deliberate democracy’s dilemmas. Engage with diverse voices, gain mentoring, refine skills, and showcase prowess."
+              "Join Democracy Dialogue, a dynamic debate to deepen discussions and deliberate democracy’s dilemmas. Engage diverse voices, gain mentoring,and showcase prowess."
             }
             Date={"22/02/2025"}
             Day={"Saturday"}

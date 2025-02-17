@@ -5,7 +5,7 @@ export default function Event_Ticket(props) {
     <a href={props.link}>
       <div
         className={`
-            bg-[url('./assets/TicketC.jpg')] lg:bg-[url('./assets/TicketC.png')] bg-contain
+            bg-[url('./assets/TicketC.jpg')] lg:bg-[url('./assets/TicketC.png')] bg-cover sm:bg-contain
             text-white relative
             sm:h-auto h-auto
             overflow-hidden bg-repeat object-bottom mt-10
@@ -55,14 +55,15 @@ export default function Event_Ticket(props) {
               <p className="text-gray-300 text-lg sm:text-xl">
                 <span className="font-semibold text-white">Venue:</span>{" "}
                 {props.Venue}
+              </p>
+              <br />
                 {/* Place here */}
                 <a
                   href={props.link}
-                  className="text-white hover:text-rainbow transition-colors duration-300 ml-6 text-xl sm:text-2xl"
+                  className="text-white hover:text-rainbow transition-colors duration-300 text-xl sm:text-xl"
                 >
                   Click here to book &rarr;
                 </a>
-              </p>
             </div>
           </div>
         </div>
