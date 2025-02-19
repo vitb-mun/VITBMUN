@@ -5,9 +5,9 @@ export default function Event_Ticket(props) {
     <a href={props.link}>
       <div
         className={`
-            bg-[url('./assets/TicketC.jpg')] lg:bg-[url('./assets/TicketC.png')] bg-cover sm:bg-contain
+            bg-[url('./assets/TicketC1.jpg')] lg:bg-[url('./assets/TicketC.png')] bg-cover sm:bg-contain
             text-white relative
-            sm:h-auto h-auto
+            sm:h-auto h-5/6
             overflow-hidden bg-repeat object-bottom mt-10
             transition-transform duration-300 hover:scale-105
             group
@@ -37,22 +37,22 @@ export default function Event_Ticket(props) {
 
             {/* Additional Event Details */}
             <div className="mt-4 text-sm">
-              <p className="text-gray-300 text-lg sm:text-xl">
+              <p className="text-gray-300 text-base sm:text-xl">
                 <span className="font-semibold text-white">Date:</span>{" "}
                 {props.Date}
               </p>
               <br />
-              <p className="text-gray-300 text-lg sm:text-xl">
+              <p className="text-gray-300 text-base sm:text-xl">
                 <span className="font-semibold text-white">Day:</span>{" "}
                 {props.Day}
               </p>
               <br />
-              <p className="text-gray-300 text-lg sm:text-xl">
+              <p className="text-gray-300 text-base sm:text-xl">
                 <span className="font-semibold text-white">Time:</span>{" "}
                 {props.Time}
               </p>
               <br />
-              <p className="text-gray-300 text-lg sm:text-xl">
+              <p className="text-gray-300 text-base sm:text-xl">
                 <span className="font-semibold text-white">Venue:</span>{" "}
                 {props.Venue}
               </p>
