@@ -41,11 +41,11 @@ export default function Event_Ticket(props) {
                 <span className="font-semibold text-white">Date:</span>{" "}
                 {props.Date}
               </p>
-              <br />
+              {/* <br />
               <p className="text-gray-300 text-base sm:text-xl">
                 <span className="font-semibold text-white">Day:</span>{" "}
                 {props.Day}
-              </p>
+              </p> */}
               <br />
               <p className="text-gray-300 text-base sm:text-xl">
                 <span className="font-semibold text-white">Time:</span>{" "}
